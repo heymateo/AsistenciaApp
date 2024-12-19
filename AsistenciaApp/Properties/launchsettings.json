@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "AsistenciaApp (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "AsistenciaApp (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
