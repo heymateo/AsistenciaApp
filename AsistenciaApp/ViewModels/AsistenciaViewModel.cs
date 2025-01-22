@@ -1,71 +1,67 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Windows.Input;
+﻿using System.Collections.ObjectModel;
 using AsistenciaApp.Core.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace AsistenciaApp.ViewModels;
 
-public class AsistenciaViewModel : BindableBase // Implementa INotifyPropertyChanged
+public partial class AsistenciaViewModel : ObservableObject 
 {
-    private readonly AssistanceDbContext _context;
-    private DateTime? _selectedDate;
-    private ObservableCollection<Registro_Asistencia> _filteredEvents;
-    private string _resultText;
+    [ObservableProperty]
+    // An UI-interactive "FilteredEntries" property will be auto-generated.
+    private ObservableCollection<Registro_Asistencia>? filteredEntries;
+
+    [ObservableProperty]
+    // An UI-interactive "TargetDate" property will be auto-generated.
+    private DateTime? targetDate;
+
 
     public AsistenciaViewModel()
     {
-        _context = new AssistanceDbContext();
-        FilteredEvents = new ObservableCollection<Registro_Asistencia>();
-        ResultText = "Selecciona una fecha.";
+        TargetDate = DateTime.Now.Date;
+        LoadFilteredEntriesAsync();
     }
 
-    public DateTime? SelectedDate
+    private async Task LoadFilteredEntriesAsync()
     {
-        get => _selectedDate;
-        set
+        if (TargetDate == null) return;
+
+        using var dbContext = new AssistanceDbContext();
+
+        var query = await (from ra in dbContext.Registro_Asistencia
+                           join e in dbContext.Estudiante
+                           on ra.Id_Estudiante equals e.Id_Estudiante
+                           where ra.Fecha.Date == TargetDate.Value.Date
+                           select new
+                           {
+                               ra.Id_Registro,
+                               ra.Id_Estudiante,
+                               ra.Fecha,
+                               ra.Hora_Entrada,
+                               ra.Asistio,
+                               NombreEstudiante = e.Nombre
+                           }).ToListAsync();
+
+        // Mapea el resultado a una lista de Registro_Asistencia
+        var result = query.Select(item => new Registro_Asistencia
         {
-            if (SetProperty(ref _selectedDate, value))
-            {
-                LoadFilteredEvents();
-            }
-        }
+            Id_Registro = item.Id_Registro,
+            Id_Estudiante = item.Id_Estudiante,
+            Fecha = item.Fecha,
+            Hora_Entrada = item.Hora_Entrada,
+            Asistio = item.Asistio,
+            NombreEstudiante = item.NombreEstudiante
+        }).ToList();
+
+        FilteredEntries = new ObservableCollection<Registro_Asistencia>(result);
     }
 
-    public ObservableCollection<Registro_Asistencia> FilteredEvents
+    // Automatically refresh data when TargetDate changes
+    partial void OnTargetDateChanged(DateTime? value)
     {
-        get => _filteredEvents;
-        set => SetProperty(ref _filteredEvents, value);
-    }
-
-    public string ResultText
-    {
-        get => _resultText;
-        set => SetProperty(ref _resultText, value);
-    }
-
-    private void LoadFilteredEvents()
-    {
-        if (SelectedDate.HasValue)
+        if (value != null)
         {
-            var filtered = _context.Registro_Asistencia
-                .Where(e => e.Fecha.Date == SelectedDate.Value.Date)
-                .ToList();
-
-            FilteredEvents.Clear();
-            foreach (var item in filtered)
-            {
-                FilteredEvents.Add(item);
-            }
-
-            ResultText = filtered.Any()
-                ? $"{filtered.Count} registros encontrados para {SelectedDate:dd/MM/yyyy}."
-                : "No se encontraron registros para la fecha seleccionada.";
-        }
-        else
-        {
-            FilteredEvents.Clear();
-            ResultText = "Selecciona una fecha.";
+            _ = LoadFilteredEntriesAsync();
         }
     }
 }

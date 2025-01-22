@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BPym3DhFwsw=",
+  "dgSpecHash": "hA4iFrH9aXA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateo\\Downloads\\AsistenciaApp-main\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
+  "projectFilePath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\mateo\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.20\\microsoft.data.sqlite.core.7.0.20.nupkg.sha512",

@@ -10,14 +10,14 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>2870bef4-492d-460f-afe6-76fd8669ba52</PackageIdentityName>
     <PackageIdentityPublisher>CN=mateo</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AppX</LayoutDir>
+    <LayoutDir>C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AppX</LayoutDir>
     <RegisteredManifestChecksum>D0EA1A4CF90E8CBFA47F30BFB9B735AA04ED9BC97BBACEF64546198161736725</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2870bef4-492d-460f-afe6-76fd8669ba52_1.0.0.0_x86__hjzam633pnv6a</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2870bef4-492d-460f-afe6-76fd8669ba52_hjzam633pnv6a!App</RegisteredUserModeAppID>
@@ -26,36 +26,36 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-17T14:05:04.958</Modified>
+      <Modified>2025-01-22T14:49:51.534</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\resources.pri">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-12T16:39:39.664</Modified>
+      <Modified>2025-01-22T14:49:50.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AsistenciaApp.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AsistenciaApp.runtimeconfig.json">
       <PackagePath>AsistenciaApp.runtimeconfig.json</PackagePath>
-      <Modified>2025-01-12T16:36:07.737</Modified>
+      <Modified>2025-01-22T14:35:47.627</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AsistenciaApp.dll">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AsistenciaApp.dll">
       <PackagePath>AsistenciaApp.dll</PackagePath>
-      <Modified>2025-01-17T14:05:04.036</Modified>
+      <Modified>2025-01-22T14:49:50.433</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\appsettings.json">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>AsistenciaApp.exe</PackagePath>
-      <Modified>2025-01-17T14:05:04.146</Modified>
+      <Modified>2025-01-22T14:49:50.455</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AsistenciaApp.deps.json">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x86\Debug\net7.0-windows10.0.19041.0\win10-x86\AsistenciaApp.deps.json">
       <PackagePath>AsistenciaApp.deps.json</PackagePath>
-      <Modified>2025-01-12T16:36:07.727</Modified>
+      <Modified>2025-01-22T14:35:47.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.netcore.app.runtime.win-x86\7.0.20\runtimes\win-x86\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -785,13 +785,13 @@
       <PackagePath>msquic.dll</PackagePath>
       <Modified>2024-05-17T17:53:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.52\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.55\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
-      <Modified>2024-10-14T22:26:16.000</Modified>
+      <Modified>2024-11-11T17:23:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.52\lib\net6.0\WinRT.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.55\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
-      <Modified>2024-10-14T22:26:16.000</Modified>
+      <Modified>2024-11-11T17:23:02.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\colorcode.core\2.0.13\lib\netstandard1.4\ColorCode.Core.dll">
       <PackagePath>ColorCode.Core.dll</PackagePath>
@@ -805,9 +805,9 @@
       <PackagePath>CommunityToolkit.Common.dll</PackagePath>
       <Modified>2021-11-18T21:56:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\communitytoolkit.mvvm\8.1.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\communitytoolkit.mvvm\8.0.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
-      <Modified>2023-01-17T22:56:14.000</Modified>
+      <Modified>2022-08-03T23:09:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\communitytoolkit.winui\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.dll">
       <PackagePath>CommunityToolkit.WinUI.dll</PackagePath>
@@ -913,9 +913,9 @@
       <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
       <Modified>2022-10-18T16:15:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\7.0.0\lib\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\8.0.1\lib\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
-      <Modified>2022-10-18T16:15:02.000</Modified>
+      <Modified>2024-02-14T23:53:02.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.extensions.dependencymodel\7.0.0\lib\net7.0\Microsoft.Extensions.DependencyModel.dll">
       <PackagePath>Microsoft.Extensions.DependencyModel.dll</PackagePath>
@@ -1053,6 +1053,18 @@
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2022-11-24T02:10:26.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\prism.container.abstractions\9.0.106\lib\net7.0\Prism.Container.Abstractions.dll">
+      <PackagePath>Prism.Container.Abstractions.dll</PackagePath>
+      <Modified>2024-08-13T20:22:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\prism.core\9.0.537\lib\net6.0\Prism.dll">
+      <PackagePath>Prism.dll</PackagePath>
+      <Modified>2024-08-19T21:44:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\prism.events\9.0.537\lib\net6.0\Prism.Events.dll">
+      <PackagePath>Prism.Events.dll</PackagePath>
+      <Modified>2024-08-19T21:44:16.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\sqlitepclraw.bundle_e_sqlite3\2.1.4\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
       <Modified>2023-01-10T20:21:34.000</Modified>
@@ -1093,9 +1105,9 @@
       <PackagePath>e_sqlite3.dll</PackagePath>
       <Modified>2023-01-10T20:13:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp.Core\bin\x86\Debug\net7.0\AsistenciaApp.Core.dll">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp.Core\bin\x86\Debug\net7.0\AsistenciaApp.Core.dll">
       <PackagePath>AsistenciaApp.Core.dll</PackagePath>
-      <Modified>2025-01-12T16:35:30.057</Modified>
+      <Modified>2025-01-22T14:33:18.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\colorcode.winui\2.0.13\lib\net5.0-windows10.0.18362\ColorCode.WinUI.pri">
       <PackagePath>ColorCode.WinUI.pri</PackagePath>
@@ -1153,35 +1165,35 @@
       <PackagePath>WinUIEx.pri</PackagePath>
       <Modified>2023-10-11T18:22:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Downloads\AsistenciaApp-main\AsistenciaApp\Assets\WindowIcon.ico">
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\Assets\WindowIcon.ico">
       <PackagePath>Assets\WindowIcon.ico</PackagePath>
       <Modified>2024-12-19T15:40:29.000</Modified>
     </AppxPackagedFile>

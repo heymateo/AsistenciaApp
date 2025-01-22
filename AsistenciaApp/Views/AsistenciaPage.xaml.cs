@@ -1,21 +1,20 @@
-﻿using AsistenciaApp.Core.Models;
-using AsistenciaApp.ViewModels;
+﻿using AsistenciaApp.ViewModels;
 using Microsoft.UI.Xaml.Controls;
 
 namespace AsistenciaApp.Views;
 public sealed partial class AsistenciaPage : Page
 {
-    public AsistenciaViewModel ViewModel
-    {
-        get;
-    }
-
     public AsistenciaPage()
     {
         InitializeComponent();
-        ViewModel = new AsistenciaViewModel();
-        DataContext = ViewModel;
     }
 
+    public AsistenciaViewModel ViewModel { get; } = new();
 
+    private void CalendarView_SelectedDatesChanged(CalendarView sender, CalendarViewSelectedDatesChangedEventArgs args)
+    {
+        ViewModel.TargetDate = args.AddedDates.Count > 0
+            ? args.AddedDates[0].Date
+            : null;
+    }
 }
