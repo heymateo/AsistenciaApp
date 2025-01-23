@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+.vscode/
+.idea/
+# Windows
+Thumbs.db
+Desktop.ini
+# Node.js
+node_modules/
+# .NET
+bin/
+obj/

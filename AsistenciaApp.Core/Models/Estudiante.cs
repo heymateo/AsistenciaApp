@@ -20,5 +20,6 @@ public class Estudiante
     public string? Especialidad { get; set; }
     public string? Encargado_Legal { get; set; }
     public string? Telefono_Encargado { get; set; }
+    public ICollection<Registro_Asistencia> Registro_Asistencia { get; set; } = new List<Registro_Asistencia>();
 
 }

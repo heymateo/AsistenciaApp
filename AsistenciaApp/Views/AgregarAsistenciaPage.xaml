@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="AsistenciaApp.Views.AgregarAsistenciaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsistenciaApp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Padding="20" Spacing="15" x:Name="EstudiantePanel">
+        <TextBlock Text="Agregar Asistencia" Style="{StaticResource HeaderTextBlockStyle}" />
+
+        <DatePicker x:Name="FechaAsistenciaPicker" />
+
+        <TextBox x:Name="CedulaTextBox" PlaceholderText="Ingrese su cédula:" />
+
+        <Button Content="Registrar Asistencia"
+                Click="RegistrarAsistenciaButton_Click" />
+
+        <StackPanel x:Name="EstudianteDetallesPanel" Visibility="Collapsed">
+            <TextBlock x:Name="NombreTextBlock" Text="Nombre: " />
+            <TextBlock x:Name="SeccionTextBlock" Text="Sección: " />
+        </StackPanel>
+
+        <ListView x:Name="AsistenciasListView"
+                  Header="Asistencias Registradas">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Nombre}" />
+                        <TextBlock Text="{Binding Fecha}" />
+                        <TextBlock Text="{Binding Hora}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Page>

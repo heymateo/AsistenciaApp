@@ -34,9 +34,9 @@
                 <MenuBarItem x:Uid="ShellMenuBarItem_Views">
                     <MenuBarItem.Items>
                         <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Main" Command="{x:Bind ViewModel.MenuViewsMainCommand}" />
-                        <MenuFlyoutItem x:Uid="ShellMenuItem_Views_DataGrid" Command="{x:Bind ViewModel.MenuViewsDataGridCommand}" />
+                        <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Students" Command="{x:Bind ViewModel.MenuViewsStudentsCommand}" />
                         <MenuFlyoutItem x:Uid="ShellMenuItem_Views_AssistancePage" Command="{x:Bind ViewModel.MenuViewsAssistancePageCommand}" />
-                        <MenuFlyoutItem x:Uid="ShellMenuItem_Views_ListDetails" Command="{x:Bind ViewModel.MenuViewsListDetailsCommand}" />
+                        <MenuFlyoutItem x:Uid="ShellMenuItem_Views_CreateAssistancePage" Command="{x:Bind ViewModel.MenuViewsCreateAssistancePageCommand}" />
                     </MenuBarItem.Items>
                 </MenuBarItem>
             </MenuBar>

@@ -83,11 +83,6 @@ public partial class App : Application
             // Views and ViewModels
             services.AddTransient<SettingsViewModel>();
             services.AddTransient<SettingsPage>();
-            services.AddTransient<ListDetailsViewModel>();
-            services.AddTransient<ContentGridDetailViewModel>();
-            services.AddTransient<ContentGridDetailPage>();
-            services.AddTransient<ContentGridViewModel>();
-            services.AddTransient<ContentGridPage>();
             services.AddTransient<EstudiantesDataGridViewModel>();
             services.AddTransient<RestorePasswordPage>();
             services.AddTransient<MainViewModel>();
@@ -96,6 +91,8 @@ public partial class App : Application
             services.AddTransient<ShellViewModel>();
             services.AddTransient<LoginViewModel>();
             services.AddTransient<LoginPage>();
+            services.AddTransient<AgregarAsistenciaPage>();
+            services.AddTransient<AgregarAsistenciaViewModel>();
 
             // Configuration
             services.Configure<LocalSettingsOptions>(context.Configuration.GetSection(nameof(LocalSettingsOptions)));

@@ -25,17 +25,7 @@ public partial class ShellViewModel : ObservableRecipient
         get;
     }
 
-    public ICommand MenuViewsListDetailsCommand
-    {
-        get;
-    }
-
-    public ICommand MenuViewsContentGridCommand
-    {
-        get;
-    }
-
-    public ICommand MenuViewsDataGridCommand
+    public ICommand MenuViewsStudentsCommand
     {
         get;
     }
@@ -46,6 +36,11 @@ public partial class ShellViewModel : ObservableRecipient
     }
 
     public ICommand MenuViewsAssistancePageCommand
+    {
+        get;
+    }
+
+    public ICommand MenuViewsCreateAssistancePageCommand
     {
         get;
     }
@@ -63,9 +58,9 @@ public partial class ShellViewModel : ObservableRecipient
         MenuFileExitCommand = new RelayCommand(OnMenuFileExit);
         MenuSettingsCommand = new RelayCommand(OnMenuSettings);
         MenuViewsAssistancePageCommand = new RelayCommand(OnMenuViewsAssistance);
-        MenuViewsContentGridCommand = new RelayCommand(OnMenuViewsContentGrid);
-        MenuViewsDataGridCommand = new RelayCommand(OnMenuViewsDataGrid);
+        MenuViewsStudentsCommand = new RelayCommand(OnMenuViewsStudents);
         MenuViewsMainCommand = new RelayCommand(OnMenuViewsMain);
+        MenuViewsCreateAssistancePageCommand = new RelayCommand(OnMenuCreateAssistance);
     }
 
     private void OnNavigated(object sender, NavigationEventArgs e) => IsBackEnabled = NavigationService.CanGoBack;
@@ -76,9 +71,9 @@ public partial class ShellViewModel : ObservableRecipient
 
     private void OnMenuViewsAssistance() => NavigationService.NavigateTo(typeof(AsistenciaViewModel).FullName!);
 
-    private void OnMenuViewsContentGrid() => NavigationService.NavigateTo(typeof(ContentGridViewModel).FullName!);
-
-    private void OnMenuViewsDataGrid() => NavigationService.NavigateTo(typeof(EstudiantesDataGridViewModel).FullName!);
+    private void OnMenuViewsStudents() => NavigationService.NavigateTo(typeof(EstudiantesDataGridViewModel).FullName!);
 
     private void OnMenuViewsMain() => NavigationService.NavigateTo(typeof(MainViewModel).FullName!);
+
+    private void OnMenuCreateAssistance() => NavigationService.NavigateTo(typeof(CreateAsistenciaViewModel).FullName!);
 }

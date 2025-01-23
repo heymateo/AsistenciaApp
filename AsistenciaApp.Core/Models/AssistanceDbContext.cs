@@ -30,6 +30,10 @@ public class AssistanceDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        // Configure entity mappings, relationships, etc.
+
+        modelBuilder.Entity<Registro_Asistencia>()
+        .HasOne(r => r.Estudiante)
+        .WithMany(e => e.Registro_Asistencia)
+        .HasForeignKey(r => r.Id_Estudiante);
     }
 }

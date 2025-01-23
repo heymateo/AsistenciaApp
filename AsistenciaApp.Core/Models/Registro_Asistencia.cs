@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AsistenciaApp.Core.Models;
 
@@ -16,5 +17,7 @@ public class Registro_Asistencia
     public bool Asistio { get; set; }
 
     public Estudiante Estudiante { get; set; } = null!;
+    [NotMapped]
     public string NombreEstudiante { get; set; } = string.Empty;
+
 }

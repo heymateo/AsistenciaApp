@@ -16,13 +16,11 @@ public class PageService : IPageService
     {
         Configure<MainViewModel, MainPage>();
         Configure<EstudiantesDataGridViewModel, EstudiantesDataGrid>();
-        Configure<ContentGridViewModel, ContentGridPage>();
-        Configure<ContentGridDetailViewModel, ContentGridDetailPage>();
-        Configure<ListDetailsViewModel, ListDetailsPage>();
         Configure<SettingsViewModel, SettingsPage>();
         Configure<LoginViewModel, LoginPage>();
         Configure<ShellViewModel,  ShellPage>();
         Configure<AsistenciaViewModel, AsistenciaPage>();
+        Configure<CreateAsistenciaViewModel, AgregarAsistenciaPage>();
     }
 
     public Type GetPageType(string key)
