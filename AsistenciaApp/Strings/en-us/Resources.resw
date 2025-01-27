@@ -133,7 +133,7 @@
     <value>Salir</value>
   </data>
   <data name="Main_Title.Text" xml:space="preserve">
-    <value>Menú</value>
+    <value>Inicio</value>
     <comment>Page title for MainPage</comment>
   </data>
   <data name="ShellMenuItem_Views_Students.Text" xml:space="preserve">
@@ -202,6 +202,9 @@
     <value>Asistencia</value>
   </data>
   <data name="ShellMenuItem_Views_Main.Text" xml:space="preserve">
-    <value>Menú</value>
+    <value>Inicio</value>
+  </data>
+  <data name="ShellMenuItem_Views_CreateAssistancePage.Text" xml:space="preserve">
+    <value>Crear Asistencia</value>
   </data>
 </root>

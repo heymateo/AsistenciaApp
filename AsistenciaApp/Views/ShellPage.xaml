@@ -29,17 +29,22 @@
                 https://docs.microsoft.com/windows/uwp/app-resources/localize-strings-ui-manifest#refer-to-a-string-resource-identifier-from-xaml
                 -->
                 <MenuBarItem x:Uid="ShellMenuBarItem_File">
+                    <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Main" Command="{x:Bind ViewModel.MenuViewsMainCommand}"/>
                     <MenuFlyoutItem x:Uid="ShellMenuItem_File_Exit" Command="{x:Bind ViewModel.MenuFileExitCommand}" />
                 </MenuBarItem>
+
                 <MenuBarItem x:Uid="ShellMenuBarItem_Views">
                     <MenuBarItem.Items>
-                        <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Main" Command="{x:Bind ViewModel.MenuViewsMainCommand}" />
+                        
                         <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Students" Command="{x:Bind ViewModel.MenuViewsStudentsCommand}" />
-                        <MenuFlyoutItem x:Uid="ShellMenuItem_Views_AssistancePage" Command="{x:Bind ViewModel.MenuViewsAssistancePageCommand}" />
-                        <MenuFlyoutItem x:Uid="ShellMenuItem_Views_CreateAssistancePage" Command="{x:Bind ViewModel.MenuViewsCreateAssistancePageCommand}" />
+                        <MenuFlyoutSubItem x:Uid="ShellMenuItem_Views_AssistancePage">
+                            <MenuFlyoutItem x:Uid="ShellMenuItem_Views_AssistancePage" Command="{x:Bind ViewModel.MenuViewsAssistancePageCommand}" />
+                            <MenuFlyoutItem x:Uid="ShellMenuItem_Views_CreateAssistancePage" Command="{x:Bind ViewModel.MenuViewsCreateAssistancePageCommand}" />
+                        </MenuFlyoutSubItem>
                     </MenuBarItem.Items>
                 </MenuBarItem>
             </MenuBar>
+            
             <AppBarButton Grid.Column="1" x:Name="ShellMenuBarSettingsButton" x:Uid="ShellMenuBarSettingsButton"
                           AnimatedIcon.State="Normal"
                           PointerEntered="ShellMenuBarSettingsButton_PointerEntered"

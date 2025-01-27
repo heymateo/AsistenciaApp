@@ -29,17 +29,22 @@
                 https://docs.microsoft.com/windows/uwp/app-resources/localize-strings-ui-manifest#refer-to-a-string-resource-identifier-from-xaml
                 -->
                 <MenuBarItem x:Uid="ShellMenuBarItem_File">
+                    <MenuFlyoutItem x:ConnectionId='9' x:Uid="ShellMenuItem_Views_Main"                                                  />
                     <MenuFlyoutItem x:ConnectionId='10' x:Uid="ShellMenuItem_File_Exit"                                                  />
                 </MenuBarItem>
+
                 <MenuBarItem x:Uid="ShellMenuBarItem_Views">
                     <MenuBarItem.Items>
-                        <MenuFlyoutItem x:ConnectionId='6' x:Uid="ShellMenuItem_Views_Main"                                                   />
-                        <MenuFlyoutItem x:ConnectionId='7' x:Uid="ShellMenuItem_Views_Students"                                                       />
-                        <MenuFlyoutItem x:ConnectionId='8' x:Uid="ShellMenuItem_Views_AssistancePage"                                                             />
-                        <MenuFlyoutItem x:ConnectionId='9' x:Uid="ShellMenuItem_Views_CreateAssistancePage"                                                                   />
+                        
+                        <MenuFlyoutItem x:ConnectionId='6' x:Uid="ShellMenuItem_Views_Students"                                                       />
+                        <MenuFlyoutSubItem x:Uid="ShellMenuItem_Views_AssistancePage">
+                            <MenuFlyoutItem x:ConnectionId='7' x:Uid="ShellMenuItem_Views_AssistancePage"                                                             />
+                            <MenuFlyoutItem x:ConnectionId='8' x:Uid="ShellMenuItem_Views_CreateAssistancePage"                                                                   />
+                        </MenuFlyoutSubItem>
                     </MenuBarItem.Items>
                 </MenuBarItem>
             </MenuBar>
+            
             <AppBarButton x:ConnectionId='4' Grid.Column="1" x:Name="ShellMenuBarSettingsButton" x:Uid="ShellMenuBarSettingsButton"
                           AnimatedIcon.State="Normal"
                                                                                     

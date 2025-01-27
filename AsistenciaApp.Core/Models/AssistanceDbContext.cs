@@ -35,5 +35,9 @@ public class AssistanceDbContext : DbContext
         .HasOne(r => r.Estudiante)
         .WithMany(e => e.Registro_Asistencia)
         .HasForeignKey(r => r.Id_Estudiante);
+
+        modelBuilder.Entity<Registro_Asistencia>()
+           .Property(r => r.Fecha)
+           .HasColumnType("date");
     }
 }

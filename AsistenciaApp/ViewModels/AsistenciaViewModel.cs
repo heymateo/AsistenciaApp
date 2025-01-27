@@ -8,11 +8,9 @@ namespace AsistenciaApp.ViewModels;
 public partial class AsistenciaViewModel : ObservableObject 
 {
     [ObservableProperty]
-    // An UI-interactive "FilteredEntries" property will be auto-generated.
     private ObservableCollection<Registro_Asistencia>? filteredEntries;
 
     [ObservableProperty]
-    // An UI-interactive "TargetDate" property will be auto-generated.
     private DateTime? targetDate;
 
 
@@ -31,7 +29,7 @@ public partial class AsistenciaViewModel : ObservableObject
         var query = await (from ra in dbContext.Registro_Asistencia
                            join e in dbContext.Estudiante
                            on ra.Id_Estudiante equals e.Id_Estudiante
-                           where ra.Fecha.Date == TargetDate.Value.Date
+                           where ra.Fecha == TargetDate.Value
                            select new
                            {
                                ra.Id_Registro,
@@ -42,7 +40,6 @@ public partial class AsistenciaViewModel : ObservableObject
                                NombreEstudiante = e.Nombre
                            }).ToListAsync();
 
-        // Mapea el resultado a una lista de Registro_Asistencia
         var result = query.Select(item => new Registro_Asistencia
         {
             Id_Registro = item.Id_Registro,
@@ -56,7 +53,6 @@ public partial class AsistenciaViewModel : ObservableObject
         FilteredEntries = new ObservableCollection<Registro_Asistencia>(result);
     }
 
-    // Automatically refresh data when TargetDate changes
     partial void OnTargetDateChanged(DateTime? value)
     {
         if (value != null)

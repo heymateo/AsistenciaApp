@@ -19,5 +19,4 @@ public class Registro_Asistencia
     public Estudiante Estudiante { get; set; } = null!;
     [NotMapped]
     public string NombreEstudiante { get; set; } = string.Empty;
-
 }

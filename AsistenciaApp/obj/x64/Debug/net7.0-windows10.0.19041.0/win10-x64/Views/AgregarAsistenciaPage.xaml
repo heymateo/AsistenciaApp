@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Page
     x:Class="AsistenciaApp.Views.AgregarAsistenciaPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -14,32 +14,32 @@
         <converters:DateToStringConverter x:Key="DateToStringConverter" />
     </Page.Resources>
 
-    <StackPanel Padding="20" Spacing="15" x:Name="EstudiantePanel">
+    <StackPanel x:ConnectionId='2' Padding="20" Spacing="15" x:Name="EstudiantePanel">
         <TextBlock Text="Agregar Asistencia" Style="{StaticResource HeaderTextBlockStyle}" />
 
-        <DatePicker x:Name="FechaAsistenciaPicker" 
+        <DatePicker x:ConnectionId='3' x:Name="FechaAsistenciaPicker" 
             Date="{Binding FechaActual, Mode=TwoWay}"  />
 
-        <TextBox x:Name="CedulaTextBox" PlaceholderText="Ingrese su cédula:" HorizontalAlignment="Left" Width="300"/>
+        <TextBox x:ConnectionId='4' x:Name="CedulaTextBox" PlaceholderText="Ingrese su cédula:" HorizontalAlignment="Left" Width="300"/>
 
-        <Button Content="Registrar Asistencia"
-                Click="RegistrarAsistenciaButton_Click" />
+        <Button x:ConnectionId='5' Content="Registrar Asistencia"
+                                                        />
 
-        <StackPanel x:Name="EstudianteDetallesPanel" Visibility="Collapsed">
-            <TextBlock x:Name="NombreTextBlock" Text="Nombre: " />
-            <TextBlock x:Name="SeccionTextBlock" Text="Sección: " />
+        <StackPanel x:ConnectionId='6' x:Name="EstudianteDetallesPanel" Visibility="Collapsed">
+            <TextBlock x:ConnectionId='11' x:Name="NombreTextBlock" Text="Nombre: " />
+            <TextBlock x:ConnectionId='12' x:Name="SeccionTextBlock" Text="Sección: " />
         </StackPanel>
 
-        <ListView x:Name="AsistenciasListView"
+        <ListView x:ConnectionId='7' x:Name="AsistenciasListView"
                   Header="Asistencias Registradas" 
                   ItemsSource="{Binding Asistencias}">
             <ListView.ItemTemplate>
-                <DataTemplate x:DataType="models:Registro_Asistencia">
+                <DataTemplate                                        >
                     <Grid>
                         <!-- Menú contextual con opción para eliminar -->
                         <Grid.ContextFlyout>
                             <MenuFlyout>
-                                <MenuFlyoutItem Text="Eliminar" Click="EliminarAsistenciaMenuFlyoutItem_Click"/>
+                                <MenuFlyoutItem x:ConnectionId='10' Text="Eliminar"                                               />
                             </MenuFlyout>
                         </Grid.ContextFlyout>
 
@@ -74,3 +74,4 @@
         </ListView>
     </StackPanel>
 </Page>
+
