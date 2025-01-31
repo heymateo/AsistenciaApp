@@ -7,33 +7,35 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d">
-    
+
     <Grid x:Name="ContentArea">
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
+            <RowDefinition Height="58" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <RelativePanel>
 
-        <StackPanel HorizontalAlignment="Center">
-            <ComboBox 
-                ItemsSource="{x:Bind ViewModel.SeccionesDisponibles, Mode=OneWay}" 
-                SelectedItem="{x:Bind ViewModel.SeccionSeleccionada, Mode=TwoWay}" 
-                PlaceholderText="Seleccione una sección" 
-                Width="200" />
-        </StackPanel>
-
-
-        <TextBlock
-        Grid.Row="0"
+            <TextBlock
         x:Uid="DataGrid_Title"
-        Style="{StaticResource PageTitleStyle}"/>
-        
+        Name="Header"
+        Style="{StaticResource HeaderTextBlockStyle}"/>
+
+            <ComboBox 
+            ItemsSource="{x:Bind ViewModel.SeccionesDisponibles, Mode=OneWay}" 
+            SelectedItem="{x:Bind ViewModel.SeccionSeleccionada, Mode=TwoWay}" 
+            RelativePanel.RightOf="Header" Margin="20,20,0,0"
+            PlaceholderText="Seleccione una sección" 
+            Width="200" />
+        </RelativePanel>
+
+
+
         <controls:DataGrid
         Grid.Row="1"
         AutoGenerateColumns="False"
         GridLinesVisibility="Horizontal"
-        ItemsSource="{x:Bind ViewModel.Source, Mode=OneWay}">
+        ItemsSource="{x:Bind ViewModel.FiltradoEstudiantes, Mode=OneWay}">
             <controls:DataGrid.Resources>
                 <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundColor" Color="Transparent" />
             </controls:DataGrid.Resources>

@@ -49,6 +49,8 @@ public partial class App : Application
     {
         InitializeComponent();
 
+        Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "es-ES";
+
         var dbFilePath = Path.Combine(AppContext.BaseDirectory, "DB_ASSISTANCE.db");
 
         Host = Microsoft.Extensions.Hosting.Host.

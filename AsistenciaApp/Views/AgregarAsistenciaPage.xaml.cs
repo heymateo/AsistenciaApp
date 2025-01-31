@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using AsistenciaApp.Core.Models;
 using AsistenciaApp.ViewModels;
 using Microsoft.EntityFrameworkCore;
@@ -18,17 +19,35 @@ public sealed partial class AgregarAsistenciaPage : Page
 
     private async void EliminarAsistenciaMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
     {
-        var selectedAsistencia = (sender as MenuFlyoutItem).DataContext as Registro_Asistencia;
-        if (selectedAsistencia != null)
+        var selectedAsistencia = (sender as MenuFlyoutItem)?.DataContext as Registro_Asistencia;
+
+        if (selectedAsistencia == null)
         {
-            // Eliminar la asistencia de la base de datos
-            _dbContext.Registro_Asistencia.Remove(selectedAsistencia);
+            Debug.WriteLine("El registro seleccionado (selectedAsistencia) es nulo.");
+            return;
+        }
 
-            // Guardar cambios en la base de datos
-            await _dbContext.SaveChangesAsync();
+        try
+        {
+            using (var dbContext = new AssistanceDbContext())
+            {
+                if (dbContext.Entry(selectedAsistencia).State == EntityState.Detached)
+                {
+                    dbContext.Registro_Asistencia.Attach(selectedAsistencia);
+                }
 
-            // Actualizar la lista en memoria (esto puede variar según tu implementación)
+                dbContext.Registro_Asistencia.Remove(selectedAsistencia);
+
+                await dbContext.SaveChangesAsync();
+            }
+
             _viewModel.Asistencias.Remove(selectedAsistencia);
+
+            Debug.WriteLine("El registro fue eliminado correctamente.");
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Ocurrió un error al eliminar el registro: {ex.Message}");
         }
     }
 
@@ -58,6 +77,8 @@ public sealed partial class AgregarAsistenciaPage : Page
                 };
 
                 await _viewModel.RegistrarAsistenciaAsync(nuevaAsistencia);
+
+                await MostrarDialogo("Éxito", "La asistencia fue registrada correctamente.");
             }
 
             else

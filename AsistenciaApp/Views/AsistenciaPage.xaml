@@ -12,32 +12,67 @@
         <converters:DateToStringConverter x:Key="DateToStringConverter" />
     </Page.Resources>
 
-    <Grid ColumnDefinitions="Auto,*">
+    <RelativePanel>
+
+        <TextBlock
+        x:Name="Header"
+        Text="Asistencia"
+        Style="{StaticResource HeaderTextBlockStyle}"
+        RelativePanel.AlignLeftWithPanel="True"
+        RelativePanel.AlignTopWithPanel="True" />
+
         <CalendarView
-            Grid.Column="0"
-            Language="es"
-            VerticalAlignment="Top"
-            SelectedDatesChanged="CalendarView_SelectedDatesChanged"
-            SelectionMode="Single" />
-        
+        x:Name="CalendarView"
+        RelativePanel.Below="Header"
+        RelativePanel.AlignLeftWithPanel="True"
+        Margin="0,16,0,0"
+        Height="400"
+        Width="400"
+        Language="es"
+        SelectionMode="Single"
+        SelectedDatesChanged="CalendarView_SelectedDatesChanged" />
+
         <ListView
-            Grid.Column="1"
-            ItemsSource="{x:Bind ViewModel.FilteredEntries, Mode=OneWay}">
+        x:Name="AsistenciaListView"
+        RelativePanel.RightOf="CalendarView"
+        RelativePanel.AlignTopWith="CalendarView"
+        RelativePanel.AlignBottomWith="CalendarView"
+        Margin="16,0,0,0"
+        Width="600"
+        ItemsSource="{x:Bind ViewModel.FilteredEntries, Mode=OneWay}">
+            <ListView.Header>
+                
+                <Grid Background="DimGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Fecha" FontWeight="Bold" Foreground="White"  Margin="10,5" />
+                    <TextBlock Grid.Column="1" Text="Nombre del estudiante" FontWeight="Bold" Foreground="White"  Margin="10,5" />
+                    <TextBlock Grid.Column="2" Text="Hora de entrada" FontWeight="Bold" Foreground="White"  Margin="10,5" />
+                </Grid>
+            </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="models:Registro_Asistencia">
-                    <Grid ColumnDefinitions="Auto,Auto,Auto">
+                    <Grid ColumnDefinitions="2*,3*,2*">
                         <TextBlock
-                            Grid.Column="0"
-                            Text="{x:Bind Fecha, Converter={StaticResource DateToStringConverter}}" Margin="0,0,20,0"/>
+                        Grid.Column="0"
+                        Text="{x:Bind Fecha, Converter={StaticResource DateToStringConverter}}"
+                        Margin="10,5" />
                         <TextBlock
-                            Grid.Column="1"
-                            Text="{x:Bind NombreEstudiante}" Margin="0,0,20,0"/>
-                        <TextBlock Grid.Column="2"
-                            Text="{x:Bind Hora_Entrada}" />
+                        Grid.Column="1"
+                        Text="{x:Bind NombreEstudiante}"
+                        Margin="10,5" />
+                        <TextBlock
+                        Grid.Column="2"
+                        Text="{x:Bind Hora_Entrada}"
+                        Margin="10,5" />
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </Grid>
+    </RelativePanel>
+
 </Page>
 

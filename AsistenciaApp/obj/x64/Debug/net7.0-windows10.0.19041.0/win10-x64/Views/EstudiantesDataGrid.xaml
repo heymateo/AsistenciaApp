@@ -7,33 +7,35 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d">
-    
+
     <Grid x:ConnectionId='2' x:Name="ContentArea">
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
+            <RowDefinition Height="58" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <RelativePanel>
 
-        <StackPanel HorizontalAlignment="Center">
-            <ComboBox x:ConnectionId='4' 
-                                                                                   
-                                                                                   
-                PlaceholderText="Seleccione una sección" 
-                Width="200" />
-        </StackPanel>
-
-
-        <TextBlock
-        Grid.Row="0"
+            <TextBlock x:ConnectionId='4'
         x:Uid="DataGrid_Title"
-        Style="{StaticResource PageTitleStyle}"/>
-        
+        Name="Header"
+        Style="{StaticResource HeaderTextBlockStyle}"/>
+
+            <ComboBox x:ConnectionId='5' 
+                                                                               
+                                                                               
+            RelativePanel.RightOf="Header" Margin="20,20,0,0"
+            PlaceholderText="Seleccione una sección" 
+            Width="200" />
+        </RelativePanel>
+
+
+
         <controls:DataGrid x:ConnectionId='3'
         Grid.Row="1"
         AutoGenerateColumns="False"
         GridLinesVisibility="Horizontal"
-                                                            >
+                                                                         >
             <controls:DataGrid.Resources>
                 <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundColor" Color="Transparent" />
             </controls:DataGrid.Resources>
