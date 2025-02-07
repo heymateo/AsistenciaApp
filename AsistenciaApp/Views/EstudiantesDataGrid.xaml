@@ -19,12 +19,12 @@
             <TextBlock
         x:Uid="DataGrid_Title"
         Name="Header"
-        Style="{StaticResource HeaderTextBlockStyle}"/>
+        Style="{StaticResource HeaderTextBlockStyle}" />
 
             <ComboBox 
             ItemsSource="{x:Bind ViewModel.SeccionesDisponibles, Mode=OneWay}" 
             SelectedItem="{x:Bind ViewModel.SeccionSeleccionada, Mode=TwoWay}" 
-            RelativePanel.RightOf="Header" Margin="20,20,0,0"
+            RelativePanel.RightOf="Header" Margin="56,20,0,0"
             PlaceholderText="Seleccione una sección" 
             Width="200" />
         </RelativePanel>
@@ -35,7 +35,8 @@
         Grid.Row="1"
         AutoGenerateColumns="False"
         GridLinesVisibility="Horizontal"
-        ItemsSource="{x:Bind ViewModel.FiltradoEstudiantes, Mode=OneWay}">
+        ItemsSource="{x:Bind ViewModel.FiltradoEstudiantes, Mode=OneWay}"
+            Margin="0,36,0,40">
             <controls:DataGrid.Resources>
                 <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundColor" Color="Transparent" />
             </controls:DataGrid.Resources>

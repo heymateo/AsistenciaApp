@@ -68,11 +68,22 @@ public sealed partial class AgregarAsistenciaPage : Page
 
             if (estudiante != null)
             {
+                var fechaHoy = FechaAsistenciaPicker.Date.DateTime.Date;
+
+                bool existeAsistencia = db.Registro_Asistencia.Any(a => a.Id_Estudiante == estudiante.Id_Estudiante && a.Fecha == fechaHoy);
+
+                if (existeAsistencia)
+                {
+                    await MostrarDialogo("Error", "El estudiante ya tiene una asistencia registrada para hoy");
+                    return;
+                }
+
                 var nuevaAsistencia = new Registro_Asistencia
                 {
                     Id_Estudiante = estudiante.Id_Estudiante,
                     Fecha = FechaAsistenciaPicker.Date.DateTime.Date,
                     Hora_Entrada = TimeOnly.FromDateTime(DateTime.Now),
+                    NombreEstudiante = estudiante.Nombre,
                     Asistio = true
                 };
 

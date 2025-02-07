@@ -15,72 +15,95 @@
         <converters:DateToStringConverter x:Key="DateToStringConverter" />
     </Page.Resources>
 
-    <Grid Padding="20">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Spacing="15">
-            <TextBlock Text="Ingresar Asistencia" Style="{StaticResource HeaderTextBlockStyle}" />
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="Ingresar Asistencia" Style="{StaticResource HeaderTextBlockStyle}" Margin="36,32,0,24"/>
 
-            <DatePicker
-                x:Name="FechaAsistenciaPicker"
-                Date="{Binding FechaActual, Mode=TwoWay}"
-                IsEnabled="False">
-            </DatePicker>
+            <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" 
+                    CornerRadius="20"
+                    Padding="20"
+                    Width="400"
+                    Height="250"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Opacity="0.9">
+                <StackPanel>
+                    <DatePicker x:Name="FechaAsistenciaPicker"
+                                Date="{Binding FechaActual, Mode=TwoWay}"
+                                IsEnabled="False"
+                                Margin="36,20,0,16">
+                    </DatePicker>
 
-            <TextBox x:Name="CedulaTextBox" PlaceholderText="Ingrese su cédula:" HorizontalAlignment="Left" Width="300"/>
+                    <TextBox x:Name="CedulaTextBox" PlaceholderText="Ingrese su cédula:" HorizontalAlignment="Left" Width="300"
+                             Margin="36,20,0,0"/>
 
-            <Button Content="Registrar Asistencia"
-                    Click="RegistrarAsistenciaButton_Click" />
-
-            <StackPanel x:Name="EstudianteDetallesPanel" Visibility="Collapsed">
-                <TextBlock x:Name="NombreTextBlock" Text="Nombre: " />
-                <TextBlock x:Name="SeccionTextBlock" Text="Sección: " />
-            </StackPanel>
+                    <Button Content="Registrar Asistencia"
+                            Click="RegistrarAsistenciaButton_Click"
+                            Margin="36,40,0,0"/>
+                </StackPanel>
+            </Border>
         </StackPanel>
 
-        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
-            <ListView x:Name="AsistenciasListView"
-                      Header="Asistencias Registradas" 
+        <Grid Grid.Column="1">
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                <ListView x:Name="AsistenciasListView"
+                      Header="{Binding HeaderText}" 
                       ItemsSource="{Binding Asistencias}">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="models:Registro_Asistencia">
-                        <Grid>
-                            <Grid.ContextFlyout>
-                                <MenuFlyout>
-                                    <MenuFlyoutItem Text="Eliminar" Click="EliminarAsistenciaMenuFlyoutItem_Click"/>
-                                </MenuFlyout>
-                            </Grid.ContextFlyout>
+                    
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" FontSize="14" Margin="10" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
 
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="3"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
 
-                            <Ellipse Grid.RowSpan="3" Width="32" Height="32" Margin="6" 
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Registro_Asistencia">
+                            <Grid>
+                                <Grid.ContextFlyout>
+                                    <MenuFlyout>
+                                        <MenuFlyoutItem Text="Eliminar" Click="EliminarAsistenciaMenuFlyoutItem_Click"/>
+                                    </MenuFlyout>
+                                </Grid.ContextFlyout>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Ellipse Grid.RowSpan="3" Width="32" Height="32" Margin="6" 
                                      VerticalAlignment="Center" HorizontalAlignment="Center" 
                                      Fill="{ThemeResource ControlStrongFillColorDefaultBrush}"/>
 
-                            <TextBlock Grid.Column="1" Grid.Row="0"
+                                <TextBlock Grid.Column="1" Grid.Row="0"
                                        Text="{Binding Fecha, Converter={StaticResource DateToStringConverter}}"
-                                       Style="{ThemeResource BaseTextBlockStyle}" Margin="12,6,0,0"/>
-                            <TextBlock Grid.Column="1" Grid.Row="1"
+                                       Style="{ThemeResource BodyTextBlockStyle}" Margin="12,6,0,0"/>
+                                <TextBlock Grid.Column="1" Grid.Row="1"
                                        Text="{Binding NombreEstudiante}"
-                                       Style="{ThemeResource BodyTextBlockStyle}" Margin="12,0,0,6"/>
-                            <TextBlock Grid.Column="1" Grid.Row="2"
+                                       Style="{ThemeResource BodyTextBlockStyle}" Margin="12,6,0,6"/>
+                                <TextBlock Grid.Column="1" Grid.Row="2"
                                        Text="{Binding Hora_Entrada}"
                                        Style="{ThemeResource BodyTextBlockStyle}" Margin="12,0,0,6"/>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </ScrollViewer>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>

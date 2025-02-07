@@ -14,6 +14,13 @@ public class AgregarAsistenciaViewModel : INotifyPropertyChanged
     {
         _dbContext = dbContext;
         Asistencias = new ObservableCollection<Registro_Asistencia>();
+
+        // Escuchar cambios en la lista de asistencias
+        Asistencias.CollectionChanged += (s, e) =>
+        {
+            HeaderText = Asistencias.Any() ? "Asistencias Registradas" : "No se encontraron asistencias.";
+        };
+
         _ = LoadAsistenciasAsync();  
     }
 
@@ -22,6 +29,7 @@ public class AgregarAsistenciaViewModel : INotifyPropertyChanged
         var fechaHoy = DateTime.Today;
 
         var asistenciasFromDb = await _dbContext.Registro_Asistencia
+            .Include(a => a.Estudiante)  // Cargar relación con Estudiante
             .Where(a => a.Fecha.Date == fechaHoy)
             .ToListAsync();
 
@@ -29,19 +37,44 @@ public class AgregarAsistenciaViewModel : INotifyPropertyChanged
 
         foreach (var asistencia in asistenciasFromDb)
         {
+            asistencia.NombreEstudiante = asistencia.Estudiante?.Nombre ?? "Desconocido"; // Asignar nombre manualmente
             Asistencias.Add(asistencia);
         }
+
+        // Actualizar el encabezado dinámicamente
+        HeaderText = Asistencias.Any() ? "Asistencias Registradas" : "No se encontraron asistencias.";
 
         OnPropertyChanged(nameof(Asistencias));
     }
 
+
     public async Task RegistrarAsistenciaAsync(Registro_Asistencia nuevaAsistencia)
     {
+        var existingAsistencia = await _dbContext.Registro_Asistencia
+         .Where(a => a.Id_Registro == nuevaAsistencia.Id_Registro)
+         .FirstOrDefaultAsync();
+
+        if (existingAsistencia != null)
+        {
+            throw new InvalidOperationException("Ya existe una asistencia para este estudiante en la fecha especificada.");
+        }
+
+        existingAsistencia.Asistio = nuevaAsistencia.Asistio;
+        existingAsistencia.Fecha = nuevaAsistencia.Fecha;
+        existingAsistencia.Hora_Entrada = nuevaAsistencia.Hora_Entrada;
+
         _dbContext.Registro_Asistencia.Add(nuevaAsistencia);
         await _dbContext.SaveChangesAsync();
 
-        Asistencias.Add(nuevaAsistencia);  
+        nuevaAsistencia.Estudiante = await _dbContext.Estudiante.FindAsync(nuevaAsistencia.Id_Estudiante);
+        nuevaAsistencia.NombreEstudiante = nuevaAsistencia.Estudiante?.Nombre ?? "Desconocido";
+
+        Asistencias.Add(nuevaAsistencia);
+
+        // Actualizar el encabezado
+        HeaderText = "Asistencias Registradas";
     }
+
 
 
     private DateTimeOffset _fechaActual = DateTimeOffset.Now;
@@ -55,6 +88,20 @@ public class AgregarAsistenciaViewModel : INotifyPropertyChanged
             {
                 _fechaActual = value;
                 OnPropertyChanged(nameof(FechaActual));
+            }
+        }
+    }
+
+    private string _headerText = "No se encontraron asistencias.";
+    public string HeaderText
+    {
+        get => _headerText;
+        set
+        {
+            if (_headerText != value)
+            {
+                _headerText = value;
+                OnPropertyChanged(nameof(HeaderText));
             }
         }
     }
