@@ -58,9 +58,9 @@ public partial class App : Application
         UseContentRoot(AppContext.BaseDirectory).
         ConfigureServices((context, services) =>
         {
-            //DbContext
+            // DbContext
             services.AddDbContext<AssistanceDbContext>(options =>
-                options.UseSqlite($"Data Source={dbFilePath}")); // Use your actual connection string
+                options.UseSqlite($"Data Source={dbFilePath}"));
 
             // Default Activation Handler
             services.AddTransient<ActivationHandler<LaunchActivatedEventArgs>, DefaultActivationHandler>();
@@ -98,6 +98,13 @@ public partial class App : Application
 
             // Configuration
             services.Configure<LocalSettingsOptions>(context.Configuration.GetSection(nameof(LocalSettingsOptions)));
+
+            // Import Excel
+            services.AddSingleton<ImportExcelViewModel>();
+            services.AddSingleton<ShellViewModel>();
+
+            // Content Dialog
+            services.AddSingleton<ContentDialogService>();
         }).
         Build();
 
@@ -127,7 +134,7 @@ public partial class App : Application
         }
         else
         {
-            rootFrame.Navigate(typeof(MainWindow));
+            rootFrame.Navigate(typeof(MainPage));
         }
 
         MainWindow.Activate();

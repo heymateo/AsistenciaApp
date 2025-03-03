@@ -14,10 +14,12 @@
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        
         <Grid x:ConnectionId='2' Grid.Row="0" x:Name="AppTitleBar">
             <Image Source="/Assets/WindowIcon.ico" HorizontalAlignment="Left" Width="16" Height="16" Margin="8,0"/>
-            <TextBlock x:ConnectionId='11' x:Name="AppTitleBarText" VerticalAlignment="Center" TextWrapping="NoWrap" Style="{StaticResource CaptionTextBlockStyle}" Margin="32, 0, 0, 0"/>
+            <TextBlock x:ConnectionId='14' x:Name="AppTitleBarText" VerticalAlignment="Center" TextWrapping="NoWrap" Style="{StaticResource CaptionTextBlockStyle}" Margin="32, 0, 0, 0"/>
         </Grid>
+        
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -29,28 +31,33 @@
                 https://docs.microsoft.com/windows/uwp/app-resources/localize-strings-ui-manifest#refer-to-a-string-resource-identifier-from-xaml
                 -->
                 <MenuBarItem x:Uid="ShellMenuBarItem_File">
-                    <MenuFlyoutItem x:ConnectionId='9' x:Uid="ShellMenuItem_Views_Main"                                                  />
-                    <MenuFlyoutItem x:ConnectionId='10' x:Uid="ShellMenuItem_File_Exit"                                                  />
+                    <MenuFlyoutItem x:ConnectionId='11' x:Uid="ShellMenuItem_Views_Main"                                                  />
+                    
+                    <MenuFlyoutItem x:ConnectionId='12' x:Uid="ShellMenuItem_Views_ImportExcel"
+                      Text="Importar"
+                                                                      />
+
+                    <MenuFlyoutItem x:ConnectionId='13' x:Uid="ShellMenuItem_File_Exit"                                                  />
                 </MenuBarItem>
 
                 <MenuBarItem x:Uid="ShellMenuBarItem_Views">
                     <MenuBarItem.Items>
                         
-                        <MenuFlyoutItem x:ConnectionId='6' x:Uid="ShellMenuItem_Views_Students"                                                       />
+                        <MenuFlyoutItem x:ConnectionId='8' x:Uid="ShellMenuItem_Views_Students"                                                       />
                         <MenuFlyoutSubItem x:Uid="ShellMenuItem_Views_AssistancePage">
-                            <MenuFlyoutItem x:ConnectionId='7' x:Uid="ShellMenuItem_Views_AssistancePage"                                                             />
-                            <MenuFlyoutItem x:ConnectionId='8' x:Uid="ShellMenuItem_Views_CreateAssistancePage"                                                                   />
+                            <MenuFlyoutItem x:ConnectionId='9' x:Uid="ShellMenuItem_Views_AssistancePage"                                                             />
+                            <MenuFlyoutItem x:ConnectionId='10' x:Uid="ShellMenuItem_Views_CreateAssistancePage"                                                                   />
                         </MenuFlyoutSubItem>
                     </MenuBarItem.Items>
                 </MenuBarItem>
             </MenuBar>
             
-            <AppBarButton x:ConnectionId='4' Grid.Column="1" x:Name="ShellMenuBarSettingsButton" x:Uid="ShellMenuBarSettingsButton"
+            <AppBarButton x:ConnectionId='6' Grid.Column="1" x:Name="ShellMenuBarSettingsButton" x:Uid="ShellMenuBarSettingsButton"
                           AnimatedIcon.State="Normal"
                                                                                     
                                                                                   
                                                                           >
-                <AnimatedIcon x:ConnectionId='5' x:Name="ShellMenuBarSettingsButtonIcon">
+                <AnimatedIcon x:ConnectionId='7' x:Name="ShellMenuBarSettingsButtonIcon">
                     <AnimatedIcon.Source>
                         <animatedvisuals:AnimatedSettingsVisualSource/>
                     </AnimatedIcon.Source>
@@ -61,8 +68,12 @@
             </AppBarButton>
         </Grid>
         <Grid Grid.Row="2" Margin="{StaticResource MenuBarContentMargin}">
-            <Frame x:ConnectionId='3' x:Name="NavigationFrame" />
+            <Frame x:ConnectionId='5' x:Name="NavigationFrame" />
         </Grid>
+
+        <ContentDialog x:ConnectionId='3' x:Name="GlobalDialog" Title="Importación" PrimaryButtonText="Aceptar">
+            <TextBlock x:ConnectionId='4' x:Name="MessageTextBlock"/>
+        </ContentDialog>
     </Grid>
 </Page>
 

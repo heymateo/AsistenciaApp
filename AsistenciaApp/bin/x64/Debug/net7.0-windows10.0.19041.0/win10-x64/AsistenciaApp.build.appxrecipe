@@ -595,6 +595,12 @@
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.55\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\closedxml\0.104.2\lib\netstandard2.1\ClosedXML.dll">
+      <PackagePath>ClosedXML.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\closedxml.parser\1.2.0\lib\netstandard2.1\ClosedXML.Parser.dll">
+      <PackagePath>ClosedXML.Parser.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\colorcode.core\2.0.13\lib\netstandard1.4\ColorCode.Core.dll">
       <PackagePath>ColorCode.Core.dll</PackagePath>
     </AppxPackagedFile>
@@ -636,6 +642,21 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\communitytoolkit.winui.ui.controls.primitives\7.1.2\lib\net5.0-windows10.0.18362\CommunityToolkit.WinUI.UI.Controls.Primitives.dll">
       <PackagePath>CommunityToolkit.WinUI.UI.Controls.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\documentformat.openxml\3.1.1\lib\netstandard2.0\DocumentFormat.OpenXml.dll">
+      <PackagePath>DocumentFormat.OpenXml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\documentformat.openxml.framework\3.1.1\lib\net6.0\DocumentFormat.OpenXml.Framework.dll">
+      <PackagePath>DocumentFormat.OpenXml.Framework.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\exceldatareader\3.7.0\lib\netstandard2.1\ExcelDataReader.dll">
+      <PackagePath>ExcelDataReader.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\exceldatareader.dataset\3.7.0\lib\netstandard2.1\ExcelDataReader.DataSet.dll">
+      <PackagePath>ExcelDataReader.DataSet.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\excelnumberformat\1.1.0\lib\netstandard2.0\ExcelNumberFormat.dll">
+      <PackagePath>ExcelNumberFormat.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.data.sqlite.core\7.0.20\lib\net6.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
@@ -799,6 +820,12 @@
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\prism.events\9.0.537\lib\net6.0\Prism.Events.dll">
       <PackagePath>Prism.Events.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\rbush\4.0.0\lib\netstandard2.0\RBush.dll">
+      <PackagePath>RBush.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\sixlabors.fonts\1.0.0\lib\netcoreapp3.1\SixLabors.Fonts.dll">
+      <PackagePath>SixLabors.Fonts.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\sqlitepclraw.bundle_e_sqlite3\2.1.4\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
     </AppxPackagedFile>
@@ -813,6 +840,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\system.diagnostics.eventlog\6.0.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll">
       <PackagePath>System.Diagnostics.EventLog.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\system.io.packaging\8.0.1\lib\net7.0\System.IO.Packaging.dll">
+      <PackagePath>System.IO.Packaging.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\winuiex\2.3.2\lib\net6.0-windows10.0.18362\WinUIEx.dll">
       <PackagePath>WinUIEx.dll</PackagePath>

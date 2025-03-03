@@ -1,5 +1,6 @@
 ﻿using AsistenciaApp.Contracts.Services;
 using AsistenciaApp.Helpers;
+using AsistenciaApp.Services;
 using AsistenciaApp.ViewModels;
 
 using Microsoft.UI.Xaml;
@@ -13,6 +14,8 @@ namespace AsistenciaApp.Views;
 
 public sealed partial class ShellPage : Page
 {
+    private ContentDialogService _contentDialogService;
+
     public ShellViewModel ViewModel
     {
         get;
@@ -21,7 +24,17 @@ public sealed partial class ShellPage : Page
     public ShellPage()
     {
         ViewModel = App.GetService<ShellViewModel>();
+        // Obtener el servicio
+        var dialogService = App.GetService<ContentDialogService>();
+
+        // Inicializar con el XamlRoot de la ventana
+        dialogService.Initialize(this.Content.XamlRoot);
         InitializeComponent();
+    }
+
+    public async Task ShowGlobalDialogAsync(string title, string message)
+    {
+        await _contentDialogService.ShowDialogAsync(title, message);
     }
 
     public ShellPage(ShellViewModel viewModel)

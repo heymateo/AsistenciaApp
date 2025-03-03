@@ -4,6 +4,8 @@ using AsistenciaApp.Contracts.Services;
 using AsistenciaApp.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 
 namespace AsistenciaApp.ViewModels;
 
@@ -66,11 +68,11 @@ public class LoginViewModel : ObservableObject
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    private void ExecuteLogin()
+    private async void ExecuteLogin()
     {
         if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
         {
-            ErrorMessage = "Por favor ingresa un usuario y una contraseña.";
+            await MostrarDialogo("Error", "Por favor ingresa un usuario y una contraseña");
             return;
         }
 
@@ -87,12 +89,35 @@ public class LoginViewModel : ObservableObject
             }
             else
             {
-                ErrorMessage = "Usuario o contraseña incorrectos.";
+                await MostrarDialogo("Error", "Usuario o contraseña incorrectos");
             }
         }
         catch (Exception ex)
         {
-            ErrorMessage = $"Ocurrió un error: {ex.Message}";
+            await MostrarDialogo("Error", $"{ex.Message}");
         }
+    }
+
+
+    private async Task MostrarDialogo(string titulo, string contenido)
+    {
+        var dialog = new ContentDialog
+        {
+            Title = titulo,
+            Content = contenido,
+            CloseButtonText = "Aceptar"
+        };
+
+        // Verifica si el `XamlRoot` está disponible desde la ventana principal
+        if (App.MainWindow.Content is FrameworkElement rootElement)
+        {
+            dialog.XamlRoot = rootElement.XamlRoot;
+        }
+        else
+        {
+            return; // Evita que se ejecute si no hay un `XamlRoot`
+        }
+
+        await dialog.ShowAsync();
     }
 }

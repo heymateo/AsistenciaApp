@@ -51,19 +51,20 @@ public class AgregarAsistenciaViewModel : INotifyPropertyChanged
     public async Task RegistrarAsistenciaAsync(Registro_Asistencia nuevaAsistencia)
     {
         var existingAsistencia = await _dbContext.Registro_Asistencia
-         .Where(a => a.Id_Registro == nuevaAsistencia.Id_Registro)
-         .FirstOrDefaultAsync();
+            .Where(a => a.Id_Registro == nuevaAsistencia.Id_Registro)
+            .FirstOrDefaultAsync();
 
         if (existingAsistencia != null)
         {
-            throw new InvalidOperationException("Ya existe una asistencia para este estudiante en la fecha especificada.");
+            existingAsistencia.Asistio = nuevaAsistencia.Asistio;
+            existingAsistencia.Fecha = nuevaAsistencia.Fecha;
+            existingAsistencia.Hora_Entrada = nuevaAsistencia.Hora_Entrada;
+        }
+        else
+        {
+            _dbContext.Registro_Asistencia.Add(nuevaAsistencia);
         }
 
-        existingAsistencia.Asistio = nuevaAsistencia.Asistio;
-        existingAsistencia.Fecha = nuevaAsistencia.Fecha;
-        existingAsistencia.Hora_Entrada = nuevaAsistencia.Hora_Entrada;
-
-        _dbContext.Registro_Asistencia.Add(nuevaAsistencia);
         await _dbContext.SaveChangesAsync();
 
         nuevaAsistencia.Estudiante = await _dbContext.Estudiante.FindAsync(nuevaAsistencia.Id_Estudiante);
@@ -71,10 +72,8 @@ public class AgregarAsistenciaViewModel : INotifyPropertyChanged
 
         Asistencias.Add(nuevaAsistencia);
 
-        // Actualizar el encabezado
         HeaderText = "Asistencias Registradas";
     }
-
 
 
     private DateTimeOffset _fechaActual = DateTimeOffset.Now;

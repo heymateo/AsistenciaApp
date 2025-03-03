@@ -1,6 +1,9 @@
 ﻿using AsistenciaApp.Helpers;
+using AsistenciaApp.Services;
+using CommunityToolkit.WinUI;
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
+using Microsoft.UI.Xaml;
 using Windows.UI.ViewManagement;
 
 namespace AsistenciaApp;
@@ -18,7 +21,8 @@ public sealed partial class MainWindow : WindowEx
         // Configuración inicial
         AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets/WindowIcon.ico"));
         Content = null;
-        Title = "AppDisplayName".GetLocalized();
+        Title = CommunityToolkit.WinUI.StringExtensions.GetLocalized("AppDisplayName");
+
 
         // Obtener AppWindow para modificar propiedades de la ventana
         _appWindow = GetAppWindowForCurrentWindow();
@@ -30,6 +34,23 @@ public sealed partial class MainWindow : WindowEx
         dispatcherQueue = Microsoft.UI.Dispatching.DispatcherQueue.GetForCurrentThread();
         settings = new UISettings();
         settings.ColorValuesChanged += Settings_ColorValuesChanged; // no se puede usar FrameworkElement.ActualThemeChanged
+
+        this.Activated += OnWindowActivated;
+        this.Closed += OnWindowClosed;
+    }
+
+    private void OnWindowActivated(object sender, WindowActivatedEventArgs e)
+    {
+        if (this.Content != null)
+        {
+            var dialogService = App.GetService<ContentDialogService>();
+            dialogService.Initialize(this.Content.XamlRoot);
+        }
+    }
+
+    private void OnWindowClosed(object sender, WindowEventArgs e)
+    {
+        this.Activated -= OnWindowActivated; // Desuscribirse del evento para evitar errores
     }
 
     // Método para obtener el AppWindow de la ventana actual
