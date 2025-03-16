@@ -5,6 +5,7 @@ Styles\TextBlock.xbf
 Styles\Thickness.xbf
 Views\AgregarAsistenciaPage.xbf
 Views\AsistenciaPage.xbf
+Views\ConfigurationPage.xbf
 Views\EstudiantesDataGrid.xbf
 Views\LoginPage.xbf
 Views\MainPage.xbf

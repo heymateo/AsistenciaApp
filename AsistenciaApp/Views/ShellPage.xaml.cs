@@ -55,6 +55,9 @@ public sealed partial class ShellPage : Page
 
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
+        // Cargar MainPage en el Frame
+        NavigationFrame.Navigate(typeof(MainPage));
+
         TitleBarHelper.UpdateTitleBar(RequestedTheme);
 
         KeyboardAccelerators.Add(BuildKeyboardAccelerator(VirtualKey.Left, VirtualKeyModifiers.Menu));

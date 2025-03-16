@@ -40,15 +40,17 @@
                     <MenuFlyoutItem x:Uid="ShellMenuItem_File_Exit" Command="{x:Bind ViewModel.MenuFileExitCommand}" />
                 </MenuBarItem>
 
-                <MenuBarItem x:Uid="ShellMenuBarItem_Views">
-                    <MenuBarItem.Items>
-                        
-                        <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Students" Command="{x:Bind ViewModel.MenuViewsStudentsCommand}" />
-                        <MenuFlyoutSubItem x:Uid="ShellMenuItem_Views_AssistancePage">
-                            <MenuFlyoutItem x:Uid="ShellMenuItem_Views_AssistancePage" Command="{x:Bind ViewModel.MenuViewsAssistancePageCommand}" />
-                            <MenuFlyoutItem x:Uid="ShellMenuItem_Views_CreateAssistancePage" Command="{x:Bind ViewModel.MenuViewsCreateAssistancePageCommand}" />
-                        </MenuFlyoutSubItem>
-                    </MenuBarItem.Items>
+                <MenuBarItem x:Uid="ShellMenuBarItem_Assistance">
+                    <MenuFlyoutItem x:Uid="ShellMenuItem_Views_AssistancePage" Command="{x:Bind ViewModel.MenuViewsAssistancePageCommand}" />
+                    <MenuFlyoutItem x:Uid="ShellMenuItem_Views_CreateAssistancePage" Command="{x:Bind ViewModel.MenuViewsCreateAssistancePageCommand}" />
+                </MenuBarItem>
+
+                <MenuBarItem x:Uid="ShellMenuBarItem_Students">
+                    <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Students" Command="{x:Bind ViewModel.MenuViewsStudentsCommand}" />
+                </MenuBarItem>
+
+                <MenuBarItem x:Uid="=ShellMenuBarItem_Configuration">
+                    <MenuFlyoutItem x:Uid="ShellMenuItem_Views_Configuration" Command="{x:Bind ViewModel.MenuViewsConfigurationCommand}" />
                 </MenuBarItem>
             </MenuBar>
             

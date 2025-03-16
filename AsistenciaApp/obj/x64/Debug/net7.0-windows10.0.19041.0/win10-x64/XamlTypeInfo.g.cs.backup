@@ -293,7 +293,7 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             _typeNameTable[65] = "CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient";
             _typeNameTable[66] = "AsistenciaApp.Views.LoginPage";
             _typeNameTable[67] = "AsistenciaApp.Views.MainPage";
-            _typeNameTable[68] = "MainViewModel";
+            _typeNameTable[68] = "AsistenciaApp.ViewModels.MainViewModel";
             _typeNameTable[69] = "AsistenciaApp.Views.RestorePasswordPage";
             _typeNameTable[70] = "AsistenciaApp.Helpers.EnumToBooleanConverter";
             _typeNameTable[71] = "AsistenciaApp.Views.SettingsPage";
@@ -385,7 +385,7 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             _typeTable[65] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient);
             _typeTable[66] = typeof(global::AsistenciaApp.Views.LoginPage);
             _typeTable[67] = typeof(global::AsistenciaApp.Views.MainPage);
-            _typeTable[68] = typeof(global::MainViewModel);
+            _typeTable[68] = typeof(global::AsistenciaApp.ViewModels.MainViewModel);
             _typeTable[69] = typeof(global::AsistenciaApp.Views.RestorePasswordPage);
             _typeTable[70] = typeof(global::AsistenciaApp.Helpers.EnumToBooleanConverter);
             _typeTable[71] = typeof(global::AsistenciaApp.Views.SettingsPage);
@@ -458,6 +458,7 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
         private object Activate_63_EstudiantesDataGrid() { return new global::AsistenciaApp.Views.EstudiantesDataGrid(); }
         private object Activate_66_LoginPage() { return new global::AsistenciaApp.Views.LoginPage(); }
         private object Activate_67_MainPage() { return new global::AsistenciaApp.Views.MainPage(); }
+        private object Activate_68_MainViewModel() { return new global::AsistenciaApp.ViewModels.MainViewModel(); }
         private object Activate_69_RestorePasswordPage() { return new global::AsistenciaApp.Views.RestorePasswordPage(); }
         private object Activate_70_EnumToBooleanConverter() { return new global::AsistenciaApp.Helpers.EnumToBooleanConverter(); }
         private object Activate_71_SettingsPage() { return new global::AsistenciaApp.Views.SettingsPage(); }
@@ -1039,8 +1040,8 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 68:   //  MainViewModel
-                userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableObject"));
+            case 68:   //  AsistenciaApp.ViewModels.MainViewModel
+                userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -3111,7 +3112,7 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 break;
             case "AsistenciaApp.Views.MainPage.ViewModel":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsistenciaApp.Views.MainPage");
-                xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "ViewModel", "MainViewModel");
+                xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "ViewModel", "AsistenciaApp.ViewModels.MainViewModel");
                 xamlMember.Getter = get_108_MainPage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;

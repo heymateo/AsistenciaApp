@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AsistenciaApp.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50321b049c8a8b852cd3fcb69f51ef3e48e60f34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b11cd3792c034ea81116c6c69f20d7ed5c33feb")]
 [assembly: System.Reflection.AssemblyProductAttribute("AsistenciaApp.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AsistenciaApp.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

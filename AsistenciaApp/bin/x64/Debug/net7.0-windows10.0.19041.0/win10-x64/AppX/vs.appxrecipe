@@ -29,21 +29,21 @@
     <AppXManifest Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-03T20:45:19.677</Modified>
+      <Modified>2025-03-14T14:32:00.759</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-02-27T21:08:26.526</Modified>
+      <Modified>2025-03-14T14:31:59.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AsistenciaApp.runtimeconfig.json">
       <PackagePath>AsistenciaApp.runtimeconfig.json</PackagePath>
-      <Modified>2025-02-27T21:08:26.414</Modified>
+      <Modified>2025-03-14T14:31:57.941</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AsistenciaApp.dll">
       <PackagePath>AsistenciaApp.dll</PackagePath>
-      <Modified>2025-03-03T20:45:18.643</Modified>
+      <Modified>2025-03-14T14:31:52.052</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -51,11 +51,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>AsistenciaApp.exe</PackagePath>
-      <Modified>2025-03-03T20:45:18.726</Modified>
+      <Modified>2025-03-14T14:31:52.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AsistenciaApp.deps.json">
       <PackagePath>AsistenciaApp.deps.json</PackagePath>
-      <Modified>2025-02-27T21:08:26.410</Modified>
+      <Modified>2025-03-14T14:31:57.916</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.20\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1147,7 +1147,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp.Core\bin\x64\Debug\net7.0\AsistenciaApp.Core.dll">
       <PackagePath>AsistenciaApp.Core.dll</PackagePath>
-      <Modified>2025-02-27T21:07:50.948</Modified>
+      <Modified>2025-03-14T14:31:11.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\colorcode.winui\2.0.13\lib\net5.0-windows10.0.18362\ColorCode.WinUI.pri">
       <PackagePath>ColorCode.WinUI.pri</PackagePath>

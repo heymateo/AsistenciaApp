@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="AsistenciaApp.Views.ConfigurationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:AsistenciaApp.ViewModels"
+    mc:Ignorable="d">
+
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Configuración"
+                   Style="{StaticResource HeaderTextBlockStyle}"
+                   Margin="0,0,0,20"/>
+
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" MinWidth="200"/>
+                    <ColumnDefinition Width="*" MinWidth="200"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Spacing="12">
+                    <TextBlock Text="Nombre del Centro Educativo" FontSize="18"/>
+                    <TextBox Text="{Binding CentroEducativo.Nombre_Centro, Mode=TwoWay}"
+                             PlaceholderText="Ingrese el nombre del centro..." Width="400" HorizontalAlignment="Left"/>
+
+                    <TextBlock Text="Tipo de Institución" FontSize="18"/>
+                    <TextBox Text="{Binding CentroEducativo.Tipo_Institucion, Mode=TwoWay}"
+                             PlaceholderText="Ingrese el tipo de institución..." Width="400" HorizontalAlignment="Left"/>
+
+                    <TextBlock Text="Dirección" FontSize="18"/>
+                    <TextBox Text="{Binding CentroEducativo.Direccion, Mode=TwoWay}"
+         PlaceholderText="Ingrese la dirección..." 
+         Width="400"
+         Height="100"
+         TextWrapping="Wrap"
+         AcceptsReturn="True"
+         HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Spacing="12">
+                    <TextBlock Text="Teléfono" FontSize="18"/>
+                    <TextBox Text="{Binding CentroEducativo.Telefono, Mode=TwoWay}"
+                             PlaceholderText="Ingrese el teléfono..."/>
+
+                    <TextBlock Text="Correo" FontSize="18"/>
+                    <TextBox Text="{Binding CentroEducativo.Correo, Mode=TwoWay}"
+                             PlaceholderText="Ingrese el correo..."
+                             InputScope="EmailSmtpAddress"/>
+
+                    <TextBlock Text="Descripción" FontSize="18"/>
+                    <TextBox Text="{Binding CentroEducativo.Descripcion, Mode=TwoWay}"
+                             PlaceholderText="Ingrese una breve descripción..."
+                             AcceptsReturn="True"
+                             Height="80"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Spacing="12" Margin="0,20,0,0">
+            <Button Content="Subir Logo" Command="{Binding UploadLogoCommand}" Background="Blue" Foreground="White"/>
+            <Button Content="Guardar" Command="{Binding SaveCommand}" Background="Green" Foreground="White"/>
+            <Button Content="Restablecer" Command="{Binding ResetCommand}" Background="Gray" Foreground="White"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
+

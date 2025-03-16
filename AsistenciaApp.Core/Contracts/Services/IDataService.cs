@@ -9,4 +9,7 @@ public interface IDataService
 
     void Delete(string folderPath, string fileName);
     Task<IEnumerable<Estudiante>> GetGridDataAsync();
+    Task SaveCentroEducativoAsync(string folderPath, string fileName, Centro_Educativo centroEducativo);
+
+    Task<Centro_Educativo> GetCentroEducativoAsync();
 }

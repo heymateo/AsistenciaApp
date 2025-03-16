@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 using AsistenciaApp.Core.Contracts.Services;
 using AsistenciaApp.Core.Models;
 using Microsoft.EntityFrameworkCore;
@@ -52,5 +53,31 @@ public class DataService : IDataService
         }
 
         return await _dbContext.Estudiante.ToListAsync();
+    }
+
+    public async Task SaveCentroEducativoAsync(string folderPath, string fileName, Centro_Educativo centroEducativo)
+    {
+        try
+        {
+            _dbContext.Centro_Educativo.Add(centroEducativo);
+            await _dbContext.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error al guardar el centro educativo: {ex.Message}");
+        }
+    }
+
+    public async Task<Centro_Educativo> GetCentroEducativoAsync()
+    {
+        try
+        {
+            return await _dbContext.Centro_Educativo.FirstOrDefaultAsync();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error al obtener el Centro Educativo: {ex.Message}");
+            return null;
+        }
     }
 }

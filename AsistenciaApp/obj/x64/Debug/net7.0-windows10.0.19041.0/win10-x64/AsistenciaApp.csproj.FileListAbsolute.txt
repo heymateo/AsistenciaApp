@@ -7,6 +7,7 @@ C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.
 C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Styles\Thickness.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AgregarAsistenciaPage.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AsistenciaPage.xbf
+C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\ConfigurationPage.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\EstudiantesDataGrid.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\LoginPage.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\MainPage.xbf
@@ -302,6 +303,8 @@ C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AgregarAsistenciaPage.g.cs
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AsistenciaPage.g.i.cs
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AsistenciaPage.g.cs
+C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\ConfigurationPage.g.i.cs
+C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\ConfigurationPage.g.cs
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\EstudiantesDataGrid.g.i.cs
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\EstudiantesDataGrid.g.cs
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\LoginPage.g.i.cs
@@ -322,6 +325,7 @@ C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Styles\Thickness.xaml
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AgregarAsistenciaPage.xaml
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AsistenciaPage.xaml
+C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\ConfigurationPage.xaml
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\EstudiantesDataGrid.xaml
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\LoginPage.xaml
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\MainPage.xaml
@@ -335,6 +339,7 @@ C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Styles\Thickness.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AgregarAsistenciaPage.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\AsistenciaPage.xbf
+C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\ConfigurationPage.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\EstudiantesDataGrid.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\LoginPage.xbf
 C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\Views\MainPage.xbf

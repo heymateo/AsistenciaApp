@@ -55,6 +55,11 @@ public partial class ShellViewModel : ObservableRecipient
         get;
     }
 
+    public ICommand MenuViewsConfigurationCommand
+    {
+        get;
+    }
+
     private readonly ImportExcelViewModel _importExcelViewModel;
     public ShellViewModel(INavigationService navigationService, ImportExcelViewModel importExcelViewModel)
     {
@@ -70,6 +75,7 @@ public partial class ShellViewModel : ObservableRecipient
         MenuViewsMainCommand = new RelayCommand(OnMenuViewsMain);
         MenuViewsCreateAssistancePageCommand = new RelayCommand(OnMenuCreateAssistance);
         ImportExcelCommand = new AsyncRelayCommand(_importExcelViewModel.ImportExcelFile);
+        MenuViewsConfigurationCommand = new RelayCommand(OnMenuViewsConfigurationCommand);
     }
 
     private void OnNavigated(object sender, NavigationEventArgs e) => IsBackEnabled = NavigationService.CanGoBack;
@@ -87,4 +93,6 @@ public partial class ShellViewModel : ObservableRecipient
     private void OnMenuCreateAssistance() => NavigationService.NavigateTo(typeof(CreateAsistenciaViewModel).FullName!);
 
     private void ImportExcelFile() => NavigationService.NavigateTo(typeof(ImportExcelViewModel).FullName!);
+
+    private void OnMenuViewsConfigurationCommand() => NavigationService.NavigateTo(typeof(ConfigurationViewModel).FullName!);
 }

@@ -124,10 +124,10 @@
     <value>AsistenciaApp</value>
   </data>
   <data name="ShellMenuBarItem_File.Title" xml:space="preserve">
-    <value>Archivo</value>
+    <value>Menú</value>
   </data>
-  <data name="ShellMenuBarItem_Views.Title" xml:space="preserve">
-    <value>Vistas</value>
+  <data name="ShellMenuBarItem_Assistance.Title" xml:space="preserve">
+    <value>Asistencia</value>
   </data>
   <data name="ShellMenuItem_File_Exit.Text" xml:space="preserve">
     <value>Salir</value>
@@ -135,9 +135,6 @@
   <data name="Main_Title.Text" xml:space="preserve">
     <value>Inicio</value>
     <comment>Page title for MainPage</comment>
-  </data>
-  <data name="ShellMenuItem_Views_Students.Text" xml:space="preserve">
-    <value>Estudiantes</value>
   </data>
   <data name="DataGrid_Title.Text" xml:space="preserve">
     <value>Estudiantes</value>
@@ -177,7 +174,7 @@
   <data name="SettingsPage_PrivacyTermsLink.NavigateUri" xml:space="preserve">
     <value>https://YourPrivacyUrlGoesHere/</value>
   </data>
-  <data name="ShellMenuBarSettingsButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+  <data name="ShellMenuBarItem_Configuration.Title" xml:space="preserve">
     <value>Configuración</value>
   </data>
   <data name="Settings_Title.Text" xml:space="preserve">
@@ -199,12 +196,24 @@
 &lt;/toast&gt;</value>
   </data>
   <data name="ShellMenuItem_Views_AssistancePage.Text" xml:space="preserve">
-    <value>Asistencia</value>
+    <value>Calendario</value>
   </data>
   <data name="ShellMenuItem_Views_Main.Text" xml:space="preserve">
     <value>Inicio</value>
   </data>
   <data name="ShellMenuItem_Views_CreateAssistancePage.Text" xml:space="preserve">
-    <value>Crear Asistencia</value>
+    <value>Asistencia</value>
+  </data>
+  <data name="ShellMenuBarItem_Students.Title" xml:space="preserve">
+    <value>Estudiantes</value>
+  </data>
+  <data name="ShellMenuItem_Views_Students.Text" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="ShellMenuItem_Views_Configuration.Text" xml:space="preserve">
+    <value>Centro Educativo</value>
+  </data>
+  <data name="ShellMenuBarItem_Configuration.Text" xml:space="preserve">
+    <value>Configuración</value>
   </data>
 </root>

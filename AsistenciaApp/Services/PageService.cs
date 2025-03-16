@@ -21,6 +21,7 @@ public class PageService : IPageService
         Configure<ShellViewModel,  ShellPage>();
         Configure<AsistenciaViewModel, AsistenciaPage>();
         Configure<CreateAsistenciaViewModel, AgregarAsistenciaPage>();
+        Configure<ConfigurationViewModel, ConfigurationPage>();
     }
 
     public Type GetPageType(string key)

@@ -9,7 +9,7 @@ public class AssistanceDbContext : DbContext
     public DbSet<Centro_Educativo> Centro_Educativo { get; set; }
     public DbSet<Admin> Admin { get; set; }
     public AssistanceDbContext(DbContextOptions<AssistanceDbContext> options)
-        : base(options) // Pass the options to the base DbContext constructor
+        : base(options)
     {
     }
 
@@ -20,10 +20,8 @@ public class AssistanceDbContext : DbContext
     // USAR UNA DIRECCION DINAMICA, NO DIRECCION LOCAL PERO NO FUNCIONA
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        // Ruta fija a la base de datos en el escritorio
         var dbPath = @"C:\Users\mateo\Desktop\Assistance\Assistance\DB_ASSISTANCE.db";
 
-        // Configurar SQLite con la ruta fija
         optionsBuilder.UseSqlite($"Data Source={dbPath}");
     }
 

@@ -95,6 +95,8 @@ public partial class App : Application
             services.AddTransient<LoginPage>();
             services.AddTransient<AgregarAsistenciaPage>();
             services.AddTransient<AgregarAsistenciaViewModel>();
+            services.AddTransient<ConfigurationPage>();
+            services.AddTransient<ConfigurationViewModel>();
 
             // Configuration
             services.Configure<LocalSettingsOptions>(context.Configuration.GetSection(nameof(LocalSettingsOptions)));

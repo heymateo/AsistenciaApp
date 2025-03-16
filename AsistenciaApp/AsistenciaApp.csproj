@@ -17,6 +17,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Views\AgregarAsistenciaPage.xaml" />
+    <None Remove="Views\ConfigurationPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,6 +46,9 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\ConfigurationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\AgregarAsistenciaPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
