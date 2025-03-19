@@ -29,21 +29,21 @@
     <AppXManifest Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-14T14:32:00.759</Modified>
+      <Modified>2025-03-19T17:30:58.710</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-14T14:31:59.444</Modified>
+      <Modified>2025-03-19T16:51:11.501</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AsistenciaApp.runtimeconfig.json">
       <PackagePath>AsistenciaApp.runtimeconfig.json</PackagePath>
-      <Modified>2025-03-14T14:31:57.941</Modified>
+      <Modified>2025-03-19T16:51:10.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AsistenciaApp.dll">
       <PackagePath>AsistenciaApp.dll</PackagePath>
-      <Modified>2025-03-14T14:31:52.052</Modified>
+      <Modified>2025-03-19T17:30:57.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -51,11 +51,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>AsistenciaApp.exe</PackagePath>
-      <Modified>2025-03-14T14:31:52.339</Modified>
+      <Modified>2025-03-19T17:30:57.772</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AsistenciaApp.deps.json">
       <PackagePath>AsistenciaApp.deps.json</PackagePath>
-      <Modified>2025-03-14T14:31:57.916</Modified>
+      <Modified>2025-03-19T16:51:10.586</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.20\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -793,6 +793,10 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2024-11-11T17:23:02.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\bouncycastle.cryptography\2.4.0\lib\net6.0\BouncyCastle.Cryptography.dll">
+      <PackagePath>BouncyCastle.Cryptography.dll</PackagePath>
+      <Modified>2024-05-27T06:54:08.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\closedxml\0.104.2\lib\netstandard2.1\ClosedXML.dll">
       <PackagePath>ClosedXML.dll</PackagePath>
       <Modified>2024-11-15T00:26:30.000</Modified>
@@ -877,9 +881,65 @@
       <PackagePath>ExcelNumberFormat.dll</PackagePath>
       <Modified>2020-10-02T08:42:28.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.barcodes.dll">
+      <PackagePath>itext.barcodes.dll</PackagePath>
+      <Modified>2025-02-10T08:32:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.bouncy-castle-connector.dll">
+      <PackagePath>itext.bouncy-castle-connector.dll</PackagePath>
+      <Modified>2025-02-10T08:28:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.forms.dll">
+      <PackagePath>itext.forms.dll</PackagePath>
+      <Modified>2025-02-10T08:34:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.io.dll">
+      <PackagePath>itext.io.dll</PackagePath>
+      <Modified>2025-02-10T08:28:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.kernel.dll">
+      <PackagePath>itext.kernel.dll</PackagePath>
+      <Modified>2025-02-10T08:32:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.layout.dll">
+      <PackagePath>itext.layout.dll</PackagePath>
+      <Modified>2025-02-10T08:33:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.pdfa.dll">
+      <PackagePath>itext.pdfa.dll</PackagePath>
+      <Modified>2025-02-10T08:35:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.pdfua.dll">
+      <PackagePath>itext.pdfua.dll</PackagePath>
+      <Modified>2025-02-10T08:35:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.sign.dll">
+      <PackagePath>itext.sign.dll</PackagePath>
+      <Modified>2025-02-10T08:36:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.styledxmlparser.dll">
+      <PackagePath>itext.styledxmlparser.dll</PackagePath>
+      <Modified>2025-02-10T08:34:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.svg.dll">
+      <PackagePath>itext.svg.dll</PackagePath>
+      <Modified>2025-02-10T08:35:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext.bouncy-castle-adapter\9.1.0\lib\netstandard2.0\itext.bouncy-castle-adapter.dll">
+      <PackagePath>itext.bouncy-castle-adapter.dll</PackagePath>
+      <Modified>2025-02-10T08:28:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext.commons\9.1.0\lib\netstandard2.0\itext.commons.dll">
+      <PackagePath>itext.commons.dll</PackagePath>
+      <Modified>2025-02-10T08:27:08.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.data.sqlite.core\7.0.20\lib\net6.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
       <Modified>2024-05-19T23:49:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.dotnet.platformabstractions\1.1.0\lib\netstandard1.3\Microsoft.DotNet.PlatformAbstractions.dll">
+      <PackagePath>Microsoft.DotNet.PlatformAbstractions.dll</PackagePath>
+      <Modified>2016-11-08T22:14:04.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.entityframeworkcore\7.0.20\lib\net6.0\Microsoft.EntityFrameworkCore.dll">
       <PackagePath>Microsoft.EntityFrameworkCore.dll</PackagePath>
@@ -1137,9 +1197,9 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2023-10-06T14:57:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.0\runtimes\win7-x64\native\clrcompression.dll">
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.2\runtimes\win7-x64\native\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
-      <Modified>2016-11-05T04:34:54.000</Modified>
+      <Modified>2018-06-22T08:21:46.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.4\runtimes\win-x64\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
@@ -1147,7 +1207,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp.Core\bin\x64\Debug\net7.0\AsistenciaApp.Core.dll">
       <PackagePath>AsistenciaApp.Core.dll</PackagePath>
-      <Modified>2025-03-14T14:31:11.806</Modified>
+      <Modified>2025-03-19T16:39:00.405</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\colorcode.winui\2.0.13\lib\net5.0-windows10.0.18362\ColorCode.WinUI.pri">
       <PackagePath>ColorCode.WinUI.pri</PackagePath>

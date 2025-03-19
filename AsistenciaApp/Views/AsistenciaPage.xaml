@@ -72,6 +72,29 @@
                 </ListView.ItemTemplate>
         </ListView>
 
+        <StackPanel Orientation="Horizontal" Spacing="10" RelativePanel.Below="CalendarView">
+            <CalendarDatePicker  x:Name="CalendarDatePicker1"
+                    PlaceholderText="De"
+                    RelativePanel.Below="CalendarView"
+                    DateChanged="CalendarDatePicker_DateChanged">
+
+            </CalendarDatePicker>
+
+            <CalendarDatePicker  x:Name="CalendarDatePicker2"
+                PlaceholderText="Hasta" 
+                RelativePanel.RightOf="CalendarDatePicker1"
+                DateChanged="CalendarDatePicker_DateChanged">
+
+            </CalendarDatePicker>
+
+            <Button x:Name="ExportButton"
+            Content="Exportar"
+            IsEnabled="False"
+            Click="ExportButton_Click"
+            Margin="10"/>
+        </StackPanel>
+        
+        
     </RelativePanel>
 
 </Page>

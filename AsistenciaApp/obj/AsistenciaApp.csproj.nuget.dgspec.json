@@ -194,6 +194,14 @@
             "WinUIEx": {
               "target": "Package",
               "version": "[2.3.2, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[9.1.0, )"
+            },
+            "itext7.bouncy-castle-adapter": {
+              "target": "Package",
+              "version": "[9.1.0, )"
             }
           },
           "imports": [

@@ -595,6 +595,9 @@
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.55\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\bouncycastle.cryptography\2.4.0\lib\net6.0\BouncyCastle.Cryptography.dll">
+      <PackagePath>BouncyCastle.Cryptography.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\closedxml\0.104.2\lib\netstandard2.1\ClosedXML.dll">
       <PackagePath>ClosedXML.dll</PackagePath>
     </AppxPackagedFile>
@@ -658,8 +661,50 @@
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\excelnumberformat\1.1.0\lib\netstandard2.0\ExcelNumberFormat.dll">
       <PackagePath>ExcelNumberFormat.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.barcodes.dll">
+      <PackagePath>itext.barcodes.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.bouncy-castle-connector.dll">
+      <PackagePath>itext.bouncy-castle-connector.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.forms.dll">
+      <PackagePath>itext.forms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.io.dll">
+      <PackagePath>itext.io.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.kernel.dll">
+      <PackagePath>itext.kernel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.layout.dll">
+      <PackagePath>itext.layout.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.pdfa.dll">
+      <PackagePath>itext.pdfa.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.pdfua.dll">
+      <PackagePath>itext.pdfua.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.sign.dll">
+      <PackagePath>itext.sign.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.styledxmlparser.dll">
+      <PackagePath>itext.styledxmlparser.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext\9.1.0\lib\netstandard2.0\itext.svg.dll">
+      <PackagePath>itext.svg.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext.bouncy-castle-adapter\9.1.0\lib\netstandard2.0\itext.bouncy-castle-adapter.dll">
+      <PackagePath>itext.bouncy-castle-adapter.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\itext.commons\9.1.0\lib\netstandard2.0\itext.commons.dll">
+      <PackagePath>itext.commons.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.data.sqlite.core\7.0.20\lib\net6.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.dotnet.platformabstractions\1.1.0\lib\netstandard1.3\Microsoft.DotNet.PlatformAbstractions.dll">
+      <PackagePath>Microsoft.DotNet.PlatformAbstractions.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.entityframeworkcore\7.0.20\lib\net6.0\Microsoft.EntityFrameworkCore.dll">
       <PackagePath>Microsoft.EntityFrameworkCore.dll</PackagePath>
@@ -853,7 +898,7 @@
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.windowsappsdk\1.4.231008000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.0\runtimes\win7-x64\native\clrcompression.dll">
+    <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\runtime.win7-x64.runtime.native.system.io.compression\4.3.2\runtimes\win7-x64\native\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.4\runtimes\win-x64\native\e_sqlite3.dll">
