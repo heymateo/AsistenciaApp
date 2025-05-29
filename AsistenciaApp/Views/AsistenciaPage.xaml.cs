@@ -63,31 +63,41 @@ public sealed partial class AsistenciaPage : Page
                 {
                     Document document = new Document(pdf);
 
-                    // Fuente en negrita
                     PdfFont boldFont = PdfFontFactory.CreateFont(StandardFonts.HELVETICA_BOLD);
-                    document.Add(new Paragraph("Registro de Asistencia").SetFont(boldFont).SetFontSize(16));
+                    document.Add(new Paragraph("Registro de Asistencia")
+                        .SetFont(boldFont)
+                        .SetFontSize(16)
+                        .SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER));
 
-                    // Crear tabla
-                    Table table = new Table(6);
-                    table.AddHeaderCell("ID Registro");
-                    table.AddHeaderCell("ID Estudiante");
-                    table.AddHeaderCell("Nombre");
-                    table.AddHeaderCell("Fecha");
-                    table.AddHeaderCell("Hora Entrada");
-                    table.AddHeaderCell("Asistió");
+                    // Agrupar los registros por fecha
+                    var groupedRecords = records
+                        .GroupBy(r => r.Fecha.Date)
+                        .OrderBy(g => g.Key);
 
-                    foreach (var record in records)
+                    foreach (var group in groupedRecords)
                     {
-                        table.AddCell(record.Id_Registro.ToString());
-                        table.AddCell(record.Id_Estudiante.ToString());
-                        table.AddCell(record.NombreEstudiante);
-                        table.AddCell(record.Fecha.ToString("yyyy-MM-dd"));
-                        table.AddCell(record.Hora_Entrada.ToString());
-                        table.AddCell(record.Asistio ? "Sí" : "No");
-                    }
-                    document.Add(table);
+                        // Título por fecha
+                        document.Add(new Paragraph($"\nFecha: {group.Key:yyyy-MM-dd}")
+                            .SetFont(boldFont)
+                            .SetFontSize(12)
+                            .SetMarginTop(10));
 
-                    // Add signature field
+                        Table table = new Table(3);
+                        table.AddHeaderCell("Cédula");
+                        table.AddHeaderCell("Nombre");
+                        table.AddHeaderCell("Marca");
+
+                        foreach (var record in group)
+                        {
+                            table.AddCell(record.Estudiante?.Identificacion ?? "");
+                            table.AddCell(record.NombreEstudiante);
+                            table.AddCell(record.Hora_Entrada.ToString());
+                        }
+
+                        document.Add(table);
+                    }
+
+                    // Firma
                     PdfAcroForm form = PdfAcroForm.GetAcroForm(pdf, true);
                     PdfWidgetAnnotation widget = new(new Rectangle(70, 20, 150, 25));
                     PdfSignatureFormField signature = new PdfFormFactory().CreateSignatureFormField(widget, pdf);
@@ -96,20 +106,18 @@ public sealed partial class AsistenciaPage : Page
                     signature.SetFieldName("Signature");
                     form.AddField(signature);
 
-                    // Add a label for the signature
                     Paragraph signatureLabel = new Paragraph("Firma del Responsable:")
                         .SetFixedPosition(pdf.GetNumberOfPages(), 70, 70, 200)
                         .SetFont(PdfFontFactory.CreateFont(StandardFonts.HELVETICA))
                         .SetFontSize(10);
                     document.Add(signatureLabel);
 
-                    // Draw a line for the signature
                     PdfCanvas canvas = new PdfCanvas(pdf.GetLastPage());
                     canvas
                         .SetLineWidth(0.5f)
                         .MoveTo(70, 50)
                         .LineTo(220, 50)
-                        .Stroke(); ;
+                        .Stroke();
 
                     document.Close();
                 }
@@ -123,6 +131,7 @@ public sealed partial class AsistenciaPage : Page
         }
     }
 
+
     private void ExportButton_Click(object sender, RoutedEventArgs e)
     {
         if (CalendarDatePicker1.Date != null && CalendarDatePicker2.Date != null)
@@ -133,7 +142,7 @@ public sealed partial class AsistenciaPage : Page
 
     private List<Registro_Asistencia> GetAttendanceRecords(DateTime startDate, DateTime endDate)
     {
-        using (var context = new AssistanceDbContext())
+        using var context = new AssistanceDbContext();
         {
             return context.Registro_Asistencia
                 .Where(r => r.Fecha >= startDate && r.Fecha <= endDate)
@@ -144,7 +153,11 @@ public sealed partial class AsistenciaPage : Page
                     Fecha = r.Fecha,
                     Hora_Entrada = r.Hora_Entrada,
                     Asistio = r.Asistio,
-                    NombreEstudiante = r.Estudiante.Nombre
+                    NombreEstudiante = r.Estudiante.Nombre,
+                    Estudiante = new Estudiante
+                    {
+                        Identificacion = r.Estudiante.Identificacion
+                    }
                 })
                 .ToList();
         }

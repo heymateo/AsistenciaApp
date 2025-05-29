@@ -48,91 +48,81 @@ public partial class ImportExcelViewModel : ObservableRecipient
         {
             var filePath = await PickExcelFileAsync();
 
-            if (string.IsNullOrEmpty(filePath))
-            {
-                 await _dialogService.ShowDialogAsync("Atención", "Importación cancelada.");
-                return;
-            }
-
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
-            using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
+            using var stream = File.Open(filePath, FileMode.Open, FileAccess.Read);
+            using var reader = ExcelReaderFactory.CreateReader(stream);
+            var result = reader.AsDataSet(new ExcelDataSetConfiguration
             {
-                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                ConfigureDataTable = _ => new ExcelDataTableConfiguration
                 {
-                    var result = reader.AsDataSet(new ExcelDataSetConfiguration
+                    UseHeaderRow = false
+                }
+            });
+
+            List<Estudiante> estudiantes = new List<Estudiante>();
+
+            foreach (DataTable table in result.Tables)
+            {
+                var dataStartRow = DetectDataStartRow(table);
+
+                for (var i = dataStartRow + 1; i < table.Rows.Count; i++)
+                {
+                    DataRow row = table.Rows[i];
+
+                    // Verificar si la fila está completamente vacía
+                    var filaVacia = row.ItemArray.All(cell => string.IsNullOrWhiteSpace(cell?.ToString()));
+                    if (filaVacia)
                     {
-                        ConfigureDataTable = _ => new ExcelDataTableConfiguration
-                        {
-                            UseHeaderRow = false
-                        }
-                    });
-
-                    List<Estudiante> estudiantes = new List<Estudiante>();
-
-                    foreach (DataTable table in result.Tables)
-                    {
-                        int dataStartRow = DetectDataStartRow(table);
-
-                        for (int i = dataStartRow + 1; i < table.Rows.Count; i++)
-                        {
-                            DataRow row = table.Rows[i];
-
-                            // Verificar si la fila está completamente vacía
-                            bool filaVacia = row.ItemArray.All(cell => string.IsNullOrWhiteSpace(cell?.ToString()));
-                            if (filaVacia)
-                            {
-                                continue; // Saltar filas vacías
-                            }
-
-                            // Leer y limpiar datos
-                            string identificacion = row[1]?.ToString().Trim() ?? "";
-                            string nombre = row[2]?.ToString().Trim() ?? "";
-                            string nivel = row[3]?.ToString().Trim() ?? "";
-                            string seccion = row[4]?.ToString().Trim() ?? "";
-                            string grupo = row[5]?.ToString().Trim() ?? "";
-
-                            // Si identificación y nombre están vacíos, descartar la fila
-                            if (string.IsNullOrWhiteSpace(identificacion) || string.IsNullOrWhiteSpace(nombre))
-                            {
-                                continue;
-                            }
-
-                            var estudiante = new Estudiante
-                            {
-                                Identificacion = identificacion,
-                                Nombre = nombre,
-                                Nivel = nivel,
-                                Seccion = seccion,
-                                Grupo = grupo,
-                                Especialidad = (seccion == "10" || seccion == "11" || seccion == "12") ? (row[6]?.ToString().Trim() ?? "") : null,
-                                Encargado_Legal = (seccion == "10" || seccion == "11" || seccion == "12") ? row[7]?.ToString().Trim() ?? "" : row[6]?.ToString().Trim() ?? "",
-                                Telefono_Encargado = (seccion == "10" || seccion == "11" || seccion == "12") ? row[8]?.ToString().Trim() ?? "" : row[7]?.ToString().Trim() ?? ""
-                            };
-
-                            estudiantes.Add(estudiante);
-                        }
+                        continue; // Saltar filas vacías
                     }
 
-                    await InsertStudentsToDatabase(estudiantes);
+                    // Leer y limpiar datos
+                    var identificacion = row[1]?.ToString().Trim() ?? "";  //  validar primero que el índice exista
+                    var nombre = row[2]?.ToString().Trim() ?? "";
+                    var nivel = row[3]?.ToString().Trim() ?? "";
+                    var seccion = row[4]?.ToString().Trim() ?? "";
+                    var grupo = row[5]?.ToString().Trim() ?? "";
 
-                    // Actualizar la colección observable para reflejar cambios en tiempo real
-                    EstudiantesImportados.Clear();
-                    estudiantes.ForEach(est => EstudiantesImportados.Add(est));
+                    // Si identificación y nombre están vacíos, descartar la fila
+                    if (string.IsNullOrWhiteSpace(identificacion) || string.IsNullOrWhiteSpace(nombre))
+                    {
+                        continue;
+                    }
 
-                    await _dialogService.ShowDialogAsync("Atención", $"Importación completada. {estudiantes.Count} estudiantes agregados.");
+                    var estudiante = new Estudiante
+                    {
+                        Identificacion = identificacion,
+                        Nombre = nombre,
+                        Nivel = nivel,
+                        Seccion = seccion,
+                        Grupo = grupo,
+                        Especialidad = (nivel == "10" || nivel == "11" || nivel == "12") ? (row[6]?.ToString().Trim() ?? "") : null,
+                        Encargado_Legal = (nivel == "10" || nivel == "11" || nivel == "12") ? row[7]?.ToString().Trim() ?? "" : row[6]?.ToString().Trim() ?? "",
+                        Telefono_Encargado = (nivel == "10" || nivel == "11" || nivel == "12") ? row[8]?.ToString().Trim() ?? "" : row[7]?.ToString().Trim() ?? ""
+                    };
+
+                    estudiantes.Add(estudiante);
                 }
             }
+
+            await InsertStudentsToDatabase(estudiantes);
+
+            // Actualizar la colección observable para reflejar cambios en tiempo real
+            EstudiantesImportados.Clear();
+            estudiantes.ForEach(est => EstudiantesImportados.Add(est));
+
+            await _dialogService.ShowDialogAsync("Atención", $"Importación completada. {estudiantes.Count} estudiantes agregados.");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            await _dialogService.ShowDialogAsync("Error", "Error al importar.");
+            
         }
     }
 
     private int DetectDataStartRow(DataTable table)
     {
-        for (int i = 0; i < table.Rows.Count; i++)
+        for (var i = 0; i < table.Rows.Count; i++)
         {
             var row = table.Rows[i];
             if (row.ItemArray.All(cell => cell != null && !string.IsNullOrWhiteSpace(cell.ToString())))
@@ -160,11 +150,11 @@ public partial class ImportExcelViewModel : ObservableRecipient
 
     private async Task InsertStudentsToDatabase(List<Estudiante> estudiantes)
     {
-        using (var connection = new SqliteConnection("Data Source=C:\\Users\\mateo\\Desktop\\Assistance\\Assistance\\DB_ASSISTANCE.db"))
+        using var connection = new SqliteConnection("Data Source=C:\\Users\\mateo\\Desktop\\Assistance\\Assistance\\DB_ASSISTANCE.db");
         {
             await connection.OpenAsync();
 
-            using (var transaction = await connection.BeginTransactionAsync())
+            using var transaction = await connection.BeginTransactionAsync();
             {
                 foreach (var estudiante in estudiantes)
                 {

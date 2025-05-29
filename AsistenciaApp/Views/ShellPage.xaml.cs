@@ -14,7 +14,7 @@ namespace AsistenciaApp.Views;
 
 public sealed partial class ShellPage : Page
 {
-    private ContentDialogService _contentDialogService;
+    private readonly ContentDialogService _contentDialogService;
 
     public ShellViewModel ViewModel
     {

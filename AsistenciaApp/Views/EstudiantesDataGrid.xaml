@@ -5,52 +5,50 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:AsistenciaApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls" xmlns:viewmodels="using:AsistenciaApp.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:AsistenciaViewModel}"
     mc:Ignorable="d">
 
-    <Grid x:Name="ContentArea">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="58" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
+    <Border Style="{StaticResource CardStyle}">
         <RelativePanel>
 
             <TextBlock
-        x:Uid="DataGrid_Title"
-        Name="Header"
-        Style="{StaticResource HeaderTextBlockStyle}" />
+                x:Name="Header"
+                Text="Estudiantes"
+                Style="{StaticResource TitleLargeTextBlockStyle}"
+                Margin="36,40,0,0"/>
 
             <ComboBox 
-            ItemsSource="{x:Bind ViewModel.SeccionesDisponibles, Mode=OneWay}" 
-            SelectedItem="{x:Bind ViewModel.SeccionSeleccionada, Mode=TwoWay}" 
-            RelativePanel.RightOf="Header" Margin="56,20,0,0"
-            PlaceholderText="Seleccione una sección" 
-            Width="200" />
+                ItemsSource="{x:Bind ViewModel.SeccionesDisponibles, Mode=OneWay}" 
+                SelectedItem="{x:Bind ViewModel.SeccionSeleccionada, Mode=TwoWay}" 
+                RelativePanel.RightOf="Header" Margin="56,56,0,0"
+                PlaceholderText="Seleccione una sección" 
+                Width="200" />
+
+            <Border Style="{StaticResource CardEstudiantes}"
+                    RelativePanel.Below="Header"
+                    Margin="36,36,0,36"
+                    Width="1350">
+                <controls:DataGrid
+                    Grid.Row="1"
+                    AutoGenerateColumns="False"
+                    GridLinesVisibility="Horizontal"
+                    ItemsSource="{x:Bind ViewModel.FiltradoEstudiantes, Mode=OneWay}"
+                    Height="490">
+
+                    <controls:DataGrid.Columns>
+                        <!-- TODO: Replace column definitions to match real data. Consider adding Header values to Resources.resw. -->
+                        <controls:DataGridTextColumn Binding="{Binding Identificacion}" Header="Cédula" />
+                        <controls:DataGridTextColumn Binding="{Binding Nombre}" Header="Estudiante" />
+                        <controls:DataGridTextColumn Binding="{Binding Nivel}" Header="Nivel" />
+                        <controls:DataGridTextColumn Binding="{Binding Seccion}" Header="Sección" />
+                        <controls:DataGridTextColumn Binding="{Binding Grupo}" Header="Grupo" />
+                        <controls:DataGridTextColumn Binding="{Binding Especialidad}" Header="Especialidad" />
+                        <controls:DataGridTextColumn Binding="{Binding Encargado_Legal}" Header="Encargado" />
+                        <controls:DataGridTextColumn Binding="{Binding Telefono_Encargado}" Header="Teléfono" />
+                    </controls:DataGrid.Columns>
+                </controls:DataGrid>
+            </Border>
         </RelativePanel>
-
-
-
-        <controls:DataGrid
-        Grid.Row="1"
-        AutoGenerateColumns="False"
-        GridLinesVisibility="Horizontal"
-        ItemsSource="{x:Bind ViewModel.FiltradoEstudiantes, Mode=OneWay}"
-            Margin="0,36,0,40">
-            <controls:DataGrid.Resources>
-                <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundColor" Color="Transparent" />
-            </controls:DataGrid.Resources>
-            <controls:DataGrid.Columns>
-                <!-- TODO: Replace column definitions to match real data. Consider adding Header values to Resources.resw. -->
-                <controls:DataGridTextColumn Binding="{Binding Identificacion}" Header="Identificacion" />
-                <controls:DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" />
-                <controls:DataGridTextColumn Binding="{Binding Nivel}" Header="Nivel" />
-                <controls:DataGridTextColumn Binding="{Binding Seccion}" Header="Seccion" />
-                <controls:DataGridTextColumn Binding="{Binding Grupo}" Header="Grupo" />
-                <controls:DataGridTextColumn Binding="{Binding Especialidad}" Header="Especialidad" />
-                <controls:DataGridTextColumn Binding="{Binding Encargado_Legal}" Header="Encargado_Legal" />
-                <controls:DataGridTextColumn Binding="{Binding Telefono_Encargado}" Header="Telefono_Encargado" />
-            </controls:DataGrid.Columns>
-        </controls:DataGrid>
-    </Grid>
+    </Border>
+    
 </Page>

@@ -12,90 +12,78 @@
         <converters:DateToStringConverter x:Key="DateToStringConverter" />
     </Page.Resources>
 
-    <RelativePanel>
+    <Border Style="{StaticResource CardStyle}">
+        <RelativePanel>
 
-        <TextBlock
-        x:Name="Header"
-        Text="Asistencia"
-        Style="{StaticResource HeaderTextBlockStyle}"
-        RelativePanel.AlignLeftWithPanel="True"
-        RelativePanel.AlignTopWithPanel="True" />
+            <TextBlock
+            x:Name="Header"
+            Text="Registro Asistencias"
+            Style="{StaticResource TitleLargeTextBlockStyle}"
+            Margin="36,40,0,36" />
 
-        <CalendarView
-        x:Name="CalendarView"
-        RelativePanel.Below="Header"
-        RelativePanel.AlignLeftWithPanel="True"
-        Margin="0,36,36,0"
-        Height="400"
-        Width="400"
-        Language="es"
-        SelectionMode="Single"
-        SelectedDatesChanged="CalendarView_SelectedDatesChanged" />
+            <Border x:Name="CalendarBorder"
+                RelativePanel.Below="Header"
+                Margin="36,0,0,0">
+                <CalendarView
+                x:Name="CalendarView"
+                Height="400"
+                Width="400"
+                Language="es"
+                SelectionMode="Single"
+                SelectedDatesChanged="CalendarView_SelectedDatesChanged" />
+            </Border>
 
-        <ListView
-            Width="700"
-            ItemsSource="{x:Bind ViewModel.FilteredEntries, Mode=OneWay}"
-            Margin="150,36,36,0"
-            RelativePanel.RightOf="CalendarView"
-            RelativePanel.AlignTopWith="CalendarView"
-            RelativePanel.AlignBottomWith="CalendarView">
-                <ListView.Header>
-                    <Grid Background="{ThemeResource LayerFillColorAltBrush}">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*" />
-                            <ColumnDefinition Width="3*" />
-                            <ColumnDefinition Width="2*" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="Fecha" Foreground="{ThemeResource TextFillColorPrimaryBrush}" Margin="10,5" />
-                        <TextBlock Grid.Column="1" Text="Nombre del estudiante" Foreground="{ThemeResource TextFillColorPrimaryBrush}"  Margin="10,5" />
-                        <TextBlock Grid.Column="2" Text="Hora de entrada" Foreground="{ThemeResource TextFillColorPrimaryBrush}" Margin="10,5" />
-                    </Grid>
+            <StackPanel Orientation="Horizontal"
+                    Spacing="10"
+                    RelativePanel.Below="CalendarBorder"
+                    Margin="36,16,0,0">
+                <CalendarDatePicker x:Name="CalendarDatePicker1"
+                                PlaceholderText="De"
+                                DateChanged="CalendarDatePicker_DateChanged" />
+                <CalendarDatePicker x:Name="CalendarDatePicker2"
+                                PlaceholderText="Hasta"
+                                DateChanged="CalendarDatePicker_DateChanged" />
+                <Button x:Name="ExportButton"
+                    Content="Exportar"
+                    IsEnabled="False"
+                    Click="ExportButton_Click"
+                    Margin="10,0,0,0"/>
+            </StackPanel>
 
-                </ListView.Header>
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="models:Registro_Asistencia">
-                        <Grid ColumnDefinitions="2*,3*,2*">
-                            <TextBlock
-                                Grid.Column="0"
-                                Text="{x:Bind Fecha, Converter={StaticResource DateToStringConverter}}"
-                                Margin="10,5" />
-                            <TextBlock
-                                Grid.Column="1"
-                                Text="{x:Bind NombreEstudiante}"
-                                Margin="10,5" />
-                            <TextBlock
-                                Grid.Column="2"
-                                Text="{x:Bind Hora_Entrada}"
-                                Margin="10,5" />
+            <Border x:Name="ListBorder"
+                RelativePanel.RightOf="CalendarBorder"
+                Style="{StaticResource CardStyle2}"
+                Margin="50,125,0,200">
+                <ListView
+                Width="700"
+                ItemsSource="{x:Bind ViewModel.FilteredEntries, Mode=OneWay}">
+                    <ListView.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="Estudiante" Margin="20,5" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                            <TextBlock Grid.Column="1" Text="Marca" Margin="20,5" Style="{StaticResource BodyStrongTextBlockStyle}" />
                         </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-        </ListView>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Registro_Asistencia">
+                            <Grid ColumnDefinitions="3*,2*">
+                                <TextBlock Grid.Column="0"
+                                       Text="{x:Bind NombreEstudiante}"
+                                       Margin="10,5" />
+                                <TextBlock Grid.Column="1"
+                                       Text="{x:Bind Hora_Entrada}"
+                                       Margin="25,5" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
 
-        <StackPanel Orientation="Horizontal" Spacing="10" RelativePanel.Below="CalendarView">
-            <CalendarDatePicker  x:Name="CalendarDatePicker1"
-                    PlaceholderText="De"
-                    RelativePanel.Below="CalendarView"
-                    DateChanged="CalendarDatePicker_DateChanged">
-
-            </CalendarDatePicker>
-
-            <CalendarDatePicker  x:Name="CalendarDatePicker2"
-                PlaceholderText="Hasta" 
-                RelativePanel.RightOf="CalendarDatePicker1"
-                DateChanged="CalendarDatePicker_DateChanged">
-
-            </CalendarDatePicker>
-
-            <Button x:Name="ExportButton"
-            Content="Exportar"
-            IsEnabled="False"
-            Click="ExportButton_Click"
-            Margin="10"/>
-        </StackPanel>
-        
-        
-    </RelativePanel>
+        </RelativePanel>
+    </Border>
 
 </Page>
 

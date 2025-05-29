@@ -7,7 +7,7 @@ public class Estudiante
 {
     [Key]
     public int Id_Estudiante { get; set; }
-    [Required(ErrorMessage = "Identificación")]
+    [Required(ErrorMessage = "Cédula")]
     public string Identificacion { get; set; } = string.Empty;
     [Required(ErrorMessage = "Nombre")]
     public string Nombre { get; set; } = string.Empty;
@@ -17,9 +17,13 @@ public class Estudiante
     public string Seccion { get; set; } = string.Empty;
     [Required(ErrorMessage = "Grupo")]
     public string Grupo { get; set; } = string.Empty;
-    public string? Especialidad { get; set; }
-    public string? Encargado_Legal { get; set; }
-    public string? Telefono_Encargado { get; set; }
+    public string? Especialidad { get; set; } = string.Empty;
+
+    [Required(ErrorMessage = "Encargado")]
+    public string? Encargado_Legal { get; set; } = string.Empty;
+
+    [Required(ErrorMessage = "Teléfono")]
+    public string? Telefono_Encargado { get; set; } = string.Empty;
     public ICollection<Registro_Asistencia> Registro_Asistencia { get; set; } = new List<Registro_Asistencia>();
 
 }

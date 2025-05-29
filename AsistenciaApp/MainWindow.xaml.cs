@@ -1,10 +1,13 @@
 ﻿using AsistenciaApp.Helpers;
 using AsistenciaApp.Services;
-using CommunityToolkit.WinUI;
 using Microsoft.UI;
+using Microsoft.UI.Composition;
+using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Windows.UI.ViewManagement;
+using WinRT;
+using CommunityToolkit.WinUI;
 
 namespace AsistenciaApp;
 
@@ -13,10 +16,14 @@ public sealed partial class MainWindow : WindowEx
     private Microsoft.UI.Dispatching.DispatcherQueue dispatcherQueue;
     private UISettings settings;
     private AppWindow _appWindow;
+    private DesktopAcrylicController _acrylicController;
+    private SystemBackdropConfiguration _backdropConfiguration;
 
     public MainWindow()
     {
         InitializeComponent();
+
+        TrySetAcrylicBackdrop();
 
         // Configuración inicial
         AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets/WindowIcon.ico"));
@@ -37,6 +44,29 @@ public sealed partial class MainWindow : WindowEx
 
         this.Activated += OnWindowActivated;
         this.Closed += OnWindowClosed;
+    }
+
+    private void TrySetAcrylicBackdrop()
+    {
+        if (DesktopAcrylicController.IsSupported())
+        {
+            _backdropConfiguration = new SystemBackdropConfiguration
+            {
+                IsInputActive = true,
+                Theme = SystemBackdropTheme.Default
+            };
+
+            _acrylicController = new DesktopAcrylicController();
+
+            // Use WindowEx's SystemBackdrop support
+            var compositorTarget = this.As<ICompositionSupportsSystemBackdrop>();
+
+            if (compositorTarget != null)
+            {
+                _acrylicController.AddSystemBackdropTarget(compositorTarget);
+                _acrylicController.SetSystemBackdropConfiguration(_backdropConfiguration);
+            }
+        }
     }
 
     private void OnWindowActivated(object sender, WindowActivatedEventArgs e)

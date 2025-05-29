@@ -1,6 +1,7 @@
 App.xbf
 MainWindow.xbf
 Styles\FontSizes.xbf
+Styles\Styles.xbf
 Styles\TextBlock.xbf
 Styles\Thickness.xbf
 Views\AgregarAsistenciaPage.xbf

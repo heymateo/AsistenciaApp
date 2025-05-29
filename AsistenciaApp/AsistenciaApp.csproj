@@ -14,10 +14,17 @@
 	<UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefaultLanguage>en-US</DefaultLanguage>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="DB_ASSISTANCE.db" />
     <None Remove="Views\AgregarAsistenciaPage.xaml" />
     <None Remove="Views\ConfigurationPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB_ASSISTANCE.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

@@ -106,7 +106,7 @@ public sealed partial class AgregarAsistenciaPage : Page
             Title = titulo,
             Content = contenido,
             CloseButtonText = "Aceptar",
-            XamlRoot = this.XamlRoot
+            XamlRoot = App.MainWindow.Content.XamlRoot
         };
 
         await dialog.ShowAsync();

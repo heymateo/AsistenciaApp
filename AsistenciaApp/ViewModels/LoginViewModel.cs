@@ -53,7 +53,7 @@ public class LoginViewModel : ObservableObject
         get;
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public new event PropertyChangedEventHandler PropertyChanged;
 
     public LoginViewModel(IAuthenticationService authenticationService, INavigationService navigationService)
     {
@@ -63,7 +63,7 @@ public class LoginViewModel : ObservableObject
         LoginCommand = new RelayCommand(ExecuteLogin);
     }
 
-    private void OnPropertyChanged(string propertyName)
+    private new void OnPropertyChanged(string propertyName)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }

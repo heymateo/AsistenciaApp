@@ -40,6 +40,9 @@
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\obj\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>AsistenciaApp.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\DB_ASSISTANCE.db">
+      <PackagePath>DB_ASSISTANCE.db</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\bin\x64\Debug\net7.0-windows10.0.19041.0\win10-x64\AsistenciaApp.deps.json">
       <PackagePath>AsistenciaApp.deps.json</PackagePath>
     </AppxPackagedFile>
