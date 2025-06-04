@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+BMhzMMnLbg=",
+  "dgSpecHash": "MbbtyLCPVRo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.csproj",
+  "projectFilePath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateo\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\mateo\\.nuget\\packages\\closedxml\\0.104.2\\closedxml.0.104.2.nupkg.sha512",

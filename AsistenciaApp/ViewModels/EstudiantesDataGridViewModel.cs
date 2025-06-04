@@ -50,7 +50,18 @@ public partial class EstudiantesDataGridViewModel : ObservableRecipient, INaviga
         }
 
         // Popular la coleccion de seccionesDisponibles
-        var sections = Source.Select(s => s.Seccion).Distinct().ToList();
+        var sections = Source.Select(s => s.Seccion)
+            .Where(s => !string.IsNullOrEmpty(s))
+            .Distinct()
+            .OrderBy(s =>
+            {
+                // Extraer número si es posible, por ejemplo: "7A" -> 7
+                var digits = new string(s.TakeWhile(char.IsDigit).ToArray());
+                return int.TryParse(digits, out int nivel) ? nivel : 1000; // Ciclos tendrán valor 1000
+            })
+            .ThenBy(s => s) // Subordenar alfabéticamente si tienen el mismo nivel
+            .ToList();
+
         SeccionesDisponibles.Clear();
         foreach (var section in sections)
         {

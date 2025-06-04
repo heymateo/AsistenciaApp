@@ -14,6 +14,6 @@ public class Admin
     [Required(ErrorMessage = "Escriba su contraseña")]
     public string Password { get; set; } = string.Empty;
     public string? Salt { get; set; }
-    public string? PasswordResetToken { get; set; }  
-    public DateTime? PasswordResetTokenExpiry { get; set; }
+    public string? Password_Reset_Token { get; set; }  
+    public DateTime? Password_Reset_Token_Expiry { get; set; }
 }

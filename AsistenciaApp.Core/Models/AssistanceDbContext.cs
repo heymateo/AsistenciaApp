@@ -20,7 +20,7 @@ public class AssistanceDbContext : DbContext
     // USAR UNA DIRECCION DINAMICA, NO DIRECCION LOCAL PERO NO FUNCIONA
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        var dbPath = @"C:\Users\mateo\Desktop\Assistance\Assistance\DB_ASSISTANCE.db";
+        var dbPath = @"C:\Users\mateo\Desktop\App\AsistenciaApp\AsistenciaApp\DB_ASSISTANCE.db";
 
         optionsBuilder.UseSqlite($"Data Source={dbPath}");
     }

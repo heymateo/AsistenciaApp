@@ -18,12 +18,6 @@ public class Estudiante
     [Required(ErrorMessage = "Grupo")]
     public string Grupo { get; set; } = string.Empty;
     public string? Especialidad { get; set; } = string.Empty;
-
-    [Required(ErrorMessage = "Encargado")]
-    public string? Encargado_Legal { get; set; } = string.Empty;
-
-    [Required(ErrorMessage = "Teléfono")]
-    public string? Telefono_Encargado { get; set; } = string.Empty;
     public ICollection<Registro_Asistencia> Registro_Asistencia { get; set; } = new List<Registro_Asistencia>();
 
 }

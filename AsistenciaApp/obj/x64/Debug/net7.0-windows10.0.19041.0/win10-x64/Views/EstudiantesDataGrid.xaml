@@ -43,8 +43,6 @@
                         <controls:DataGridTextColumn Binding="{Binding Seccion}" Header="Sección" />
                         <controls:DataGridTextColumn Binding="{Binding Grupo}" Header="Grupo" />
                         <controls:DataGridTextColumn Binding="{Binding Especialidad}" Header="Especialidad" />
-                        <controls:DataGridTextColumn Binding="{Binding Encargado_Legal}" Header="Encargado" />
-                        <controls:DataGridTextColumn Binding="{Binding Telefono_Encargado}" Header="Teléfono" />
                     </controls:DataGrid.Columns>
                 </controls:DataGrid>
             </Border>

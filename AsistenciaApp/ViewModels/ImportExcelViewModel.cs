@@ -1,19 +1,21 @@
-﻿using AsistenciaApp.Core.Models;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Data;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AsistenciaApp.Core.Models;
 using AsistenciaApp.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using ExcelDataReader;
 using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Prism.Dialogs;
-using System;
-using System.Collections.ObjectModel;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using WinRT.Interop;
@@ -66,29 +68,45 @@ public partial class ImportExcelViewModel : ObservableRecipient
             {
                 var dataStartRow = DetectDataStartRow(table);
 
+                // Limpiar encabezados (quitar tildes)
+                for (int c = 0; c < table.Columns.Count; c++)
+                {
+                    string originalName = table.Rows[dataStartRow][c]?.ToString() ?? "";
+                    table.Columns[c].ColumnName = QuitarTildes(originalName.Trim());
+                }
+
+                // Función para acceder de forma segura a celdas
+                string GetCell(DataRow row, int index)
+                {
+                    return index < row.ItemArray.Length ? row[index]?.ToString().Trim() ?? "" : "";
+                }
+
                 for (var i = dataStartRow + 1; i < table.Rows.Count; i++)
                 {
                     DataRow row = table.Rows[i];
 
-                    // Verificar si la fila está completamente vacía
                     var filaVacia = row.ItemArray.All(cell => string.IsNullOrWhiteSpace(cell?.ToString()));
-                    if (filaVacia)
+
+                    string[] valoresInvalidos = { "SIN ESPECIALIDAD", "N/A", "NINGUNA", "NO APLICA" };
+                    var sinEspecialidad = row.ItemArray.Any(cell =>
                     {
-                        continue; // Saltar filas vacías
-                    }
+                        var valor = cell?.ToString().Trim().ToUpperInvariant();
+                        return valoresInvalidos.Contains(valor);
+                    });
+
+                    if (filaVacia)
+                        continue;
 
                     // Leer y limpiar datos
-                    var identificacion = row[1]?.ToString().Trim() ?? "";  //  validar primero que el índice exista
-                    var nombre = row[2]?.ToString().Trim() ?? "";
-                    var nivel = row[3]?.ToString().Trim() ?? "";
-                    var seccion = row[4]?.ToString().Trim() ?? "";
-                    var grupo = row[5]?.ToString().Trim() ?? "";
+                    var identificacion = GetCell(row, 0); 
+                    var nombre = GetCell(row, 1);         
+                    var nivel = GetCell(row, 2);          
+                    var seccion = GetCell(row, 3);        
+                    var grupo = GetCell(row, 4);          
+                    var especialidad = GetCell(row, 5);   
 
-                    // Si identificación y nombre están vacíos, descartar la fila
                     if (string.IsNullOrWhiteSpace(identificacion) || string.IsNullOrWhiteSpace(nombre))
-                    {
                         continue;
-                    }
 
                     var estudiante = new Estudiante
                     {
@@ -97,9 +115,7 @@ public partial class ImportExcelViewModel : ObservableRecipient
                         Nivel = nivel,
                         Seccion = seccion,
                         Grupo = grupo,
-                        Especialidad = (nivel == "10" || nivel == "11" || nivel == "12") ? (row[6]?.ToString().Trim() ?? "") : null,
-                        Encargado_Legal = (nivel == "10" || nivel == "11" || nivel == "12") ? row[7]?.ToString().Trim() ?? "" : row[6]?.ToString().Trim() ?? "",
-                        Telefono_Encargado = (nivel == "10" || nivel == "11" || nivel == "12") ? row[8]?.ToString().Trim() ?? "" : row[7]?.ToString().Trim() ?? ""
+                        Especialidad = (nivel == "10" || nivel == "11" || nivel == "12") ? especialidad : null
                     };
 
                     estudiantes.Add(estudiante);
@@ -108,16 +124,37 @@ public partial class ImportExcelViewModel : ObservableRecipient
 
             await InsertStudentsToDatabase(estudiantes);
 
-            // Actualizar la colección observable para reflejar cambios en tiempo real
+            // Actualizar colección en tiempo real
             EstudiantesImportados.Clear();
             estudiantes.ForEach(est => EstudiantesImportados.Add(est));
 
             await _dialogService.ShowDialogAsync("Atención", $"Importación completada. {estudiantes.Count} estudiantes agregados.");
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            
+            await _dialogService.ShowDialogAsync("Error", $"{ex.Message}");
         }
+    }
+
+
+    public static string QuitarTildes(string texto)
+    {
+        if (string.IsNullOrEmpty(texto))
+            return texto;
+
+        var normalized = texto.Normalize(NormalizationForm.FormD);
+        var sb = new StringBuilder();
+
+        foreach (var c in normalized)
+        {
+            var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
+            if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+            {
+                sb.Append(c);
+            }
+        }
+
+        return sb.ToString().Normalize(NormalizationForm.FormC);
     }
 
     private int DetectDataStartRow(DataTable table)
@@ -150,34 +187,23 @@ public partial class ImportExcelViewModel : ObservableRecipient
 
     private async Task InsertStudentsToDatabase(List<Estudiante> estudiantes)
     {
-        using var connection = new SqliteConnection("Data Source=C:\\Users\\mateo\\Desktop\\Assistance\\Assistance\\DB_ASSISTANCE.db");
+        using var context = new AssistanceDbContext();
+
+        foreach (var estudiante in estudiantes)
         {
-            await connection.OpenAsync();
+            // Puedes verificar si ya existe por Identificación si quieres evitar duplicados:
+            var existe = await context.Estudiante
+                .AnyAsync(e => e.Identificacion == estudiante.Identificacion);
 
-            using var transaction = await connection.BeginTransactionAsync();
+            if (!existe)
             {
-                foreach (var estudiante in estudiantes)
-                {
-                    var command = connection.CreateCommand();
-                    command.CommandText = @"
-                    INSERT INTO Estudiante 
-                    (Identificacion, Nombre, Nivel, Seccion, Grupo, Especialidad, Encargado_Legal, Telefono_Encargado) 
-                    VALUES ($Identificacion, $Nombre, $Nivel, $Seccion, $Grupo, $Especialidad, $Encargado_Legal, $Telefono_Encargado)";
-
-                    command.Parameters.AddWithValue("$Identificacion", estudiante.Identificacion);
-                    command.Parameters.AddWithValue("$Nombre", estudiante.Nombre);
-                    command.Parameters.AddWithValue("$Nivel", estudiante.Nivel);
-                    command.Parameters.AddWithValue("$Seccion", estudiante.Seccion);
-                    command.Parameters.AddWithValue("$Grupo", estudiante.Grupo);
-                    command.Parameters.AddWithValue("$Especialidad", estudiante.Especialidad ?? (object)DBNull.Value);
-                    command.Parameters.AddWithValue("$Encargado_Legal", estudiante.Encargado_Legal ?? (object)DBNull.Value);
-                    command.Parameters.AddWithValue("$Telefono_Encargado", estudiante.Telefono_Encargado ?? (object)DBNull.Value);
-
-                    await command.ExecuteNonQueryAsync();
-                }
-
-                await transaction.CommitAsync();
+                context.Estudiante.Add(estudiante);
             }
         }
+
+        context.Estudiante.RemoveRange(context.Estudiante);
+        context.Estudiante.AddRange(estudiantes);
+
+        await context.SaveChangesAsync();
     }
 }

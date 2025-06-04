@@ -1,1 +1,1 @@
-C:\Users\mateo\Desktop\App\AsistenciaApp\AsistenciaApp.csproj;x64
+C:\Users\mateo\Desktop\App\AsistenciaApp\AsistenciaApp\AsistenciaApp.csproj;x64
