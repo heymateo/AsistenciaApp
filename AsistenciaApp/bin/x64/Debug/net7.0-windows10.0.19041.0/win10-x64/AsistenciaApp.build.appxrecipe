@@ -952,6 +952,9 @@
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\winuiex\2.3.2\lib\net6.0-windows10.0.18362\WinUIEx.pri">
       <PackagePath>WinUIEx.pri</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\AsistenciaApp\Assets\background.jpg">
+      <PackagePath>Assets\background.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\App\AsistenciaApp\AsistenciaApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>

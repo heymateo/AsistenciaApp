@@ -11,6 +11,8 @@
                 <ResourceDictionary Source="/Styles/TextBlock.xaml" />
                 <ResourceDictionary Source="/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!--  Converters  -->
             <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
             <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="Transparent"/>

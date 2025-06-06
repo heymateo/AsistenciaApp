@@ -36,7 +36,6 @@
                     Height="490">
 
                     <controls:DataGrid.Columns>
-                        <!-- TODO: Replace column definitions to match real data. Consider adding Header values to Resources.resw. -->
                         <controls:DataGridTextColumn Binding="{Binding Identificacion}" Header="Cédula" />
                         <controls:DataGridTextColumn Binding="{Binding Nombre}" Header="Estudiante" />
                         <controls:DataGridTextColumn Binding="{Binding Nivel}" Header="Nivel" />

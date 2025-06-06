@@ -224,7 +224,7 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[88];
+            _typeNameTable = new string[91];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -292,29 +292,32 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             _typeNameTable[64] = "CommunityToolkit.WinUI.UI.Controls.ConstrainedBox";
             _typeNameTable[65] = "Microsoft.UI.Xaml.Controls.ContentPresenter";
             _typeNameTable[66] = "CommunityToolkit.WinUI.UI.Controls.AspectRatio";
-            _typeNameTable[67] = "AsistenciaApp.Views.MainPage";
-            _typeNameTable[68] = "MainViewModel";
-            _typeNameTable[69] = "AsistenciaApp.Views.RestorePasswordPage";
-            _typeNameTable[70] = "AsistenciaApp.Helpers.EnumToBooleanConverter";
-            _typeNameTable[71] = "AsistenciaApp.Views.SettingsPage";
-            _typeNameTable[72] = "AsistenciaApp.ViewModels.SettingsViewModel";
-            _typeNameTable[73] = "Microsoft.UI.Xaml.Controls.MenuBar";
-            _typeNameTable[74] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>";
-            _typeNameTable[75] = "Microsoft.UI.Xaml.Controls.MenuBarItem";
-            _typeNameTable[76] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>";
-            _typeNameTable[77] = "Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase";
-            _typeNameTable[78] = "Microsoft.UI.Xaml.Controls.AnimatedIcon";
-            _typeNameTable[79] = "Microsoft.UI.Xaml.Controls.IconElement";
-            _typeNameTable[80] = "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2";
-            _typeNameTable[81] = "Microsoft.UI.Xaml.Controls.IconSource";
-            _typeNameTable[82] = "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource";
-            _typeNameTable[83] = "System.Collections.Generic.IReadOnlyDictionary`2<String, Double>";
-            _typeNameTable[84] = "AsistenciaApp.Views.ShellPage";
-            _typeNameTable[85] = "AsistenciaApp.ViewModels.ShellViewModel";
-            _typeNameTable[86] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[87] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[67] = "CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl";
+            _typeNameTable[68] = "Microsoft.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[69] = "Microsoft.UI.Xaml.Controls.Orientation";
+            _typeNameTable[70] = "AsistenciaApp.Views.MainPage";
+            _typeNameTable[71] = "MainViewModel";
+            _typeNameTable[72] = "AsistenciaApp.Views.RestorePasswordPage";
+            _typeNameTable[73] = "AsistenciaApp.Helpers.EnumToBooleanConverter";
+            _typeNameTable[74] = "AsistenciaApp.Views.SettingsPage";
+            _typeNameTable[75] = "AsistenciaApp.ViewModels.SettingsViewModel";
+            _typeNameTable[76] = "Microsoft.UI.Xaml.Controls.MenuBar";
+            _typeNameTable[77] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>";
+            _typeNameTable[78] = "Microsoft.UI.Xaml.Controls.MenuBarItem";
+            _typeNameTable[79] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>";
+            _typeNameTable[80] = "Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase";
+            _typeNameTable[81] = "Microsoft.UI.Xaml.Controls.AnimatedIcon";
+            _typeNameTable[82] = "Microsoft.UI.Xaml.Controls.IconElement";
+            _typeNameTable[83] = "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2";
+            _typeNameTable[84] = "Microsoft.UI.Xaml.Controls.IconSource";
+            _typeNameTable[85] = "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource";
+            _typeNameTable[86] = "System.Collections.Generic.IReadOnlyDictionary`2<String, Double>";
+            _typeNameTable[87] = "AsistenciaApp.Views.ShellPage";
+            _typeNameTable[88] = "AsistenciaApp.ViewModels.ShellViewModel";
+            _typeNameTable[89] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[90] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
 
-            _typeTable = new global::System.Type[88];
+            _typeTable = new global::System.Type[91];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -384,27 +387,30 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             _typeTable[64] = typeof(global::CommunityToolkit.WinUI.UI.Controls.ConstrainedBox);
             _typeTable[65] = typeof(global::Microsoft.UI.Xaml.Controls.ContentPresenter);
             _typeTable[66] = typeof(global::CommunityToolkit.WinUI.UI.Controls.AspectRatio);
-            _typeTable[67] = typeof(global::AsistenciaApp.Views.MainPage);
-            _typeTable[68] = typeof(global::MainViewModel);
-            _typeTable[69] = typeof(global::AsistenciaApp.Views.RestorePasswordPage);
-            _typeTable[70] = typeof(global::AsistenciaApp.Helpers.EnumToBooleanConverter);
-            _typeTable[71] = typeof(global::AsistenciaApp.Views.SettingsPage);
-            _typeTable[72] = typeof(global::AsistenciaApp.ViewModels.SettingsViewModel);
-            _typeTable[73] = typeof(global::Microsoft.UI.Xaml.Controls.MenuBar);
-            _typeTable[74] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuBarItem>);
-            _typeTable[75] = typeof(global::Microsoft.UI.Xaml.Controls.MenuBarItem);
-            _typeTable[76] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>);
-            _typeTable[77] = typeof(global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase);
-            _typeTable[78] = typeof(global::Microsoft.UI.Xaml.Controls.AnimatedIcon);
-            _typeTable[79] = typeof(global::Microsoft.UI.Xaml.Controls.IconElement);
-            _typeTable[80] = typeof(global::Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2);
-            _typeTable[81] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
-            _typeTable[82] = typeof(global::Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource);
-            _typeTable[83] = typeof(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Double>);
-            _typeTable[84] = typeof(global::AsistenciaApp.Views.ShellPage);
-            _typeTable[85] = typeof(global::AsistenciaApp.ViewModels.ShellViewModel);
-            _typeTable[86] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[87] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[67] = typeof(global::CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl);
+            _typeTable[68] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
+            _typeTable[69] = typeof(global::Microsoft.UI.Xaml.Controls.Orientation);
+            _typeTable[70] = typeof(global::AsistenciaApp.Views.MainPage);
+            _typeTable[71] = typeof(global::MainViewModel);
+            _typeTable[72] = typeof(global::AsistenciaApp.Views.RestorePasswordPage);
+            _typeTable[73] = typeof(global::AsistenciaApp.Helpers.EnumToBooleanConverter);
+            _typeTable[74] = typeof(global::AsistenciaApp.Views.SettingsPage);
+            _typeTable[75] = typeof(global::AsistenciaApp.ViewModels.SettingsViewModel);
+            _typeTable[76] = typeof(global::Microsoft.UI.Xaml.Controls.MenuBar);
+            _typeTable[77] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuBarItem>);
+            _typeTable[78] = typeof(global::Microsoft.UI.Xaml.Controls.MenuBarItem);
+            _typeTable[79] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>);
+            _typeTable[80] = typeof(global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase);
+            _typeTable[81] = typeof(global::Microsoft.UI.Xaml.Controls.AnimatedIcon);
+            _typeTable[82] = typeof(global::Microsoft.UI.Xaml.Controls.IconElement);
+            _typeTable[83] = typeof(global::Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2);
+            _typeTable[84] = typeof(global::Microsoft.UI.Xaml.Controls.IconSource);
+            _typeTable[85] = typeof(global::Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource);
+            _typeTable[86] = typeof(global::System.Collections.Generic.IReadOnlyDictionary<global::System.String, global::System.Double>);
+            _typeTable[87] = typeof(global::AsistenciaApp.Views.ShellPage);
+            _typeTable[88] = typeof(global::AsistenciaApp.ViewModels.ShellViewModel);
+            _typeTable[89] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[90] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -457,16 +463,17 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
         private object Activate_60_EstudiantesDataGrid() { return new global::AsistenciaApp.Views.EstudiantesDataGrid(); }
         private object Activate_63_LoginPage() { return new global::AsistenciaApp.Views.LoginPage(); }
         private object Activate_64_ConstrainedBox() { return new global::CommunityToolkit.WinUI.UI.Controls.ConstrainedBox(); }
-        private object Activate_67_MainPage() { return new global::AsistenciaApp.Views.MainPage(); }
-        private object Activate_69_RestorePasswordPage() { return new global::AsistenciaApp.Views.RestorePasswordPage(); }
-        private object Activate_70_EnumToBooleanConverter() { return new global::AsistenciaApp.Helpers.EnumToBooleanConverter(); }
-        private object Activate_71_SettingsPage() { return new global::AsistenciaApp.Views.SettingsPage(); }
-        private object Activate_73_MenuBar() { return new global::Microsoft.UI.Xaml.Controls.MenuBar(); }
-        private object Activate_75_MenuBarItem() { return new global::Microsoft.UI.Xaml.Controls.MenuBarItem(); }
-        private object Activate_78_AnimatedIcon() { return new global::Microsoft.UI.Xaml.Controls.AnimatedIcon(); }
-        private object Activate_82_AnimatedSettingsVisualSource() { return new global::Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource(); }
-        private object Activate_84_ShellPage() { return new global::AsistenciaApp.Views.ShellPage(); }
-        private object Activate_86_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_67_HeaderedContentControl() { return new global::CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl(); }
+        private object Activate_70_MainPage() { return new global::AsistenciaApp.Views.MainPage(); }
+        private object Activate_72_RestorePasswordPage() { return new global::AsistenciaApp.Views.RestorePasswordPage(); }
+        private object Activate_73_EnumToBooleanConverter() { return new global::AsistenciaApp.Helpers.EnumToBooleanConverter(); }
+        private object Activate_74_SettingsPage() { return new global::AsistenciaApp.Views.SettingsPage(); }
+        private object Activate_76_MenuBar() { return new global::Microsoft.UI.Xaml.Controls.MenuBar(); }
+        private object Activate_78_MenuBarItem() { return new global::Microsoft.UI.Xaml.Controls.MenuBarItem(); }
+        private object Activate_81_AnimatedIcon() { return new global::Microsoft.UI.Xaml.Controls.AnimatedIcon(); }
+        private object Activate_85_AnimatedSettingsVisualSource() { return new global::Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource(); }
+        private object Activate_87_ShellPage() { return new global::AsistenciaApp.Views.ShellPage(); }
+        private object Activate_89_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -498,19 +505,19 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             var newItem = (global::Microsoft.UI.Xaml.Style)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_74_IList(object instance, object item)
+        private void VectorAdd_77_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.MenuBarItem>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.MenuBarItem)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_76_IList(object instance, object item)
+        private void VectorAdd_79_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_87_IList(object instance, object item)
+        private void VectorAdd_90_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -1035,88 +1042,105 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 67:   //  AsistenciaApp.Views.MainPage
+            case 67:   //  CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl
+                userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
+                userType.Activator = Activate_67_HeaderedContentControl;
+                userType.AddMemberName("Header");
+                userType.AddMemberName("Orientation");
+                userType.AddMemberName("HeaderTemplate");
+                xamlType = userType;
+                break;
+
+            case 68:   //  Microsoft.UI.Xaml.Controls.ContentControl
+                xamlType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 69:   //  Microsoft.UI.Xaml.Controls.Orientation
+                xamlType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 70:   //  AsistenciaApp.Views.MainPage
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_67_MainPage;
+                userType.Activator = Activate_70_MainPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 68:   //  MainViewModel
+            case 71:   //  MainViewModel
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableObject"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 69:   //  AsistenciaApp.Views.RestorePasswordPage
+            case 72:   //  AsistenciaApp.Views.RestorePasswordPage
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_69_RestorePasswordPage;
+                userType.Activator = Activate_72_RestorePasswordPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 70:   //  AsistenciaApp.Helpers.EnumToBooleanConverter
+            case 73:   //  AsistenciaApp.Helpers.EnumToBooleanConverter
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_70_EnumToBooleanConverter;
+                userType.Activator = Activate_73_EnumToBooleanConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 71:   //  AsistenciaApp.Views.SettingsPage
+            case 74:   //  AsistenciaApp.Views.SettingsPage
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_71_SettingsPage;
+                userType.Activator = Activate_74_SettingsPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 72:   //  AsistenciaApp.ViewModels.SettingsViewModel
+            case 75:   //  AsistenciaApp.ViewModels.SettingsViewModel
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 73:   //  Microsoft.UI.Xaml.Controls.MenuBar
+            case 76:   //  Microsoft.UI.Xaml.Controls.MenuBar
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_73_MenuBar;
+                userType.Activator = Activate_76_MenuBar;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.MenuBar.Items");
                 userType.AddMemberName("Items");
                 xamlType = userType;
                 break;
 
-            case 74:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>
+            case 77:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_74_IList;
+                userType.CollectionAdd = VectorAdd_77_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 75:   //  Microsoft.UI.Xaml.Controls.MenuBarItem
+            case 78:   //  Microsoft.UI.Xaml.Controls.MenuBarItem
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_75_MenuBarItem;
+                userType.Activator = Activate_78_MenuBarItem;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.MenuBarItem.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("Title");
                 xamlType = userType;
                 break;
 
-            case 76:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>
+            case 79:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_76_IList;
+                userType.CollectionAdd = VectorAdd_79_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 77:   //  Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase
+            case 80:   //  Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase
                 xamlType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 78:   //  Microsoft.UI.Xaml.Controls.AnimatedIcon
+            case 81:   //  Microsoft.UI.Xaml.Controls.AnimatedIcon
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.IconElement"));
-                userType.Activator = Activate_78_AnimatedIcon;
+                userType.Activator = Activate_81_AnimatedIcon;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.AnimatedIcon.Source");
                 userType.AddMemberName("Source");
                 userType.AddMemberName("FallbackIconSource");
@@ -1125,51 +1149,51 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 79:   //  Microsoft.UI.Xaml.Controls.IconElement
+            case 82:   //  Microsoft.UI.Xaml.Controls.IconElement
                 xamlType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 80:   //  Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
+            case 83:   //  Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 81:   //  Microsoft.UI.Xaml.Controls.IconSource
+            case 84:   //  Microsoft.UI.Xaml.Controls.IconSource
                 xamlType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 82:   //  Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource
+            case 85:   //  Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_82_AnimatedSettingsVisualSource;
+                userType.Activator = Activate_85_AnimatedSettingsVisualSource;
                 userType.AddMemberName("Markers");
                 xamlType = userType;
                 break;
 
-            case 83:   //  System.Collections.Generic.IReadOnlyDictionary`2<String, Double>
+            case 86:   //  System.Collections.Generic.IReadOnlyDictionary`2<String, Double>
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 84:   //  AsistenciaApp.Views.ShellPage
+            case 87:   //  AsistenciaApp.Views.ShellPage
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_84_ShellPage;
+                userType.Activator = Activate_87_ShellPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 85:   //  AsistenciaApp.ViewModels.ShellViewModel
+            case 88:   //  AsistenciaApp.ViewModels.ShellViewModel
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("CommunityToolkit.Mvvm.ComponentModel.ObservableRecipient"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 86:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 89:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_86_TreeViewNode;
+                userType.Activator = Activate_89_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -1181,9 +1205,9 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 87:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 90:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_87_IList;
+                userType.CollectionAdd = VectorAdd_90_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
@@ -2325,130 +2349,160 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             var that = (global::CommunityToolkit.WinUI.UI.Controls.ConstrainedBox)instance;
             that.MultipleY = (global::System.Int32)Value;
         }
-        private object get_112_MainPage_ViewModel(object instance)
+        private object get_112_HeaderedContentControl_Header(object instance)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl)instance;
+            return that.Header;
+        }
+        private void set_112_HeaderedContentControl_Header(object instance, object Value)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_113_HeaderedContentControl_Orientation(object instance)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl)instance;
+            return that.Orientation;
+        }
+        private void set_113_HeaderedContentControl_Orientation(object instance, object Value)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl)instance;
+            that.Orientation = (global::Microsoft.UI.Xaml.Controls.Orientation)Value;
+        }
+        private object get_114_HeaderedContentControl_HeaderTemplate(object instance)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_114_HeaderedContentControl_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_115_MainPage_ViewModel(object instance)
         {
             var that = (global::AsistenciaApp.Views.MainPage)instance;
             return that.ViewModel;
         }
-        private object get_113_SettingsPage_ViewModel(object instance)
+        private object get_116_SettingsPage_ViewModel(object instance)
         {
             var that = (global::AsistenciaApp.Views.SettingsPage)instance;
             return that.ViewModel;
         }
-        private object get_114_MenuBar_Items(object instance)
+        private object get_117_MenuBar_Items(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.MenuBar)instance;
             return that.Items;
         }
-        private object get_115_MenuBarItem_Items(object instance)
+        private object get_118_MenuBarItem_Items(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.MenuBarItem)instance;
             return that.Items;
         }
-        private object get_116_MenuBarItem_Title(object instance)
+        private object get_119_MenuBarItem_Title(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.MenuBarItem)instance;
             return that.Title;
         }
-        private void set_116_MenuBarItem_Title(object instance, object Value)
+        private void set_119_MenuBarItem_Title(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.MenuBarItem)instance;
             that.Title = (global::System.String)Value;
         }
-        private object get_117_AnimatedIcon_Source(object instance)
+        private object get_120_AnimatedIcon_Source(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.AnimatedIcon)instance;
             return that.Source;
         }
-        private void set_117_AnimatedIcon_Source(object instance, object Value)
+        private void set_120_AnimatedIcon_Source(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.AnimatedIcon)instance;
             that.Source = (global::Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2)Value;
         }
-        private object get_118_AnimatedIcon_FallbackIconSource(object instance)
+        private object get_121_AnimatedIcon_FallbackIconSource(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.AnimatedIcon)instance;
             return that.FallbackIconSource;
         }
-        private void set_118_AnimatedIcon_FallbackIconSource(object instance, object Value)
+        private void set_121_AnimatedIcon_FallbackIconSource(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.AnimatedIcon)instance;
             that.FallbackIconSource = (global::Microsoft.UI.Xaml.Controls.IconSource)Value;
         }
-        private object get_119_AnimatedIcon_MirroredWhenRightToLeft(object instance)
+        private object get_122_AnimatedIcon_MirroredWhenRightToLeft(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.AnimatedIcon)instance;
             return that.MirroredWhenRightToLeft;
         }
-        private void set_119_AnimatedIcon_MirroredWhenRightToLeft(object instance, object Value)
+        private void set_122_AnimatedIcon_MirroredWhenRightToLeft(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.AnimatedIcon)instance;
             that.MirroredWhenRightToLeft = (global::System.Boolean)Value;
         }
-        private object get_120_AnimatedIcon_State(object instance)
+        private object get_123_AnimatedIcon_State(object instance)
         {
             return global::Microsoft.UI.Xaml.Controls.AnimatedIcon.GetState((global::Microsoft.UI.Xaml.DependencyObject)instance);
         }
-        private void set_120_AnimatedIcon_State(object instance, object Value)
+        private void set_123_AnimatedIcon_State(object instance, object Value)
         {
             global::Microsoft.UI.Xaml.Controls.AnimatedIcon.SetState((global::Microsoft.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
         }
-        private object get_121_AnimatedSettingsVisualSource_Markers(object instance)
+        private object get_124_AnimatedSettingsVisualSource_Markers(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource)instance;
             return that.Markers;
         }
-        private object get_122_ShellPage_ViewModel(object instance)
+        private object get_125_ShellPage_ViewModel(object instance)
         {
             var that = (global::AsistenciaApp.Views.ShellPage)instance;
             return that.ViewModel;
         }
-        private object get_123_TreeViewNode_Children(object instance)
+        private object get_126_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_124_TreeViewNode_Content(object instance)
+        private object get_127_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_124_TreeViewNode_Content(object instance, object Value)
+        private void set_127_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_125_TreeViewNode_Depth(object instance)
+        private object get_128_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_126_TreeViewNode_HasChildren(object instance)
+        private object get_129_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_127_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_130_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_127_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_130_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_128_TreeViewNode_IsExpanded(object instance)
+        private object get_131_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_128_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_131_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_129_TreeViewNode_Parent(object instance)
+        private object get_132_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
@@ -3181,59 +3235,80 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlMember.Getter = get_111_ConstrainedBox_MultipleY;
                 xamlMember.Setter = set_111_ConstrainedBox_MultipleY;
                 break;
+            case "CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl.Header":
+                userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl");
+                xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_112_HeaderedContentControl_Header;
+                xamlMember.Setter = set_112_HeaderedContentControl_Header;
+                break;
+            case "CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl.Orientation":
+                userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl");
+                xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Orientation", "Microsoft.UI.Xaml.Controls.Orientation");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_113_HeaderedContentControl_Orientation;
+                xamlMember.Setter = set_113_HeaderedContentControl_Orientation;
+                break;
+            case "CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl.HeaderTemplate":
+                userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CommunityToolkit.WinUI.UI.Controls.HeaderedContentControl");
+                xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_114_HeaderedContentControl_HeaderTemplate;
+                xamlMember.Setter = set_114_HeaderedContentControl_HeaderTemplate;
+                break;
             case "AsistenciaApp.Views.MainPage.ViewModel":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsistenciaApp.Views.MainPage");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "ViewModel", "MainViewModel");
-                xamlMember.Getter = get_112_MainPage_ViewModel;
+                xamlMember.Getter = get_115_MainPage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "AsistenciaApp.Views.SettingsPage.ViewModel":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsistenciaApp.Views.SettingsPage");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "ViewModel", "AsistenciaApp.ViewModels.SettingsViewModel");
-                xamlMember.Getter = get_113_SettingsPage_ViewModel;
+                xamlMember.Getter = get_116_SettingsPage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.MenuBar.Items":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.MenuBar");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Items", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuBarItem>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_114_MenuBar_Items;
+                xamlMember.Getter = get_117_MenuBar_Items;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.MenuBarItem.Items":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.MenuBarItem");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Items", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.MenuFlyoutItemBase>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_115_MenuBarItem_Items;
+                xamlMember.Getter = get_118_MenuBarItem_Items;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.MenuBarItem.Title":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.MenuBarItem");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_116_MenuBarItem_Title;
-                xamlMember.Setter = set_116_MenuBarItem_Title;
+                xamlMember.Getter = get_119_MenuBarItem_Title;
+                xamlMember.Setter = set_119_MenuBarItem_Title;
                 break;
             case "Microsoft.UI.Xaml.Controls.AnimatedIcon.Source":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.AnimatedIcon");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Source", "Microsoft.UI.Xaml.Controls.IAnimatedVisualSource2");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_117_AnimatedIcon_Source;
-                xamlMember.Setter = set_117_AnimatedIcon_Source;
+                xamlMember.Getter = get_120_AnimatedIcon_Source;
+                xamlMember.Setter = set_120_AnimatedIcon_Source;
                 break;
             case "Microsoft.UI.Xaml.Controls.AnimatedIcon.FallbackIconSource":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.AnimatedIcon");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "FallbackIconSource", "Microsoft.UI.Xaml.Controls.IconSource");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_118_AnimatedIcon_FallbackIconSource;
-                xamlMember.Setter = set_118_AnimatedIcon_FallbackIconSource;
+                xamlMember.Getter = get_121_AnimatedIcon_FallbackIconSource;
+                xamlMember.Setter = set_121_AnimatedIcon_FallbackIconSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.AnimatedIcon.MirroredWhenRightToLeft":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.AnimatedIcon");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "MirroredWhenRightToLeft", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_119_AnimatedIcon_MirroredWhenRightToLeft;
-                xamlMember.Setter = set_119_AnimatedIcon_MirroredWhenRightToLeft;
+                xamlMember.Getter = get_122_AnimatedIcon_MirroredWhenRightToLeft;
+                xamlMember.Setter = set_122_AnimatedIcon_MirroredWhenRightToLeft;
                 break;
             case "Microsoft.UI.Xaml.Controls.AnimatedIcon.State":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.AnimatedIcon");
@@ -3241,65 +3316,65 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.DependencyObject");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_120_AnimatedIcon_State;
-                xamlMember.Setter = set_120_AnimatedIcon_State;
+                xamlMember.Getter = get_123_AnimatedIcon_State;
+                xamlMember.Setter = set_123_AnimatedIcon_State;
                 break;
             case "Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource.Markers":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.AnimatedVisuals.AnimatedSettingsVisualSource");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Markers", "System.Collections.Generic.IReadOnlyDictionary`2<String, Double>");
-                xamlMember.Getter = get_121_AnimatedSettingsVisualSource_Markers;
+                xamlMember.Getter = get_124_AnimatedSettingsVisualSource_Markers;
                 xamlMember.SetIsReadOnly();
                 break;
             case "AsistenciaApp.Views.ShellPage.ViewModel":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsistenciaApp.Views.ShellPage");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "ViewModel", "AsistenciaApp.ViewModels.ShellViewModel");
-                xamlMember.Getter = get_122_ShellPage_ViewModel;
+                xamlMember.Getter = get_125_ShellPage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_123_TreeViewNode_Children;
+                xamlMember.Getter = get_126_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_124_TreeViewNode_Content;
-                xamlMember.Setter = set_124_TreeViewNode_Content;
+                xamlMember.Getter = get_127_TreeViewNode_Content;
+                xamlMember.Setter = set_127_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_125_TreeViewNode_Depth;
+                xamlMember.Getter = get_128_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_126_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_129_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_127_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_127_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_130_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_130_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_128_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_128_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_131_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_131_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_129_TreeViewNode_Parent;
+                xamlMember.Getter = get_132_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             }
