@@ -118,18 +118,24 @@ public partial class ImportExcelViewModel : ObservableRecipient
                     };
 
                     // Limpiar tildes del nivel antes del switch
-                    string nivelLimpio = QuitarTildes(nivel.Trim()).ToLowerInvariant();
+                    var nivelLimpio = QuitarTildes(nivel.Trim()).ToLowerInvariant();
+                    var especialidadLimpia = QuitarTildes(especialidad.Trim()).ToUpperInvariant();
+
+                    // Lista de valores inválidos para especialidad
+                    string[] valoresInvalidos2 = { "NO APLICA", "NINGUNA", "SIN ESPECIALIDAD", "N/A", "" };
 
                     switch (nivelLimpio.Trim())
                     {
                         case "decimo":
                         case "undecimo":
                         case "duodecimo":
-                        estudiante.Especialidad = especialidad;
-                        break;
+                        case "3 ciclo":
+                        case "4 ciclo":
+                            estudiante.Especialidad = valoresInvalidos2.Contains(especialidadLimpia) ? null : especialidad;
+                            break;
                         default:
-                        estudiante.Especialidad = null;
-                        break;
+                            estudiante.Especialidad = null;
+                            break;
                     }
 
                     estudiantes.Add(estudiante);
