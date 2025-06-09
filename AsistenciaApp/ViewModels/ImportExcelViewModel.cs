@@ -98,7 +98,7 @@ public partial class ImportExcelViewModel : ObservableRecipient
                         continue;
 
                     // Leer y limpiar datos
-                    var identificacion = GetCell(row, 0); 
+                    var identificacion = LimpiarIdentificacion(GetCell(row, 0));
                     var nombre = GetCell(row, 1);         
                     var nivel = GetCell(row, 2);          
                     var seccion = GetCell(row, 3);        
@@ -114,9 +114,23 @@ public partial class ImportExcelViewModel : ObservableRecipient
                         Nombre = nombre,
                         Nivel = nivel,
                         Seccion = seccion,
-                        Grupo = grupo,
-                        Especialidad = (nivel == "10" || nivel == "11" || nivel == "12") ? especialidad : null
+                        Grupo = grupo
                     };
+
+                    // Limpiar tildes del nivel antes del switch
+                    string nivelLimpio = QuitarTildes(nivel.Trim()).ToLowerInvariant();
+
+                    switch (nivelLimpio.Trim())
+                    {
+                        case "decimo":
+                        case "undecimo":
+                        case "duodecimo":
+                        estudiante.Especialidad = especialidad;
+                        break;
+                        default:
+                        estudiante.Especialidad = null;
+                        break;
+                    }
 
                     estudiantes.Add(estudiante);
                 }
@@ -136,6 +150,15 @@ public partial class ImportExcelViewModel : ObservableRecipient
         }
     }
 
+    private string LimpiarIdentificacion(string valor)
+    {
+        if (string.IsNullOrWhiteSpace(valor))
+            return string.Empty;
+
+        return new string(valor
+            .Where(c => char.IsLetterOrDigit(c)) // Solo letras y números
+            .ToArray());
+    }
 
     public static string QuitarTildes(string texto)
     {
