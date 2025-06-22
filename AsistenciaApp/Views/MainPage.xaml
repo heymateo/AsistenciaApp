@@ -23,11 +23,6 @@
                Stretch="UniformToFill" />
             </controls:ConstrainedBox>
 
-
-            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Image Source="{Binding Centro_Educativo.Logo}" Width="80" Height="80" Margin="0,0,20,0"/>
-            </StackPanel>
-
             <ScrollViewer Grid.Row="1">
                 <Grid Margin="20,0,20,0">
                     <Grid.ColumnDefinitions>
@@ -72,6 +67,7 @@
                             <TextBlock Text="Descripción:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
                             <TextBlock Text="{Binding Centro_Educativo.Descripcion}" TextWrapping="Wrap" Style="{StaticResource BodyTextBlockStyle}"/>
                         </StackPanel>
+                        <!--<Image Source="{Binding LogoImage}"/>-->
                     </StackPanel>
                 </Grid>
             </ScrollViewer>

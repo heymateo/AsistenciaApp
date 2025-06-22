@@ -1,12 +1,15 @@
-﻿using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Input;
-using AsistenciaApp.Core.Models;
 using AsistenciaApp.Core.Contracts.Services;
+using AsistenciaApp.Core.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Windows.Foundation.Diagnostics;
-using System.Diagnostics;
+using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
 
 namespace AsistenciaApp.ViewModels;
 
@@ -15,6 +18,7 @@ public partial class ConfigurationViewModel : ObservableRecipient
     private readonly IDataService _dataService;
     private readonly string _folderPath = "Settings";
     private readonly string _fileName = "CentroEducativo.json";
+    private readonly AssistanceDbContext _dbContext;
 
     [ObservableProperty]
     private Centro_Educativo _centroEducativo;
@@ -28,12 +32,19 @@ public partial class ConfigurationViewModel : ObservableRecipient
         get;
     }
 
-    public ConfigurationViewModel(IDataService dataService)
+    public ICommand UploadLogoCommand
+    {
+        get;
+    }
+
+    public ConfigurationViewModel(IDataService dataService, AssistanceDbContext dbContext)
     {
         _dataService = dataService;
+        _dbContext = dbContext;
 
         // Inicializar comandos
         SaveCommand = new AsyncRelayCommand(SaveCentroEducativoAsync);
+        UploadLogoCommand = new AsyncRelayCommand(UploadLogoAsync);
         ResetCommand = new RelayCommand(ResetCentroEducativo);
 
         // Cargar datos al iniciar
@@ -58,13 +69,52 @@ public partial class ConfigurationViewModel : ObservableRecipient
         }
     }
 
+    private async Task UploadLogoAsync()
+    {
+        var picker = new FileOpenPicker();
+        picker.FileTypeFilter.Add(".png");
+        picker.FileTypeFilter.Add(".jpg");
+        picker.FileTypeFilter.Add(".jpeg");
+
+        // Necesario en WinUI 3
+        var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(App.MainWindow);
+        WinRT.Interop.InitializeWithWindow.Initialize(picker, hwnd);
+
+        var file = await picker.PickSingleFileAsync();
+
+        if (file != null)
+        {
+            try
+            {
+                using var stream = await file.OpenStreamForReadAsync(); // Usar System.IO.Stream directamente
+                using var memoryStream = new MemoryStream();
+                await stream.CopyToAsync(memoryStream);
+
+                CentroEducativo.Logo = memoryStream.ToArray(); // Asignar el byte[] directamente// Guardar en base de datos
+                var entity = await _dbContext.Centro_Educativo
+                    .FirstOrDefaultAsync(c => c.Id_Centro == CentroEducativo.Id_Centro);
+
+                if (entity != null)
+                {
+                    entity.Logo = CentroEducativo.Logo;
+                    await _dbContext.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error al subir logo: {ex.Message}");
+            }
+        }
+    }
+
+
     private async Task SaveCentroEducativoAsync()
     {
         try
         {
-            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            string folderPath = Path.Combine(desktopPath, "App", "AsistenciaApp", "Settings");
+            var folderPath = Path.Combine(desktopPath, "App", "AsistenciaApp", "Settings");
 
             Debug.WriteLine($"Ruta de la carpeta: {folderPath}");
 
@@ -74,7 +124,7 @@ public partial class ConfigurationViewModel : ObservableRecipient
                 Directory.CreateDirectory(folderPath);
             }
 
-            string filePath = Path.Combine(folderPath, _fileName);
+            var filePath = Path.Combine(folderPath, _fileName);
             Debug.WriteLine($"Ruta del archivo a guardar: {filePath}");
 
 

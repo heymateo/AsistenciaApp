@@ -19,5 +19,5 @@ public class Centro_Educativo
     public string Correo { get; set; } = string.Empty;
     [Required(ErrorMessage = "Describa el Centro Educativo")]
     public string Descripcion { get; set; } = string.Empty;
-    public string? Logo { get; set; }
+    public byte[]? Logo { get; set; }
 }
