@@ -24,8 +24,10 @@
             <Border x:Name="CalendarBorder"
                 RelativePanel.Below="Header"
                 Margin="36,0,0,0">
+                
                 <CalendarView
                 x:Name="CalendarView"
+                Background="{StaticResource CardBackgroundFillColorSecondary}"
                 Height="400"
                 Width="400"
                 Language="es"
@@ -52,11 +54,12 @@
 
             <Border x:Name="ListBorder"
                 RelativePanel.RightOf="CalendarBorder"
-                Style="{StaticResource CardStyle2}"
+                Style="{StaticResource CardStyle}"
                 Margin="50,125,0,200">
                 <ListView
                 Width="700"
-                ItemsSource="{x:Bind ViewModel.FilteredEntries, Mode=OneWay}">
+                ItemsSource="{x:Bind ViewModel.FilteredEntries, Mode=OneWay}"
+                    Style="{StaticResource CardStyle}">
                     <ListView.Header>
                         <Grid>
                             <Grid.ColumnDefinitions>

@@ -3,9 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="CardStyle" TargetType="Border">
-        <Setter Property="Background" Value="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"/>
-        <Setter Property="CornerRadius" Value="12,12,0,0"/>
-        <Setter Property="Padding" Value="20"/>
+        <Setter Property="Background" Value="{ThemeResource CardBackgroundFillColorSecondaryBrush}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource SolidBackgroundFillColorBaseAltBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
     </Style>

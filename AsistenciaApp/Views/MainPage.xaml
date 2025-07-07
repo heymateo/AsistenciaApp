@@ -9,68 +9,88 @@
     mc:Ignorable="d">
 
     <Border Style="{StaticResource CardStyle}">
-        <Grid Width="1500"
-              RowSpacing="20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
 
-            <controls:ConstrainedBox VerticalAlignment="Top"
-                             AspectRatio="16:3">
-                <Image VerticalAlignment="Center"
-               Source="/Assets/background.jpg"
-               Stretch="UniformToFill" />
-            </controls:ConstrainedBox>
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-            <ScrollViewer Grid.Row="1">
-                <Grid Margin="20,0,20,0">
+                <Grid.Resources>
+                    <ThemeShadow x:Name="DefaultShadow"/>
+                </Grid.Resources>
+
+                <controls:ConstrainedBox VerticalAlignment="Top"
+AspectRatio="16:3">
+                    <Image VerticalAlignment="Center"
+      Source="/Assets/background.jpg"
+      Stretch="UniformToFill" />
+                </controls:ConstrainedBox>
+
+                <Grid ColumnSpacing="12"
+Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="2*" />
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Grid.Column="0" VerticalAlignment="Top">
-                        <StackPanel Grid.Column="0" VerticalAlignment="Top">
+                    <StackPanel Spacing="8" Grid.Column="0" Margin="36,40,0,0">
+                        <StackPanel>
                             <TextBlock Text="Bienvenido(a) al sistema de gestión del comedor escolar."
-                                       Style="{StaticResource TitleTextBlockStyle}" 
-                                       TextWrapping="Wrap" 
-                                       Margin="0,0,0,10"/>
+                  Style="{StaticResource TitleTextBlockStyle}" 
+                  TextWrapping="Wrap" 
+                  Margin="0,0,0,24"/>
                             <TextBlock Text="Esta aplicación permite visualizar y exportar listas de asistencia de los estudiantes en el comedor escolar. Puede generar archivos PDF firmables digitalmente para respaldo administrativo y control institucional."
-                                       Style="{StaticResource BodyTextBlockStyle}"
-                                       TextWrapping="Wrap"/>
+                  Style="{StaticResource BodyTextBlockStyle}"
+                  TextWrapping="Wrap"/>
                         </StackPanel>
                     </StackPanel>
 
+                    <AppBarSeparator Grid.Column="1" />
 
-                    <StackPanel Grid.Column="1"
-                                Margin="50,0,0,0">
-                        <TextBlock Text="Nombre:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                        <TextBlock Text="{Binding Centro_Educativo.Nombre_Centro}" Style="{StaticResource BodyTextBlockStyle}"/>
+                    <Grid Grid.Column="2">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
                         <StackPanel>
-                            <TextBlock Text="Tipo de Institución:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                            <TextBlock Text="{Binding Centro_Educativo.Tipo_Institucion}" Style="{StaticResource BodyTextBlockStyle}"/>
+                            <TextBlock Text="Información Institucional"
+                                    Style="{StaticResource SubtitleTextBlockStyle}" 
+                                    TextWrapping="Wrap" 
+                                    Margin="16,40,0,0"/>
+
+                            <StackPanel Margin="16,16,0,0">
+                                <TextBlock Text="Nombre:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                                <TextBlock Text="{Binding Centro_Educativo.Nombre_Centro}" Style="{StaticResource BodyTextBlockStyle}"/>
+
+                                <TextBlock Text="Tipo de Institución:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                                <TextBlock Text="{Binding Centro_Educativo.Tipo_Institucion}" Style="{StaticResource BodyTextBlockStyle}"/>
+
+                                <TextBlock Text="Dirección:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                                <TextBlock Text="{Binding Centro_Educativo.Direccion}" Style="{StaticResource BodyTextBlockStyle}"/>
+
+                                <TextBlock Text="Teléfono:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                                <TextBlock Text="{Binding Centro_Educativo.Telefono}" Style="{StaticResource BodyTextBlockStyle}"/>
+
+                                <TextBlock Text="Correo Electrónico:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                                <TextBlock Text="{Binding Centro_Educativo.Correo}" Style="{StaticResource BodyTextBlockStyle}"/>
+
+                                <TextBlock Text="Descripción:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                                <TextBlock Text="{Binding Centro_Educativo.Descripcion}" TextWrapping="Wrap" Style="{StaticResource BodyTextBlockStyle}"/>
+                            </StackPanel>
+
                         </StackPanel>
-                        <StackPanel>
-                            <TextBlock Text="Dirección:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                            <TextBlock Text="{Binding Centro_Educativo.Direccion}" Style="{StaticResource BodyTextBlockStyle}"/>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Text="Teléfono:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                            <TextBlock Text="{Binding Centro_Educativo.Telefono}" Style="{StaticResource BodyTextBlockStyle}"/>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Text="Correo Electrónico:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                            <TextBlock Text="{Binding Centro_Educativo.Correo}" Style="{StaticResource BodyTextBlockStyle}"/>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Text="Descripción:" Style="{StaticResource BodyStrongTextBlockStyle}"/>
-                            <TextBlock Text="{Binding Centro_Educativo.Descripcion}" TextWrapping="Wrap" Style="{StaticResource BodyTextBlockStyle}"/>
-                        </StackPanel>
-                        <!--<Image Source="{Binding LogoImage}"/>-->
-                    </StackPanel>
+                        
+                        <PersonPicture ProfilePicture="{Binding LogoImage}" 
+                                       Grid.Row="0"/>
+                    </Grid>
+                   
                 </Grid>
-            </ScrollViewer>
-        </Grid>
+            </Grid>
+        </ScrollViewer>
+        
     </Border>
 </Page>

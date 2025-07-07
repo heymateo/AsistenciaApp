@@ -12,8 +12,8 @@
 
     <Grid Background="{ThemeResource SolidBackgroundFillColorBaseBrush}" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-            <RowDefinition Height="40" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -68,7 +68,8 @@
                 </AnimatedIcon>
             </AppBarButton>
         </Grid>
-        <Grid Grid.Row="2" Margin="{StaticResource MenuBarContentMargin}">
+        
+        <Grid Grid.Row="2">
             <Frame x:Name="NavigationFrame" />
         </Grid>
 
