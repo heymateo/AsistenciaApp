@@ -22,16 +22,16 @@
                 </Grid.Resources>
 
                 <controls:ConstrainedBox VerticalAlignment="Top"
-AspectRatio="16:3">
+                                        AspectRatio="16:3">
                     <Image VerticalAlignment="Center"
-      Source="/Assets/background.jpg"
-      Stretch="UniformToFill" />
+                          Source="/Assets/background.jpg"
+                          Stretch="UniformToFill" />
                 </controls:ConstrainedBox>
 
                 <Grid ColumnSpacing="12"
-Grid.Row="1">
+                        Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
@@ -39,12 +39,14 @@ Grid.Row="1">
                     <StackPanel Spacing="8" Grid.Column="0" Margin="36,40,0,0">
                         <StackPanel>
                             <TextBlock Text="Bienvenido(a) al sistema de gestión del comedor escolar."
-                  Style="{StaticResource TitleTextBlockStyle}" 
-                  TextWrapping="Wrap" 
-                  Margin="0,0,0,24"/>
+                                      Style="{StaticResource TitleLargeTextBlockStyle}" 
+                                      TextWrapping="WrapWholeWords" 
+                                      Margin="0,0,0,24"/>
                             <TextBlock Text="Esta aplicación permite visualizar y exportar listas de asistencia de los estudiantes en el comedor escolar. Puede generar archivos PDF firmables digitalmente para respaldo administrativo y control institucional."
-                  Style="{StaticResource BodyTextBlockStyle}"
-                  TextWrapping="Wrap"/>
+                                      Style="{StaticResource BodyTextBlockStyle}"
+                                      TextWrapping="WrapWholeWords"
+                                      LineHeight="20"
+                                      FontSize="20"/>
                         </StackPanel>
                     </StackPanel>
 
@@ -67,7 +69,7 @@ Grid.Row="1">
 
                             <StackPanel Margin="16,16,0,0">
                                 <TextBlock Text="Información Institucional"
-                                        Style="{StaticResource SubtitleTextBlockStyle}" 
+                                        Style="{StaticResource TitleTextBlockStyle}" 
                                         TextWrapping="Wrap" 
                                         Margin="0,40,0,24"/>
                                 
@@ -76,10 +78,12 @@ Grid.Row="1">
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="6*"/>
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <TextBlock Text="Nombre:" Style="{StaticResource BodyStrongTextBlockStyle}"
+
+                                    <TextBlock Text="Nombre:" Style="{StaticResource SubtitleTextBlockStyle}"
                                                Margin="0,0,4,4"/>
                                     <TextBlock Text="{Binding Centro_Educativo.Nombre_Centro}" Style="{StaticResource BodyTextBlockStyle}"
+                                               LineHeight="20"
+                                               FontSize="20"
                                                Grid.Column="1"/>
                                 </Grid>
 
@@ -88,10 +92,12 @@ Grid.Row="1">
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="6*"/>
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <TextBlock Text="Tipo de Institución:" Style="{StaticResource BodyStrongTextBlockStyle}"
+
+                                    <TextBlock Text="Tipo de Institución:" Style="{StaticResource SubtitleTextBlockStyle}"
                                                 Margin="0,0,4,4"/>
                                     <TextBlock Text="{Binding Centro_Educativo.Tipo_Institucion}" Style="{StaticResource BodyTextBlockStyle}"
+                                               LineHeight="20"
+                                               FontSize="20"
                                                Grid.Column="1"/>
                                 </Grid>
 
@@ -100,10 +106,12 @@ Grid.Row="1">
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="6*"/>
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <TextBlock Text="Dirección:" Style="{StaticResource BodyStrongTextBlockStyle}"
+
+                                    <TextBlock Text="Dirección:" Style="{StaticResource SubtitleTextBlockStyle}"
                                                 Margin="0,0,4,4"/>
                                     <TextBlock Text="{Binding Centro_Educativo.Direccion}" Style="{StaticResource BodyTextBlockStyle}"
+                                               LineHeight="20"
+                                               FontSize="20"
                                                Grid.Column="1"/>
                                 </Grid>
 
@@ -112,10 +120,12 @@ Grid.Row="1">
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="6*"/>
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <TextBlock Text="Teléfono:" Style="{StaticResource BodyStrongTextBlockStyle}"
+
+                                    <TextBlock Text="Teléfono:" Style="{StaticResource SubtitleTextBlockStyle}"
                                                 Margin="0,0,4,4"/>
                                     <TextBlock Text="{Binding Centro_Educativo.Telefono}" Style="{StaticResource BodyTextBlockStyle}"
+                                               LineHeight="20"
+                                               FontSize="20"
                                                Grid.Column="1"/>
                                 </Grid>
 
@@ -125,10 +135,12 @@ Grid.Row="1">
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="6*"/>
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <TextBlock Text="Correo Electrónico:" Style="{StaticResource BodyStrongTextBlockStyle}"
+
+                                    <TextBlock Text="Correo Electrónico:" Style="{StaticResource SubtitleTextBlockStyle}"
                                                 Margin="0,0,4,4"/>
                                     <TextBlock Text="{Binding Centro_Educativo.Correo}" Style="{StaticResource BodyTextBlockStyle}"
+                                               LineHeight="20"
+                                               FontSize="20"
                                                Grid.Column="1"/>
                                 </Grid>
 
@@ -137,10 +149,12 @@ Grid.Row="1">
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="6*"/>
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <TextBlock Text="Descripción:" Style="{StaticResource BodyStrongTextBlockStyle}"
+
+                                    <TextBlock Text="Descripción:" Style="{StaticResource SubtitleTextBlockStyle}"
                                                 Margin="0,0,4,4"/>
                                     <TextBlock Text="{Binding Centro_Educativo.Descripcion}" TextWrapping="Wrap" Style="{StaticResource BodyTextBlockStyle}"
+                                               LineHeight="20"
+                                               FontSize="20"
                                                Grid.Column="1"/>
                                 </Grid>
                                 
