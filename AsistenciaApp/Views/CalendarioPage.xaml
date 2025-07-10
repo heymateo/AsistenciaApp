@@ -1,5 +1,5 @@
-﻿<Page x:ConnectionId='1'
-    x:Class="AsistenciaApp.Views.AsistenciaPage"
+﻿<Page
+    x:Class="AsistenciaApp.Views.CalendarioPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -15,50 +15,60 @@
     <Border Style="{StaticResource CardStyle}">
         <RelativePanel>
 
-            <TextBlock x:ConnectionId='2'
+            <TextBlock
             x:Name="Header"
-            Text="Registro Asistencias"
+            Text="Calendario"
             Style="{StaticResource TitleLargeTextBlockStyle}"
-            Margin="36,40,0,36" />
+            Margin="36,40,0,24" />
 
-            <Border x:ConnectionId='3' x:Name="CalendarBorder"
-                RelativePanel.Below="Header"
+            <TextBlock x:Name="Information"
+                    Text="Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+                     Style="{StaticResource BodyTextBlockStyle}"
+                     RelativePanel.Below="Header"
+                     Margin="36,0,36,16"/>
+
+            <Border x:Name="CalendarBorder"
+                RelativePanel.Below="Information"
                 Margin="36,0,0,0">
                 
-                <CalendarView x:ConnectionId='13'
+                <CalendarView
                 x:Name="CalendarView"
                 Background="{StaticResource CardBackgroundFillColorSecondary}"
                 Height="400"
                 Width="400"
                 Language="es"
                 SelectionMode="Single"
-                                                                         />
+                SelectedDatesChanged="CalendarView_SelectedDatesChanged" />
             </Border>
 
             <StackPanel Orientation="Horizontal"
                     Spacing="10"
                     RelativePanel.Below="CalendarBorder"
                     Margin="36,16,0,0">
-                <CalendarDatePicker x:ConnectionId='10' x:Name="CalendarDatePicker1"
+                <CalendarDatePicker x:Name="CalendarDatePicker1"
                                 PlaceholderText="De"
-                                                                             />
-                <CalendarDatePicker x:ConnectionId='11' x:Name="CalendarDatePicker2"
+                                DateChanged="CalendarDatePicker_DateChanged" />
+                <CalendarDatePicker x:Name="CalendarDatePicker2"
                                 PlaceholderText="Hasta"
-                                                                             />
-                <Button x:ConnectionId='12' x:Name="ExportButton"
+                                DateChanged="CalendarDatePicker_DateChanged" />
+                <Button x:Name="ExportButton"
                     Content="Exportar"
                     IsEnabled="False"
-                                              
+                    Click="ExportButton_Click"
                     Margin="10,0,0,0"/>
             </StackPanel>
 
-            <Border x:ConnectionId='4' x:Name="ListBorder"
+            <Border x:Name="List"
+                RelativePanel.Below="Information"
                 RelativePanel.RightOf="CalendarBorder"
                 Style="{StaticResource CardStyle}"
-                Margin="50,125,0,200">
-                <ListView x:ConnectionId='5'
+                Margin="16,0,0,0">
+                
+                <ListView
                 Width="700"
-                                                                             
+                ItemsSource="{x:Bind ViewModel.FilteredEntries, Mode=OneWay}"
                     Style="{StaticResource CardStyle}">
                     <ListView.Header>
                         <Grid>
@@ -71,13 +81,13 @@
                         </Grid>
                     </ListView.Header>
                     <ListView.ItemTemplate>
-                        <DataTemplate                                        >
-                            <Grid x:ConnectionId='7' ColumnDefinitions="3*,2*">
-                                <TextBlock x:ConnectionId='8' Grid.Column="0"
-                                                                       
+                        <DataTemplate x:DataType="models:Registro_Asistencia">
+                            <Grid ColumnDefinitions="3*,2*">
+                                <TextBlock Grid.Column="0"
+                                       Text="{x:Bind NombreEstudiante}"
                                        Margin="10,5" />
-                                <TextBlock x:ConnectionId='9' Grid.Column="1"
-                                                                   
+                                <TextBlock Grid.Column="1"
+                                       Text="{x:Bind Hora_Entrada}"
                                        Margin="25,5" />
                             </Grid>
                         </DataTemplate>
@@ -89,5 +99,4 @@
     </Border>
 
 </Page>
-
 

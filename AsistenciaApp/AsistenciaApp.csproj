@@ -18,7 +18,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="DB_ASSISTANCE.db" />
-    <None Remove="Views\AgregarAsistenciaPage.xaml" />
+    <None Remove="Views\AgregarCalendarioPage.xaml" />
     <None Remove="Views\ConfigurationPage.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -58,7 +58,7 @@
     <Page Update="Views\ConfigurationPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Views\AgregarAsistenciaPage.xaml">
+    <Page Update="Views\AgregarCalendarioPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

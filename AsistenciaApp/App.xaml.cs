@@ -93,7 +93,7 @@ public partial class App : Application
             services.AddTransient<ShellViewModel>();
             services.AddTransient<LoginViewModel>();
             services.AddTransient<LoginPage>();
-            services.AddTransient<AgregarAsistenciaPage>();
+            services.AddTransient<AgregarCalendarioPage>();
             services.AddTransient<AgregarAsistenciaViewModel>();
             services.AddTransient<ConfigurationPage>();
             services.AddTransient<ConfigurationViewModel>();

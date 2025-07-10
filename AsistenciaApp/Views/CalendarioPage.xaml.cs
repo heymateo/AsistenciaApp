@@ -20,9 +20,9 @@ using iText.Kernel.Pdf.Annot;
 using iText.Kernel.Pdf.Canvas;
 
 namespace AsistenciaApp.Views;
-public sealed partial class AsistenciaPage : Page
+public sealed partial class CalendarioPage : Page
 {
-    public AsistenciaPage()
+    public CalendarioPage()
     {
         InitializeComponent();
     }

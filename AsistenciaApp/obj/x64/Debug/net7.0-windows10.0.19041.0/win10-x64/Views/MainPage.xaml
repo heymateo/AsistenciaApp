@@ -18,7 +18,7 @@
                 </Grid.RowDefinitions>
 
                 <Grid.Resources>
-                    <ThemeShadow x:Name="DefaultShadow"/>
+                    <ThemeShadow x:ConnectionId='2' x:Name="DefaultShadow"/>
                 </Grid.Resources>
 
                 <controls:ConstrainedBox VerticalAlignment="Top"
@@ -159,3 +159,4 @@
         
     </Border>
 </Page>
+

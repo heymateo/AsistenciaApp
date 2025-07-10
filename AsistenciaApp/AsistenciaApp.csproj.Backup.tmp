@@ -16,7 +16,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Views\AgregarAsistenciaPage.xaml" />
+    <None Remove="Views\AgregarCalendarioPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,7 +43,7 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Page Update="Views\AgregarAsistenciaPage.xaml">
+    <Page Update="Views\AgregarCalendarioPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

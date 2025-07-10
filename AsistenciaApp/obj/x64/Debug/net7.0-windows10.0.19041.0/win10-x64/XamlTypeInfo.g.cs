@@ -246,11 +246,11 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             _typeNameTable[18] = "Microsoft.UI.Xaml.Thickness";
             _typeNameTable[19] = "Microsoft.UI.Xaml.CornerRadius";
             _typeNameTable[20] = "AsistenciaApp.Converters.DateToStringConverter";
-            _typeNameTable[21] = "AsistenciaApp.Views.AgregarAsistenciaPage";
+            _typeNameTable[21] = "AsistenciaApp.Views.AgregarCalendarioPage";
             _typeNameTable[22] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.UserControl";
             _typeNameTable[24] = "AsistenciaApp.ViewModels.AgregarAsistenciaViewModel";
-            _typeNameTable[25] = "AsistenciaApp.Views.AsistenciaPage";
+            _typeNameTable[25] = "AsistenciaApp.Views.CalendarioPage";
             _typeNameTable[26] = "AsistenciaApp.ViewModels.AsistenciaViewModel";
             _typeNameTable[27] = "CommunityToolkit.Mvvm.ComponentModel.ObservableObject";
             _typeNameTable[28] = "AsistenciaApp.Views.ConfigurationPage";
@@ -342,11 +342,11 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Thickness);
             _typeTable[19] = typeof(global::Microsoft.UI.Xaml.CornerRadius);
             _typeTable[20] = typeof(global::AsistenciaApp.Converters.DateToStringConverter);
-            _typeTable[21] = typeof(global::AsistenciaApp.Views.AgregarAsistenciaPage);
+            _typeTable[21] = typeof(global::AsistenciaApp.Views.AgregarCalendarioPage);
             _typeTable[22] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
             _typeTable[24] = typeof(global::AsistenciaApp.ViewModels.AgregarAsistenciaViewModel);
-            _typeTable[25] = typeof(global::AsistenciaApp.Views.AsistenciaPage);
+            _typeTable[25] = typeof(global::AsistenciaApp.Views.CalendarioPage);
             _typeTable[26] = typeof(global::AsistenciaApp.ViewModels.AsistenciaViewModel);
             _typeTable[27] = typeof(global::CommunityToolkit.Mvvm.ComponentModel.ObservableObject);
             _typeTable[28] = typeof(global::AsistenciaApp.Views.ConfigurationPage);
@@ -452,8 +452,8 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
         private object Activate_5_WindowEx() { return new global::WinUIEx.WindowEx(); }
         private object Activate_17_MainWindow() { return new global::AsistenciaApp.MainWindow(); }
         private object Activate_20_DateToStringConverter() { return new global::AsistenciaApp.Converters.DateToStringConverter(); }
-        private object Activate_21_AgregarAsistenciaPage() { return new global::AsistenciaApp.Views.AgregarAsistenciaPage(); }
-        private object Activate_25_AsistenciaPage() { return new global::AsistenciaApp.Views.AsistenciaPage(); }
+        private object Activate_21_AgregarCalendarioPage() { return new global::AsistenciaApp.Views.AgregarCalendarioPage(); }
+        private object Activate_25_CalendarioPage() { return new global::AsistenciaApp.Views.CalendarioPage(); }
         private object Activate_26_AsistenciaViewModel() { return new global::AsistenciaApp.ViewModels.AsistenciaViewModel(); }
         private object Activate_28_ConfigurationPage() { return new global::AsistenciaApp.Views.ConfigurationPage(); }
         private object Activate_29_DataGrid() { return new global::CommunityToolkit.WinUI.UI.Controls.DataGrid(); }
@@ -689,9 +689,9 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 21:   //  AsistenciaApp.Views.AgregarAsistenciaPage
+            case 21:   //  AsistenciaApp.Views.AgregarCalendarioPage
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_AgregarAsistenciaPage;
+                userType.Activator = Activate_21_AgregarCalendarioPage;
                 userType.AddMemberName("_viewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -712,9 +712,9 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 25:   //  AsistenciaApp.Views.AsistenciaPage
+            case 25:   //  AsistenciaApp.Views.CalendarioPage
                 userType = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_25_AsistenciaPage;
+                userType.Activator = Activate_25_CalendarioPage;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -1593,19 +1593,19 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.CornerRadius)instance;
             that.BottomLeft = (global::System.Double)Value;
         }
-        private object get_30_AgregarAsistenciaPage__viewModel(object instance)
+        private object get_30_AgregarCalendarioPage__viewModel(object instance)
         {
-            var that = (global::AsistenciaApp.Views.AgregarAsistenciaPage)instance;
+            var that = (global::AsistenciaApp.Views.AgregarCalendarioPage)instance;
             return that._viewModel;
         }
-        private void set_30_AgregarAsistenciaPage__viewModel(object instance, object Value)
+        private void set_30_AgregarCalendarioPage__viewModel(object instance, object Value)
         {
-            var that = (global::AsistenciaApp.Views.AgregarAsistenciaPage)instance;
+            var that = (global::AsistenciaApp.Views.AgregarCalendarioPage)instance;
             that._viewModel = (global::AsistenciaApp.ViewModels.AgregarAsistenciaViewModel)Value;
         }
-        private object get_31_AsistenciaPage_ViewModel(object instance)
+        private object get_31_CalendarioPage_ViewModel(object instance)
         {
-            var that = (global::AsistenciaApp.Views.AsistenciaPage)instance;
+            var that = (global::AsistenciaApp.Views.CalendarioPage)instance;
             return that.ViewModel;
         }
         private object get_32_DataGrid_AutoGenerateColumns(object instance)
@@ -2790,16 +2790,16 @@ namespace AsistenciaApp.AsistenciaApp_XamlTypeInfo
                 xamlMember.Getter = get_29_CornerRadius_BottomLeft;
                 xamlMember.Setter = set_29_CornerRadius_BottomLeft;
                 break;
-            case "AsistenciaApp.Views.AgregarAsistenciaPage._viewModel":
-                userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsistenciaApp.Views.AgregarAsistenciaPage");
+            case "AsistenciaApp.Views.AgregarCalendarioPage._viewModel":
+                userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsistenciaApp.Views.AgregarCalendarioPage");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "_viewModel", "AsistenciaApp.ViewModels.AgregarAsistenciaViewModel");
-                xamlMember.Getter = get_30_AgregarAsistenciaPage__viewModel;
-                xamlMember.Setter = set_30_AgregarAsistenciaPage__viewModel;
+                xamlMember.Getter = get_30_AgregarCalendarioPage__viewModel;
+                xamlMember.Setter = set_30_AgregarCalendarioPage__viewModel;
                 break;
-            case "AsistenciaApp.Views.AsistenciaPage.ViewModel":
-                userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsistenciaApp.Views.AsistenciaPage");
+            case "AsistenciaApp.Views.CalendarioPage.ViewModel":
+                userType = (global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AsistenciaApp.Views.CalendarioPage");
                 xamlMember = new global::AsistenciaApp.AsistenciaApp_XamlTypeInfo.XamlMember(this, "ViewModel", "AsistenciaApp.ViewModels.AsistenciaViewModel");
-                xamlMember.Getter = get_31_AsistenciaPage_ViewModel;
+                xamlMember.Getter = get_31_CalendarioPage_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CommunityToolkit.WinUI.UI.Controls.DataGrid.AutoGenerateColumns":

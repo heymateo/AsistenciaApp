@@ -6,11 +6,11 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
 namespace AsistenciaApp.Views;
-public sealed partial class AgregarAsistenciaPage : Page
+public sealed partial class AgregarCalendarioPage : Page
 {
     public AgregarAsistenciaViewModel _viewModel { get; set; }
     public AssistanceDbContext _dbContext;
-    public AgregarAsistenciaPage()
+    public AgregarCalendarioPage()
     {
         this.InitializeComponent();
         _viewModel = App.GetService<AgregarAsistenciaViewModel>();

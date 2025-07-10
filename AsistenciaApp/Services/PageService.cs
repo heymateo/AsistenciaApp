@@ -19,8 +19,8 @@ public class PageService : IPageService
         Configure<SettingsViewModel, SettingsPage>();
         Configure<LoginViewModel, LoginPage>();
         Configure<ShellViewModel,  ShellPage>();
-        Configure<AsistenciaViewModel, AsistenciaPage>();
-        Configure<CreateAsistenciaViewModel, AgregarAsistenciaPage>();
+        Configure<AsistenciaViewModel, CalendarioPage>();
+        Configure<CreateAsistenciaViewModel, AgregarCalendarioPage>();
         Configure<ConfigurationViewModel, ConfigurationPage>();
     }
 
