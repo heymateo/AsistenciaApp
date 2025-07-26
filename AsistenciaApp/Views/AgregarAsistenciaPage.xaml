@@ -20,8 +20,13 @@
         <RelativePanel>
             <TextBlock x:Name="Header"
                         Text="Ingresar Asistencia"
-                        Style="{StaticResource TitleLargeTextBlockStyle}"
-                        Margin="36,40,0,0"/>
+                        Style="{StaticResource TitleTextBlockStyle}"
+                        Margin="36,32,0,24"/>
+
+            <TextBlock Text="Ingresa el número de cédula del estudiante para registrar su asistencia."
+           Style="{StaticResource BodyTextBlockStyle}"
+        RelativePanel.Below="Header"
+        Margin="36,0,36,16"/>
 
             <Border x:Name="Form" 
                     Style="{StaticResource CardStyle2}"
@@ -32,22 +37,25 @@
                     <DatePicker x:Name="FechaAsistenciaPicker"
                                 Date="{Binding FechaActual, Mode=TwoWay}"
                                 IsEnabled="False"
-                                Margin="36,20,0,16"/>           
+                                Margin="0,20,0,16"/>           
 
                     <TextBox x:Name="CedulaTextBox"
                                 PlaceholderText="Ingrese su cédula:"
                                     HorizontalAlignment="Stretch"
-                                    Margin="36,20,36,0"/>
+                                    Margin="0,20,0,0"/>
 
-                    <Button Content="Registrar Asistencia"
+                    <Button Content="Registrar"
+                            Style="{StaticResource DefaultButtonStyle}"
                             Click="RegistrarAsistenciaButton_Click"
-                            Margin="36,40,36,0"/>       
+                            Margin="0,40,36,0"/>        
+
                 </StackPanel>
             </Border>
 
             <Border Style="{StaticResource CardStyle2}"
                     RelativePanel.RightOf="Form"
                     RelativePanel.Below="Header"
+                    HorizontalAlignment="Right"
                     Margin="50,35,0,0">
                 <ScrollViewer HorizontalScrollBarVisibility="Auto">
 

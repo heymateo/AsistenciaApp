@@ -14,18 +14,25 @@
             <TextBlock
                 x:Name="Header"
                 Text="Estudiantes"
-                Style="{StaticResource TitleLargeTextBlockStyle}"
-                Margin="36,40,0,0"/>
+                Style="{StaticResource TitleTextBlockStyle}"
+                Margin="36,32,0,0"/>
 
-            <ComboBox 
+            <TextBlock x:Name="Information"
+         Text="Consulta los registros de estudiantes por sección. Usa el botón para seleccionar una y ver los resultados."
+          Style="{StaticResource BodyTextBlockStyle}"
+          RelativePanel.Below="Header"
+          Margin="36,24,0,16"/>
+
+
+            <ComboBox x:Name="ComboBox"
                 ItemsSource="{x:Bind ViewModel.SeccionesDisponibles, Mode=OneWay}" 
                 SelectedItem="{x:Bind ViewModel.SeccionSeleccionada, Mode=TwoWay}" 
-                RelativePanel.RightOf="Header" Margin="56,56,0,0"
+                RelativePanel.Below="Information" Margin="36,0,0,0"
                 PlaceholderText="Seleccione una sección" 
                 Width="200" />
 
             <Border Style="{StaticResource CardEstudiantes}"
-                    RelativePanel.Below="Header"
+                    RelativePanel.Below="ComboBox"
                     Margin="36,36,0,36"
                     Width="1350">
                 <controls:DataGrid

@@ -38,11 +38,12 @@
 
                     <StackPanel Spacing="8" Grid.Column="0" Margin="36,40,0,0">
                         <StackPanel>
-                            <TextBlock Text="Bienvenido(a) al sistema de gestión del comedor escolar."
+                            <TextBlock Text="Bienvenido a AsistenciaApp"
                                       Style="{StaticResource TitleTextBlockStyle}" 
                                       TextWrapping="WrapWholeWords" 
                                       Margin="0,0,0,24"/>
-                            <TextBlock Text="Esta aplicación permite visualizar y exportar listas de asistencia de los estudiantes en el comedor escolar. Puede generar archivos PDF firmables digitalmente para respaldo administrativo y control institucional."
+
+                            <TextBlock Text="Consulta la asistencia de los estudiantes en el comedor escolar y genera archivos PDF con firma digital para respaldo administrativo."
                                       Style="{StaticResource BodyTextBlockStyle}"
                                       TextWrapping="WrapWholeWords"/>
                         </StackPanel>

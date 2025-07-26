@@ -12,10 +12,15 @@
 
             <TextBlock Text="Configuración"
                        x:Name="Header"
-                       Style="{StaticResource TitleLargeTextBlockStyle}"
-                       Margin="36,40,0,16"/>
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Margin="36,32,0,0"/>
 
-            <Border Style="{StaticResource CardStyle2}" RelativePanel.Below="Header" Margin="36,0,0,0" >
+            <TextBlock x:Name="Information"
+                Text="Desde aquí puede ingresar o actualizar la información del centro educativo."
+                       RelativePanel.Below="Header"
+                       Margin="36,16,0,16"/>
+            
+            <Border Style="{StaticResource CardStyle2}" RelativePanel.Below="Information" Margin="36,0,0,0" >
                 <StackPanel>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -25,15 +30,15 @@
 
                         <RelativePanel>
                             <StackPanel Grid.Column="0" Spacing="16" Margin="12,12,12,0" x:Name="Stack1">
-                                <TextBlock Text="Nombre del Centro Educativo" FontSize="18" />
+                                <TextBlock Text="Nombre del Centro Educativo" Style="{StaticResource BodyStrongTextBlockStyle}" />
                                 <TextBox Text="{Binding CentroEducativo.Nombre_Centro, Mode=TwoWay}"
              PlaceholderText="Ingrese el nombre del centro..." Width="300" />
 
-                                <TextBlock Text="Tipo de Institución" FontSize="18"/>
+                                <TextBlock Text="Tipo de Institución" Style="{StaticResource BodyStrongTextBlockStyle}"/>
                                 <TextBox Text="{Binding CentroEducativo.Tipo_Institucion, Mode=TwoWay}"
             PlaceholderText="Ingrese el tipo de institución..." Width="300" />
 
-                                <TextBlock Text="Dirección" FontSize="18"/>
+                                <TextBlock Text="Dirección" Style="{StaticResource BodyStrongTextBlockStyle}"/>
                                 <TextBox Text="{Binding CentroEducativo.Direccion, Mode=TwoWay}"
                                         PlaceholderText="Ingrese la dirección..." 
                                         Width="300"
@@ -43,16 +48,16 @@
                             </StackPanel>
 
                             <StackPanel Grid.Column="1" Spacing="16" Margin="0,12,12,0" RelativePanel.RightOf="Stack1">
-                                <TextBlock Text="Teléfono" FontSize="18"/>
+                                <TextBlock Text="Teléfono" Style="{StaticResource BodyStrongTextBlockStyle}"/>
                                 <TextBox Text="{Binding CentroEducativo.Telefono, Mode=TwoWay}" Width="300"
             PlaceholderText="Ingrese el teléfono..." />
 
-                                <TextBlock Text="Correo" FontSize="18"/>
+                                <TextBlock Text="Correo" Style="{StaticResource BodyStrongTextBlockStyle}"/>
                                 <TextBox Text="{Binding CentroEducativo.Correo, Mode=TwoWay}"
             PlaceholderText="Ingrese el correo..."
              InputScope="EmailSmtpAddress"/>
 
-                                <TextBlock Text="Descripción" FontSize="18"/>
+                                <TextBlock Text="Descripción" Style="{StaticResource BodyStrongTextBlockStyle}"/>
                                 <TextBox Text="{Binding CentroEducativo.Descripcion, Mode=TwoWay}"
                 PlaceholderText="Ingrese una breve descripción..."
             AcceptsReturn="True"
