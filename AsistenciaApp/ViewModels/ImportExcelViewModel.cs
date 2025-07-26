@@ -152,7 +152,7 @@ public partial class ImportExcelViewModel : ObservableRecipient
         }
         catch (Exception ex)
         {
-            await _dialogService.ShowDialogAsync("Error", $"{ex.Message}");
+            
         }
     }
 
