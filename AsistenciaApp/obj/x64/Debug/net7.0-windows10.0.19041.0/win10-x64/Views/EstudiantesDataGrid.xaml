@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:ConnectionId='1'
+    x:Class="AsistenciaApp.Views.EstudiantesDataGrid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AsistenciaApp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls" xmlns:viewmodels="using:AsistenciaApp.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:AsistenciaViewModel}"
+    mc:Ignorable="d">
+
+    <Border Style="{StaticResource CardStyle}">
+        <RelativePanel>
+
+            <TextBlock x:ConnectionId='2'
+                x:Name="Header"
+                Text="Estudiantes"
+                Style="{StaticResource TitleTextBlockStyle}"
+                Margin="36,32,0,0"/>
+
+            <TextBlock x:ConnectionId='3' x:Name="Information"
+         Text="Consulta los registros de estudiantes por sección. Usa el botón para seleccionar una y ver los resultados."
+          Style="{StaticResource BodyTextBlockStyle}"
+          RelativePanel.Below="Header"
+          Margin="36,24,0,16"/>
+
+
+            <ComboBox x:ConnectionId='4' x:Name="ComboBox"
+                                                                                   
+                                                                                   
+                RelativePanel.Below="Information" Margin="36,0,0,0"
+                PlaceholderText="Seleccione una sección" 
+                Width="200" />
+
+            <Border Style="{StaticResource CardEstudiantes}"
+                    RelativePanel.Below="ComboBox"
+                    Margin="36,36,0,36"
+                    Width="1350">
+                <controls:DataGrid x:ConnectionId='5'
+                    Grid.Row="1"
+                    AutoGenerateColumns="False"
+                    GridLinesVisibility="Horizontal"
+                                                                                     
+                    Height="490">
+
+                    <controls:DataGrid.Columns>
+                        <controls:DataGridTextColumn Binding="{Binding Identificacion}" Header="Cédula" />
+                        <controls:DataGridTextColumn Binding="{Binding Nombre}" Header="Estudiante" />
+                        <controls:DataGridTextColumn Binding="{Binding Nivel}" Header="Nivel" />
+                        <controls:DataGridTextColumn Binding="{Binding Seccion}" Header="Sección" />
+                        <controls:DataGridTextColumn Binding="{Binding Grupo}" Header="Grupo" />
+                        <controls:DataGridTextColumn Binding="{Binding Especialidad}" Header="Especialidad" />
+                    </controls:DataGrid.Columns>
+                </controls:DataGrid>
+            </Border>
+        </RelativePanel>
+    </Border>
+    
+</Page>
+

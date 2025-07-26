@@ -19,7 +19,7 @@
 
         <Grid x:ConnectionId='2' Grid.Row="0" x:Name="AppTitleBar">
             <Image Source="/Assets/WindowIcon.ico" HorizontalAlignment="Left" Width="16" Height="16" Margin="8,0"/>
-            <TextBlock x:ConnectionId='15' x:Name="AppTitleBarText" VerticalAlignment="Center" TextWrapping="NoWrap" Style="{StaticResource CaptionTextBlockStyle}" Margin="32,0,0,0"/>
+            <TextBlock x:ConnectionId='13' x:Name="AppTitleBarText" VerticalAlignment="Center" TextWrapping="NoWrap" Style="{StaticResource CaptionTextBlockStyle}" Margin="32,0,0,0"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -30,43 +30,29 @@
             
             <MenuBar Grid.Column="0">
                 <MenuBarItem x:Uid="ShellMenuBarItem_File">
-                    <MenuFlyoutItem x:ConnectionId='12' x:Uid="ShellMenuItem_Views_Main"                                                  />
+                    <MenuFlyoutItem x:ConnectionId='10' x:Uid="ShellMenuItem_Views_Main"                                                  />
 
-                    <MenuFlyoutItem x:ConnectionId='13' x:Uid="ShellMenuItem_Views_ImportExcel"
+                    <MenuFlyoutItem x:ConnectionId='11' x:Uid="ShellMenuItem_Views_ImportExcel"
           Text="Importar"
                                                           />
                     <MenuFlyoutSeparator />
-                    <MenuFlyoutItem x:ConnectionId='14' x:Uid="ShellMenuItem_File_Exit"                                                  />
+                    <MenuFlyoutItem x:ConnectionId='12' x:Uid="ShellMenuItem_File_Exit"                                                  />
                 </MenuBarItem>
 
                 <MenuBarItem x:Uid="ShellMenuBarItem_Assistance">
-                    <MenuFlyoutItem x:ConnectionId='10' x:Uid="ShellMenuItem_Views_AssistancePage"                                                             />
-                    <MenuFlyoutItem x:ConnectionId='11' x:Uid="ShellMenuItem_Views_CreateAssistancePage"                                                                   />
+                    <MenuFlyoutItem x:ConnectionId='8' x:Uid="ShellMenuItem_Views_AssistancePage"                                                             />
+                    <MenuFlyoutItem x:ConnectionId='9' x:Uid="ShellMenuItem_Views_CreateAssistancePage"                                                                   />
                 </MenuBarItem>
 
                 <MenuBarItem x:Uid="ShellMenuBarItem_Students">
-                    <MenuFlyoutItem x:ConnectionId='9' x:Uid="ShellMenuItem_Views_Students"                                                       />
+                    <MenuFlyoutItem x:ConnectionId='7' x:Uid="ShellMenuItem_Views_Students"                                                       />
                 </MenuBarItem>
 
                 <MenuBarItem Title="Configuración">
-                    <MenuFlyoutItem x:ConnectionId='8' x:Uid="ShellMenuItem_Views_Configuration"                                                            />
+                    <MenuFlyoutItem x:ConnectionId='6' x:Uid="ShellMenuItem_Views_Configuration"                                                            />
                 </MenuBarItem>
             </MenuBar>
 
-            <AppBarButton x:ConnectionId='6' Grid.Column="1" x:Name="ShellMenuBarSettingsButton" x:Uid="ShellMenuBarSettingsButton"
-              AnimatedIcon.State="Normal"
-                                                                        
-                                                                      
-                                                              >
-                <AnimatedIcon x:ConnectionId='7' x:Name="ShellMenuBarSettingsButtonIcon">
-                    <AnimatedIcon.Source>
-                        <animatedvisuals:AnimatedSettingsVisualSource/>
-                    </AnimatedIcon.Source>
-                    <AnimatedIcon.FallbackIconSource>
-                        <FontIconSource FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE713;"/>
-                    </AnimatedIcon.FallbackIconSource>
-                </AnimatedIcon>
-            </AppBarButton>
         </Grid>
         
         <Grid Grid.Row="2">
