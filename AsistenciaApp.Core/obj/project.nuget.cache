@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g/CVGFRYrgo=",
+  "dgSpecHash": "Egk3ChZbvVI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
+  "projectFilePath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\mateo\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.20\\microsoft.data.sqlite.core.7.0.20.nupkg.sha512",
@@ -33,7 +33,17 @@
     "C:\\Users\\mateo\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\mateo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\mateo\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\mateo\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\mateo\\.nuget\\packages\\system.text.json\\9.0.9\\system.text.json.9.0.9.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

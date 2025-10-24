@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows10.0.19041": {
+    "net9.0-windows10.0.19041": {
       "BouncyCastle.Cryptography/2.4.0": {
         "type": "package",
         "compile": {
@@ -303,12 +303,12 @@
           "DocumentFormat.OpenXml.Framework": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
             "related": ".xml"
           }
         }
@@ -319,12 +319,12 @@
           "System.IO.Packaging": "8.0.1"
         },
         "compile": {
-          "lib/net6.0/DocumentFormat.OpenXml.Framework.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/DocumentFormat.OpenXml.Framework.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "related": ".xml"
           }
         }
@@ -848,12 +848,12 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
@@ -1464,12 +1464,12 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
         },
         "compile": {
-          "lib/net7.0/Prism.Container.Abstractions.dll": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
             "related": ".pdb"
           }
         },
         "runtime": {
-          "lib/net7.0/Prism.Container.Abstractions.dll": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
             "related": ".pdb"
           }
         },
@@ -1516,12 +1516,12 @@
       "RBush/4.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/RBush.dll": {
+          "lib/net8.0/RBush.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/RBush.dll": {
+          "lib/net8.0/RBush.dll": {
             "related": ".xml"
           }
         }
@@ -2243,12 +2243,12 @@
       "System.IO.Packaging/8.0.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/System.IO.Packaging.dll": {
+          "lib/net8.0/System.IO.Packaging.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.IO.Packaging.dll": {
+          "lib/net8.0/System.IO.Packaging.dll": {
             "related": ".xml"
           }
         },
@@ -2992,23 +2992,20 @@
           }
         }
       },
-      "System.Text.Json/7.0.0": {
+      "System.Text.Json/9.0.9": {
         "type": "package",
-        "dependencies": {
-          "System.Text.Encodings.Web": "7.0.0"
-        },
         "compile": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/System.Text.Json.targets": {}
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "System.Text.RegularExpressions/4.3.1": {
@@ -3205,11 +3202,12 @@
       },
       "AsistenciaApp.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.20",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.20",
-          "Newtonsoft.Json": "13.0.2"
+          "Newtonsoft.Json": "13.0.2",
+          "System.Text.Json": "9.0.9"
         },
         "compile": {
           "bin/placeholder/AsistenciaApp.Core.dll": {}
@@ -3219,7 +3217,7 @@
         }
       }
     },
-    "net7.0-windows10.0.19041/win10-arm64": {
+    "net9.0-windows10.0.19041/win-arm64": {
       "BouncyCastle.Cryptography/2.4.0": {
         "type": "package",
         "compile": {
@@ -3521,12 +3519,12 @@
           "DocumentFormat.OpenXml.Framework": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
             "related": ".xml"
           }
         }
@@ -3537,12 +3535,12 @@
           "System.IO.Packaging": "8.0.1"
         },
         "compile": {
-          "lib/net6.0/DocumentFormat.OpenXml.Framework.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/DocumentFormat.OpenXml.Framework.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "related": ".xml"
           }
         }
@@ -4066,12 +4064,12 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
@@ -4424,9 +4422,6 @@
         "runtime": {
           "lib/net5.0-windows10.0.18362.0/Microsoft.Graphics.Canvas.Interop.dll": {}
         },
-        "native": {
-          "runtimes/win10-arm64/native/Microsoft.Graphics.Canvas.dll": {}
-        },
         "build": {
           "build/net5.0-windows10.0.18362.0/_._": {}
         }
@@ -4556,9 +4551,6 @@
           "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Providers.Projection.dll": {},
           "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {}
         },
-        "native": {
-          "runtimes/win10-arm64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {}
-        },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
@@ -4654,12 +4646,12 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
         },
         "compile": {
-          "lib/net7.0/Prism.Container.Abstractions.dll": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
             "related": ".pdb"
           }
         },
         "runtime": {
-          "lib/net7.0/Prism.Container.Abstractions.dll": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
             "related": ".pdb"
           }
         },
@@ -4706,12 +4698,12 @@
       "RBush/4.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/RBush.dll": {
+          "lib/net8.0/RBush.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/RBush.dll": {
+          "lib/net8.0/RBush.dll": {
             "related": ".xml"
           }
         }
@@ -4901,8 +4893,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "runtime.win10-arm64.runtime.native.System.IO.Compression": "4.3.2"
+          "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -5109,21 +5100,6 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll": {}
-        }
-      },
-      "runtime.win10-arm64.runtime.native.System.IO.Compression/4.3.2": {
-        "type": "package",
-        "native": {
-          "runtimes/win10-arm64/native/clrcompression.dll": {}
-        }
-      },
-      "runtime.win7.System.Private.Uri/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard/_._": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
       "SixLabors.Fonts/1.0.0": {
@@ -5556,12 +5532,12 @@
       "System.IO.Packaging/8.0.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/System.IO.Packaging.dll": {
+          "lib/net8.0/System.IO.Packaging.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.IO.Packaging.dll": {
+          "lib/net8.0/System.IO.Packaging.dll": {
             "related": ".xml"
           }
         },
@@ -5746,8 +5722,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "runtime.win7.System.Private.Uri": "4.3.0"
+          "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
@@ -6341,23 +6316,20 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Text.Json/7.0.0": {
+      "System.Text.Json/9.0.9": {
         "type": "package",
-        "dependencies": {
-          "System.Text.Encodings.Web": "7.0.0"
-        },
         "compile": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/System.Text.Json.targets": {}
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "System.Text.RegularExpressions/4.3.1": {
@@ -6573,11 +6545,12 @@
       },
       "AsistenciaApp.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.20",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.20",
-          "Newtonsoft.Json": "13.0.2"
+          "Newtonsoft.Json": "13.0.2",
+          "System.Text.Json": "9.0.9"
         },
         "compile": {
           "bin/placeholder/AsistenciaApp.Core.dll": {}
@@ -6587,7 +6560,7 @@
         }
       }
     },
-    "net7.0-windows10.0.19041/win10-x64": {
+    "net9.0-windows10.0.19041/win-x64": {
       "BouncyCastle.Cryptography/2.4.0": {
         "type": "package",
         "compile": {
@@ -6889,12 +6862,12 @@
           "DocumentFormat.OpenXml.Framework": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
             "related": ".xml"
           }
         }
@@ -6905,12 +6878,12 @@
           "System.IO.Packaging": "8.0.1"
         },
         "compile": {
-          "lib/net6.0/DocumentFormat.OpenXml.Framework.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/DocumentFormat.OpenXml.Framework.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "related": ".xml"
           }
         }
@@ -7434,12 +7407,12 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
@@ -7792,9 +7765,6 @@
         "runtime": {
           "lib/net5.0-windows10.0.18362.0/Microsoft.Graphics.Canvas.Interop.dll": {}
         },
-        "native": {
-          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
-        },
         "build": {
           "build/net5.0-windows10.0.18362.0/_._": {}
         }
@@ -7924,9 +7894,6 @@
           "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Providers.Projection.dll": {},
           "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {}
         },
-        "native": {
-          "runtimes/win10-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {}
-        },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
@@ -8022,12 +7989,12 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
         },
         "compile": {
-          "lib/net7.0/Prism.Container.Abstractions.dll": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
             "related": ".pdb"
           }
         },
         "runtime": {
-          "lib/net7.0/Prism.Container.Abstractions.dll": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
             "related": ".pdb"
           }
         },
@@ -8074,12 +8041,12 @@
       "RBush/4.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/RBush.dll": {
+          "lib/net8.0/RBush.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/RBush.dll": {
+          "lib/net8.0/RBush.dll": {
             "related": ".xml"
           }
         }
@@ -8269,8 +8236,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "runtime.win7-x64.runtime.native.System.IO.Compression": "4.3.2"
+          "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -8477,21 +8443,6 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll": {}
-        }
-      },
-      "runtime.win7-x64.runtime.native.System.IO.Compression/4.3.2": {
-        "type": "package",
-        "native": {
-          "runtimes/win7-x64/native/clrcompression.dll": {}
-        }
-      },
-      "runtime.win7.System.Private.Uri/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard/_._": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
       "SixLabors.Fonts/1.0.0": {
@@ -8924,12 +8875,12 @@
       "System.IO.Packaging/8.0.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/System.IO.Packaging.dll": {
+          "lib/net8.0/System.IO.Packaging.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.IO.Packaging.dll": {
+          "lib/net8.0/System.IO.Packaging.dll": {
             "related": ".xml"
           }
         },
@@ -9114,8 +9065,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "runtime.win7.System.Private.Uri": "4.3.0"
+          "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
@@ -9709,23 +9659,20 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Text.Json/7.0.0": {
+      "System.Text.Json/9.0.9": {
         "type": "package",
-        "dependencies": {
-          "System.Text.Encodings.Web": "7.0.0"
-        },
         "compile": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/System.Text.Json.targets": {}
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "System.Text.RegularExpressions/4.3.1": {
@@ -9941,11 +9888,12 @@
       },
       "AsistenciaApp.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.20",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.20",
-          "Newtonsoft.Json": "13.0.2"
+          "Newtonsoft.Json": "13.0.2",
+          "System.Text.Json": "9.0.9"
         },
         "compile": {
           "bin/placeholder/AsistenciaApp.Core.dll": {}
@@ -9955,7 +9903,7 @@
         }
       }
     },
-    "net7.0-windows10.0.19041/win10-x86": {
+    "net9.0-windows10.0.19041/win-x86": {
       "BouncyCastle.Cryptography/2.4.0": {
         "type": "package",
         "compile": {
@@ -10257,12 +10205,12 @@
           "DocumentFormat.OpenXml.Framework": "3.1.1"
         },
         "compile": {
-          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.dll": {
             "related": ".xml"
           }
         }
@@ -10273,12 +10221,12 @@
           "System.IO.Packaging": "8.0.1"
         },
         "compile": {
-          "lib/net6.0/DocumentFormat.OpenXml.Framework.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/DocumentFormat.OpenXml.Framework.dll": {
+          "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "related": ".xml"
           }
         }
@@ -10802,12 +10750,12 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
@@ -11160,9 +11108,6 @@
         "runtime": {
           "lib/net5.0-windows10.0.18362.0/Microsoft.Graphics.Canvas.Interop.dll": {}
         },
-        "native": {
-          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
-        },
         "build": {
           "build/net5.0-windows10.0.18362.0/_._": {}
         }
@@ -11292,9 +11237,6 @@
           "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Providers.Projection.dll": {},
           "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {}
         },
-        "native": {
-          "runtimes/win10-x86/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {}
-        },
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
@@ -11390,12 +11332,12 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
         },
         "compile": {
-          "lib/net7.0/Prism.Container.Abstractions.dll": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
             "related": ".pdb"
           }
         },
         "runtime": {
-          "lib/net7.0/Prism.Container.Abstractions.dll": {
+          "lib/net8.0/Prism.Container.Abstractions.dll": {
             "related": ".pdb"
           }
         },
@@ -11442,12 +11384,12 @@
       "RBush/4.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/RBush.dll": {
+          "lib/net8.0/RBush.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/RBush.dll": {
+          "lib/net8.0/RBush.dll": {
             "related": ".xml"
           }
         }
@@ -11637,8 +11579,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "runtime.win7-x86.runtime.native.System.IO.Compression": "4.3.2"
+          "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -11845,21 +11786,6 @@
         },
         "runtime": {
           "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll": {}
-        }
-      },
-      "runtime.win7-x86.runtime.native.System.IO.Compression/4.3.2": {
-        "type": "package",
-        "native": {
-          "runtimes/win7-x86/native/clrcompression.dll": {}
-        }
-      },
-      "runtime.win7.System.Private.Uri/4.3.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard/_._": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll": {}
         }
       },
       "SixLabors.Fonts/1.0.0": {
@@ -12292,12 +12218,12 @@
       "System.IO.Packaging/8.0.1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/System.IO.Packaging.dll": {
+          "lib/net8.0/System.IO.Packaging.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.IO.Packaging.dll": {
+          "lib/net8.0/System.IO.Packaging.dll": {
             "related": ".xml"
           }
         },
@@ -12482,8 +12408,7 @@
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "runtime.win7.System.Private.Uri": "4.3.0"
+          "Microsoft.NETCore.Targets": "1.1.0"
         },
         "compile": {
           "ref/netstandard/_._": {}
@@ -13077,23 +13002,20 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Text.Json/7.0.0": {
+      "System.Text.Json/9.0.9": {
         "type": "package",
-        "dependencies": {
-          "System.Text.Encodings.Web": "7.0.0"
-        },
         "compile": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Text.Json.dll": {
+          "lib/net9.0/System.Text.Json.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/System.Text.Json.targets": {}
+          "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
       "System.Text.RegularExpressions/4.3.1": {
@@ -13309,11 +13231,12 @@
       },
       "AsistenciaApp.Core/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.20",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.20",
-          "Newtonsoft.Json": "13.0.2"
+          "Newtonsoft.Json": "13.0.2",
+          "System.Text.Json": "9.0.9"
         },
         "compile": {
           "bin/placeholder/AsistenciaApp.Core.dll": {}
@@ -16697,67 +16620,6 @@
         "runtimes/win/lib/netstandard1.5/System.Runtime.Extensions.dll"
       ]
     },
-    "runtime.win10-arm64.runtime.native.System.IO.Compression/4.3.2": {
-      "sha512": "4Yb5iJu7Jfm86A4evh69s0vyZ1hG2ZiH3S/K2X07BjAr/gHrMZIpo9LYPezYZzcgPJL6emo8wy+fCAQipnkwYw==",
-      "type": "package",
-      "path": "runtime.win10-arm64.runtime.native.system.io.compression/4.3.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "runtime.win10-arm64.runtime.native.system.io.compression.4.3.2.nupkg.sha512",
-        "runtime.win10-arm64.runtime.native.system.io.compression.nuspec",
-        "runtimes/win10-arm64/native/clrcompression.dll"
-      ]
-    },
-    "runtime.win7-x64.runtime.native.System.IO.Compression/4.3.2": {
-      "sha512": "QZj+xNVPDGJV1hs/bW5HIhiN/LOpKvmPlJiWr9H2kqucFKD0ZzZJYzJbE1W267QEe/Rl+WXODdmfrZuv8b9tVw==",
-      "type": "package",
-      "path": "runtime.win7-x64.runtime.native.system.io.compression/4.3.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "runtime.win7-x64.runtime.native.system.io.compression.4.3.2.nupkg.sha512",
-        "runtime.win7-x64.runtime.native.system.io.compression.nuspec",
-        "runtimes/win7-x64/native/clrcompression.dll",
-        "runtimes/win7-x64/nativeassets/netcore50/clrcompression.dll"
-      ]
-    },
-    "runtime.win7-x86.runtime.native.System.IO.Compression/4.3.2": {
-      "sha512": "E18Sg1VFmHKaBk6i0hOxOtgTlMbpimkIFWC7yLwV7OYmQk9pra/Yz5B0J+RvjfvdUxaBJyfRcM6H/R2r3E7kig==",
-      "type": "package",
-      "path": "runtime.win7-x86.runtime.native.system.io.compression/4.3.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "runtime.win7-x86.runtime.native.system.io.compression.4.3.2.nupkg.sha512",
-        "runtime.win7-x86.runtime.native.system.io.compression.nuspec",
-        "runtimes/win7-x86/native/clrcompression.dll",
-        "runtimes/win7-x86/nativeassets/netcore50/clrcompression.dll"
-      ]
-    },
-    "runtime.win7.System.Private.Uri/4.3.0": {
-      "sha512": "Q+IBgaPYicSQs2tBlmXqbS25c/JLIthWrgrpMwxKSOobW/OqIMVFruUGfuaz4QABVzV8iKdCAbN7APY7Tclbnw==",
-      "type": "package",
-      "path": "runtime.win7.system.private.uri/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "ref/netstandard/_._",
-        "runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
-        "runtime.win7.system.private.uri.nuspec",
-        "runtimes/aot/lib/netcore50/System.Private.Uri.dll",
-        "runtimes/win/lib/netcore50/System.Private.Uri.dll",
-        "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
-      ]
-    },
     "SixLabors.Fonts/1.0.0": {
       "sha512": "LFQsCZlV0xlUyXAOMUo5kkSl+8zAQXXbbdwWchtk0B4o7zotZhQsQOcJUELGHdfPfm/xDAsz6hONAuV25bJaAg==",
       "type": "package",
@@ -19982,16 +19844,16 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/7.0.0": {
-      "sha512": "DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
+    "System.Text.Json/9.0.9": {
+      "sha512": "NEnpppwq67fRz/OvQRxsEMgetDJsxlxpEsAFO/4PZYbAyAMd4Ol6KS7phc8uDoKPsnbdzRLKobpX303uQwCqdg==",
       "type": "package",
-      "path": "system.text.json/7.0.0",
+      "path": "system.text.json/9.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "README.md",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll",
         "analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
@@ -20037,18 +19899,18 @@
         "analyzers/dotnet/roslyn4.4/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
         "buildTransitive/net461/System.Text.Json.targets",
         "buildTransitive/net462/System.Text.Json.targets",
-        "buildTransitive/net6.0/System.Text.Json.targets",
+        "buildTransitive/net8.0/System.Text.Json.targets",
         "buildTransitive/netcoreapp2.0/System.Text.Json.targets",
         "buildTransitive/netstandard2.0/System.Text.Json.targets",
         "lib/net462/System.Text.Json.dll",
         "lib/net462/System.Text.Json.xml",
-        "lib/net6.0/System.Text.Json.dll",
-        "lib/net6.0/System.Text.Json.xml",
-        "lib/net7.0/System.Text.Json.dll",
-        "lib/net7.0/System.Text.Json.xml",
+        "lib/net8.0/System.Text.Json.dll",
+        "lib/net8.0/System.Text.Json.xml",
+        "lib/net9.0/System.Text.Json.dll",
+        "lib/net9.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.7.0.0.nupkg.sha512",
+        "system.text.json.9.0.9.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -20666,7 +20528,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0-windows10.0.19041": [
+    "net9.0-windows10.0.19041": [
       "AsistenciaApp.Core >= 1.0.0",
       "ClosedXML >= 0.104.2",
       "CommunityToolkit.Mvvm >= 8.0.0",
@@ -20679,6 +20541,7 @@
       "Microsoft.WindowsAppSDK >= 1.4.231008000",
       "Microsoft.Xaml.Behaviors.WinUI.Managed >= 2.0.9",
       "Prism.Core >= 9.0.537",
+      "System.Text.Json >= 9.0.9",
       "WinUIEx >= 2.3.2",
       "itext7 >= 9.1.0",
       "itext7.bouncy-castle-adapter >= 9.1.0"
@@ -20691,11 +20554,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
+      "projectUniqueName": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
       "projectName": "AsistenciaApp",
-      "projectPath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
+      "projectPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
       "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\obj\\",
+      "outputPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -20706,19 +20569,18 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows10.0.19041.0"
+        "net9.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows10.0.19041": {
-          "targetAlias": "net7.0-windows10.0.19041.0",
+        "net9.0-windows10.0.19041": {
+          "targetAlias": "net9.0-windows",
           "projectReferences": {
-            "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj": {
-              "projectPath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj"
+            "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj": {
+              "projectPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj"
             }
           }
         }
@@ -20736,8 +20598,8 @@
       "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net7.0-windows10.0.19041": {
-        "targetAlias": "net7.0-windows10.0.19041.0",
+      "net9.0-windows10.0.19041": {
+        "targetAlias": "net9.0-windows",
         "dependencies": {
           "ClosedXML": {
             "target": "Package",
@@ -20783,6 +20645,10 @@
             "target": "Package",
             "version": "[9.0.537, )"
           },
+          "System.Text.Json": {
+            "target": "Package",
+            "version": "[9.0.9, )"
+          },
           "WinUIEx": {
             "target": "Package",
             "version": "[2.3.2, )"
@@ -20810,43 +20676,43 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-arm64",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x86",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.19041.55, 10.0.19041.55]"
+            "version": "[10.0.19041.57, 10.0.19041.57]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-            "version": "[7.0.20, 7.0.20]"
+            "version": "[9.0.9, 9.0.9]"
           }
         ],
         "frameworkReferences": {
@@ -20857,19 +20723,27 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
-      "win10-arm64": {
+      "win-arm64": {
         "#import": []
       },
-      "win10-x64": {
+      "win-x64": {
         "#import": []
       },
-      "win10-x86": {
+      "win-x86": {
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

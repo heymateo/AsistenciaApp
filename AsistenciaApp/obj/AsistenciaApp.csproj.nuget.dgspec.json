@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj": {}
+    "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj": {
+    "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
         "projectName": "AsistenciaApp.Core",
-        "projectPath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
+        "projectPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj",
         "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\obj\\",
+        "outputPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,16 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -48,8 +47,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -74,6 +73,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.9, )"
             }
           },
           "imports": [
@@ -92,18 +95,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj": {
+    "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
+        "projectUniqueName": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
         "projectName": "AsistenciaApp",
-        "projectPath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
+        "projectPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp\\AsistenciaApp.csproj",
         "packagesPath": "C:\\Users\\mateo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp\\obj\\",
+        "outputPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -114,19 +117,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0-windows10.0.19041.0"
+          "net9.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0-windows10.0.19041": {
-            "targetAlias": "net7.0-windows10.0.19041.0",
+          "net9.0-windows10.0.19041": {
+            "targetAlias": "net9.0-windows",
             "projectReferences": {
-              "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj": {
-                "projectPath": "C:\\Users\\mateo\\Desktop\\App\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj"
+              "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj": {
+                "projectPath": "C:\\Users\\mateo\\Desktop\\AsistenciaApp\\AsistenciaApp.Core\\AsistenciaApp.Core.csproj"
               }
             }
           }
@@ -144,8 +146,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net7.0-windows10.0.19041": {
-          "targetAlias": "net7.0-windows10.0.19041.0",
+        "net9.0-windows10.0.19041": {
+          "targetAlias": "net9.0-windows",
           "dependencies": {
             "ClosedXML": {
               "target": "Package",
@@ -191,6 +193,10 @@
               "target": "Package",
               "version": "[9.0.537, )"
             },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
             "WinUIEx": {
               "target": "Package",
               "version": "[2.3.2, )"
@@ -218,43 +224,43 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-arm64",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x86",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             },
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.55, 10.0.19041.55]"
+              "version": "[10.0.19041.57, 10.0.19041.57]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-arm64",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-              "version": "[7.0.20, 7.0.20]"
+              "version": "[9.0.9, 9.0.9]"
             }
           ],
           "frameworkReferences": {
@@ -265,17 +271,17 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
-        "win10-arm64": {
+        "win-arm64": {
           "#import": []
         },
-        "win10-x64": {
+        "win-x64": {
           "#import": []
         },
-        "win10-x86": {
+        "win-x86": {
           "#import": []
         }
       }

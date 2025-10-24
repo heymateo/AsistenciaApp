@@ -20,9 +20,17 @@ public class AssistanceDbContext : DbContext
     // USAR UNA DIRECCION DINAMICA, NO DIRECCION LOCAL PERO NO FUNCIONA
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        var dbPath = @"C:\Users\mateo\Desktop\App\AsistenciaApp\AsistenciaApp\DB_ASSISTANCE.db";
+        if (!optionsBuilder.IsConfigured)
+        {
+            // Carpeta donde se ejecuta la app (por ejemplo, bin\Debug\net8.0-windows)
+            var basePath = AppContext.BaseDirectory;
 
-        optionsBuilder.UseSqlite($"Data Source={dbPath}");
+            // Ruta relativa dentro del proyecto (por ejemplo, carpeta DB)
+            var dbPath = Path.Combine(basePath, "DB", "DB_ASSISTANCE.db");
+
+            optionsBuilder.UseSqlite($"Data Source={dbPath}");
+        }
+
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

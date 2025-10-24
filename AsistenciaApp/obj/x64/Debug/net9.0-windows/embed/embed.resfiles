@@ -1,0 +1,15 @@
+App.xbf
+MainWindow.xbf
+Styles\FontSizes.xbf
+Styles\Styles.xbf
+Styles\TextBlock.xbf
+Styles\Thickness.xbf
+Views\AgregarAsistenciaPage.xbf
+Views\CalendarioPage.xbf
+Views\ConfigurationPage.xbf
+Views\EstudiantesDataGrid.xbf
+Views\LoginPage.xbf
+Views\MainPage.xbf
+Views\RestorePasswordPage.xbf
+Views\SettingsPage.xbf
+Views\ShellPage.xbf

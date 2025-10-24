@@ -53,6 +53,8 @@ public partial class App : Application
 
         var dbFilePath = Path.Combine(AppContext.BaseDirectory, "DB_ASSISTANCE.db");
 
+        System.Diagnostics.Debug.WriteLine($"DB path: {dbFilePath}");
+
         Host = Microsoft.Extensions.Hosting.Host.
         CreateDefaultBuilder().
         UseContentRoot(AppContext.BaseDirectory).
