@@ -52,31 +52,31 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.20, )"
+              "version": "[9.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.20, )"
+              "version": "[9.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[7.0.20, )"
+              "version": "[9.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.20, )"
+              "version": "[9.0.10, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.2, )"
+              "version": "[13.0.4, )"
             },
             "System.Text.Json": {
               "target": "Package",
-              "version": "[9.0.9, )"
+              "version": "[9.0.10, )"
             }
           },
           "imports": [
@@ -151,11 +151,11 @@
           "dependencies": {
             "ClosedXML": {
               "target": "Package",
-              "version": "[0.104.2, )"
+              "version": "[0.105.0, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.4.0, )"
             },
             "CommunityToolkit.WinUI.UI.Animations": {
               "target": "Package",
@@ -171,43 +171,51 @@
             },
             "ExcelDataReader": {
               "target": "Package",
-              "version": "[3.7.0, )"
+              "version": "[3.8.0, )"
             },
             "ExcelDataReader.DataSet": {
               "target": "Package",
-              "version": "[3.7.0, )"
+              "version": "[3.8.0, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[9.0.10, )"
             },
             "Microsoft.WindowsAppSDK": {
               "target": "Package",
-              "version": "[1.4.231008000, )"
+              "version": "[1.8.251003001, )"
             },
             "Microsoft.Xaml.Behaviors.WinUI.Managed": {
               "target": "Package",
-              "version": "[2.0.9, )"
+              "version": "[3.0.0, )"
             },
             "Prism.Core": {
               "target": "Package",
               "version": "[9.0.537, )"
             },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Private.Uri": {
+              "target": "Package",
+              "version": "[4.3.2, )"
+            },
             "System.Text.Json": {
               "target": "Package",
-              "version": "[9.0.9, )"
+              "version": "[9.0.10, )"
             },
             "WinUIEx": {
               "target": "Package",
-              "version": "[2.3.2, )"
+              "version": "[2.9.0, )"
             },
-            "itext7": {
+            "itext": {
               "target": "Package",
-              "version": "[9.1.0, )"
+              "version": "[9.3.0, )"
             },
-            "itext7.bouncy-castle-adapter": {
+            "itext.bouncy-castle-adapter": {
               "target": "Package",
-              "version": "[9.1.0, )"
+              "version": "[9.3.0, )"
             }
           },
           "imports": [
