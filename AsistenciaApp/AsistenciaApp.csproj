@@ -26,7 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB_ASSISTANCE.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

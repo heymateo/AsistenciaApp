@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -99,11 +100,11 @@ public partial class ImportExcelViewModel : ObservableRecipient
 
                     // Leer y limpiar datos
                     var identificacion = LimpiarIdentificacion(GetCell(row, 0));
-                    var nombre = GetCell(row, 1);         
-                    var nivel = GetCell(row, 2);          
-                    var seccion = GetCell(row, 3);        
-                    var grupo = GetCell(row, 4);          
-                    var especialidad = GetCell(row, 5);   
+                    var nombre = GetCell(row, 1);
+                    var nivel = GetCell(row, 2);
+                    var seccion = GetCell(row, 3);
+                    var grupo = GetCell(row, 4);
+                    var especialidad = GetCell(row, 5);
 
                     if (string.IsNullOrWhiteSpace(identificacion) || string.IsNullOrWhiteSpace(nombre))
                         continue;
@@ -152,7 +153,16 @@ public partial class ImportExcelViewModel : ObservableRecipient
         }
         catch (Exception ex)
         {
-            
+            System.Diagnostics.Debug.WriteLine("An error occurred: " + ex.Message);
+            System.Diagnostics.Debug.WriteLine("Stack Trace: " + ex.StackTrace);
+
+            if (ex.InnerException != null)
+            {
+                System.Diagnostics.Debug.WriteLine("Inner Exception: " + ex.InnerException.Message);
+                System.Diagnostics.Debug.WriteLine("Inner Stack Trace: " + ex.InnerException.StackTrace);
+            }
+
+
         }
     }
 
@@ -218,6 +228,11 @@ public partial class ImportExcelViewModel : ObservableRecipient
     {
         using var context = new AssistanceDbContext();
 
+        // Log the database path or connection info
+        System.Diagnostics.Debug.WriteLine("Database path: " + context.Database.GetDbConnection().ConnectionString);
+
+
+
         foreach (var estudiante in estudiantes)
         {
             // Puedes verificar si ya existe por Identificación si quieres evitar duplicados:
@@ -230,7 +245,7 @@ public partial class ImportExcelViewModel : ObservableRecipient
             }
         }
 
-        context.Estudiante.RemoveRange(context.Estudiante);
+        // context.Estudiante.RemoveRange(context.Estudiante);
         context.Estudiante.AddRange(estudiantes);
 
         await context.SaveChangesAsync();

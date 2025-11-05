@@ -9,11 +9,12 @@ namespace AsistenciaApp.Core.Services;
 
 public class DataService : IDataService
 {
-    private readonly AssistanceDbContext _dbContext;
-    public DataService(AssistanceDbContext dbContext)
+    private readonly IDbContextFactory<AssistanceDbContext> _dbContextFactory;
+    public DataService(IDbContextFactory<AssistanceDbContext> dbContextFactory)
     {
-        _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));  // Ensure it isn't null
+        _dbContextFactory = dbContextFactory ?? throw new ArgumentNullException(nameof(dbContextFactory));
     }
+
     public T Read<T>(string folderPath, string fileName)
     {
         var path = Path.Combine(folderPath, fileName);
@@ -47,20 +48,17 @@ public class DataService : IDataService
 
     public async Task<IEnumerable<Estudiante>> GetGridDataAsync()
     {
-        if (_dbContext == null)
-        {
-            throw new InvalidOperationException("DbContext is not initialized.");
-        }
-
-        return await _dbContext.Estudiante.ToListAsync();
+        using var context = _dbContextFactory.CreateDbContext();
+        return await context.Estudiante.ToListAsync();
     }
 
     public async Task SaveCentroEducativoAsync(string folderPath, string fileName, Centro_Educativo centroEducativo)
     {
         try
         {
-            _dbContext.Centro_Educativo.Add(centroEducativo);
-            await _dbContext.SaveChangesAsync();
+            using var context = _dbContextFactory.CreateDbContext();
+            context.Centro_Educativo.Add(centroEducativo);
+            await context.SaveChangesAsync();
         }
         catch (Exception ex)
         {
@@ -72,7 +70,8 @@ public class DataService : IDataService
     {
         try
         {
-            return await _dbContext.Centro_Educativo.FirstOrDefaultAsync();
+            using var context = _dbContextFactory.CreateDbContext();
+            return await context.Centro_Educativo.FirstOrDefaultAsync();
         }
         catch (Exception ex)
         {

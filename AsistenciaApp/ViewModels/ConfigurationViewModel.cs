@@ -16,12 +16,11 @@ namespace AsistenciaApp.ViewModels;
 public partial class ConfigurationViewModel : ObservableRecipient
 {
     private readonly IDataService _dataService;
-    private readonly string _folderPath = "Settings";
     private readonly string _fileName = "CentroEducativo.json";
     private readonly AssistanceDbContext _dbContext;
 
     [ObservableProperty]
-    private Centro_Educativo _centroEducativo;
+    private Centro_Educativo? _centroEducativo;
 
     public ICommand SaveCommand
     {
@@ -48,24 +47,21 @@ public partial class ConfigurationViewModel : ObservableRecipient
         ResetCommand = new RelayCommand(ResetCentroEducativo);
 
         // Cargar datos al iniciar
-        LoadCentroEducativo();
+        _ = LoadCentroEducativo(); // Explicitly discard the Task to suppress CS4014
     }
 
     private async Task LoadCentroEducativo()
     {
         try
         {
-            _centroEducativo = await _dataService.GetCentroEducativoAsync();
+            CentroEducativo = await _dataService.GetCentroEducativoAsync();
 
-            if (_centroEducativo == null)
-            {
-                _centroEducativo = new Centro_Educativo();
-            }
+            CentroEducativo ??= new Centro_Educativo();
         }
         catch (Exception ex)
         {
             Debug.WriteLine($"Error al cargar el Centro Educativo: {ex.Message}");
-            _centroEducativo = new Centro_Educativo();
+            CentroEducativo = new Centro_Educativo();
         }
     }
 
@@ -128,7 +124,7 @@ public partial class ConfigurationViewModel : ObservableRecipient
             Debug.WriteLine($"Ruta del archivo a guardar: {filePath}");
 
 
-            await _dataService.SaveCentroEducativoAsync(folderPath, _fileName, _centroEducativo);
+            await _dataService.SaveCentroEducativoAsync(folderPath, _fileName, CentroEducativo);
         }
         catch(Exception ex)
         {
@@ -139,6 +135,6 @@ public partial class ConfigurationViewModel : ObservableRecipient
     }
     private void ResetCentroEducativo()
     {
-        LoadCentroEducativo();
+        _ = LoadCentroEducativo();
     }
 }

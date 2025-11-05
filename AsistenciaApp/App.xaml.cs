@@ -60,8 +60,12 @@ public partial class App : Application
         UseContentRoot(AppContext.BaseDirectory).
         ConfigureServices((context, services) =>
         {
-            // DbContext
+            // DbContext - add both (optional) AddDbContext and AddDbContextFactory.
+            // Prefer using IDbContextFactory<T> from singletons to create short-lived contexts.
             services.AddDbContext<AssistanceDbContext>(options =>
+                options.UseSqlite($"Data Source={dbFilePath}"));
+
+            services.AddDbContextFactory<AssistanceDbContext>(options =>
                 options.UseSqlite($"Data Source={dbFilePath}"));
 
             // Default Activation Handler

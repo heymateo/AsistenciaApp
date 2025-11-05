@@ -14,7 +14,7 @@ namespace AsistenciaApp.Views;
 
 public sealed partial class ShellPage : Page
 {
-    private readonly ContentDialogService _contentDialogService;
+    private readonly ContentDialogService? _contentDialogService;
 
     public ShellViewModel ViewModel
     {
@@ -25,16 +25,19 @@ public sealed partial class ShellPage : Page
     {
         ViewModel = App.GetService<ShellViewModel>();
         // Obtener el servicio
-        var dialogService = App.GetService<ContentDialogService>();
+        _contentDialogService = App.GetService<ContentDialogService>();
 
         // Inicializar con el XamlRoot de la ventana
-        dialogService.Initialize(this.Content.XamlRoot);
+        _contentDialogService.Initialize(this.Content.XamlRoot);
         InitializeComponent();
     }
 
     public async Task ShowGlobalDialogAsync(string title, string message)
     {
-        await _contentDialogService.ShowDialogAsync(title, message);
+        if (_contentDialogService is not null)
+        {
+            await _contentDialogService.ShowDialogAsync(title, message);
+        }
     }
 
     public ShellPage(ShellViewModel viewModel)

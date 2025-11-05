@@ -28,14 +28,14 @@
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\AsistenciaApp.runtimeconfig.json">
       <PackagePath>AsistenciaApp.runtimeconfig.json</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\DB_ASSISTANCE.db">
+      <PackagePath>DB_ASSISTANCE.db</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\obj\x64\Debug\net9.0-windows\apphost.exe">
       <PackagePath>AsistenciaApp.exe</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\DB_ASSISTANCE.db">
-      <PackagePath>DB_ASSISTANCE.db</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\obj\x64\Debug\net9.0-windows\AsistenciaApp.dll">
       <PackagePath>AsistenciaApp.dll</PackagePath>

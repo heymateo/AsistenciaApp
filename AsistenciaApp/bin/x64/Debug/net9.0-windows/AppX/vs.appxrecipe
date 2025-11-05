@@ -29,13 +29,17 @@
     <AppXManifest Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-10-29T14:07:47.955</Modified>
+      <Modified>2025-11-05T03:23:47.049</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\AsistenciaApp.runtimeconfig.json">
       <PackagePath>AsistenciaApp.runtimeconfig.json</PackagePath>
-      <Modified>2025-10-29T14:07:46.368</Modified>
+      <Modified>2025-11-05T00:49:16.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\DB_ASSISTANCE.db">
+      <PackagePath>DB_ASSISTANCE.db</PackagePath>
+      <Modified>2025-11-03T13:46:09.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\appsettings.json">
       <PackagePath>appsettings.json</PackagePath>
@@ -43,15 +47,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\obj\x64\Debug\net9.0-windows\apphost.exe">
       <PackagePath>AsistenciaApp.exe</PackagePath>
-      <Modified>2025-10-29T14:07:44.882</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\DB_ASSISTANCE.db">
-      <PackagePath>DB_ASSISTANCE.db</PackagePath>
-      <Modified>2025-10-29T03:42:28.399</Modified>
+      <Modified>2025-11-05T03:23:45.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\obj\x64\Debug\net9.0-windows\AsistenciaApp.dll">
       <PackagePath>AsistenciaApp.dll</PackagePath>
-      <Modified>2025-10-29T14:07:44.831</Modified>
+      <Modified>2025-11-05T03:23:45.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -699,7 +699,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp.Core\bin\x64\Debug\net9.0\AsistenciaApp.Core.dll">
       <PackagePath>AsistenciaApp.Core.dll</PackagePath>
-      <Modified>2025-10-29T14:07:27.401</Modified>
+      <Modified>2025-11-05T00:58:29.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\.nuget\packages\microsoft.web.webview2\1.0.3179.45\lib_manual\net8.0-windows10.0.17763.0\Microsoft.Web.WebView2.Core.Projection.dll">
       <PackagePath>Microsoft.Web.WebView2.Core.Projection.dll</PackagePath>
@@ -711,7 +711,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\AsistenciaApp.deps.json">
       <PackagePath>AsistenciaApp.deps.json</PackagePath>
-      <Modified>2025-10-29T14:07:46.357</Modified>
+      <Modified>2025-11-05T00:49:16.772</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\Assets\background.jpg">
       <PackagePath>Assets\background.jpg</PackagePath>
@@ -807,7 +807,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-10-29T14:07:46.892</Modified>
+      <Modified>2025-11-05T00:49:17.131</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

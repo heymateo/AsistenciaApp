@@ -14,17 +14,19 @@ public partial class EstudiantesDataGridViewModel : ObservableRecipient, INaviga
 {
     private readonly IDataService _dataService;
 
-    private ObservableCollection<Estudiante> _filtradoEstudiantes;
+    private ObservableCollection<Estudiante> _filtradoEstudiantes = new();
 
     public ObservableCollection<string> SeccionesDisponibles { get; } = new ObservableCollection<string>();
 
-    private string _seccionSeleccionada;
+    private string? _seccionSeleccionada;
 
     public ObservableCollection<Estudiante> Source { get; } = new ObservableCollection<Estudiante>();
 
     public EstudiantesDataGridViewModel(IDataService DataService)
     {
         _dataService = DataService;
+        _filtradoEstudiantes = new ObservableCollection<Estudiante>();
+        _seccionSeleccionada = string.Empty;
     }
 
     public string SeccionSeleccionada
@@ -57,7 +59,7 @@ public partial class EstudiantesDataGridViewModel : ObservableRecipient, INaviga
             {
                 // Extraer número si es posible, por ejemplo: "7A" -> 7
                 var digits = new string(s.TakeWhile(char.IsDigit).ToArray());
-                return int.TryParse(digits, out int nivel) ? nivel : 1000; // Ciclos tendrán valor 1000
+                return int.TryParse(digits, out var nivel) ? nivel : 1000; // Ciclos tendrán valor 1000
             })
             .ThenBy(s => s) // Subordenar alfabéticamente si tienen el mismo nivel
             .ToList();

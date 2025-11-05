@@ -1,5 +1,5 @@
-C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\DB_ASSISTANCE.db
 C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\AsistenciaApp.exe
+C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\DB_ASSISTANCE.db
 C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\appsettings.json
 C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\App.xbf
 C:\Users\mateo\Desktop\AsistenciaApp\AsistenciaApp\bin\x64\Debug\net9.0-windows\MainWindow.xbf

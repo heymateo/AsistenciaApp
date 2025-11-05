@@ -1,22 +1,19 @@
-Ôªøusing System;
-using System.Collections.Generic;
+csharp AsistenciaApp\Services\AuthenticationService.cs
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AsistenciaApp.Contracts.Services;
 using AsistenciaApp.Core.Models;
-using Windows.System;
+using Microsoft.EntityFrameworkCore;
 
 namespace AsistenciaApp.Services
 {
     public class AuthenticationService : IAuthenticationService
     {
         private string? _authenticatedUser;
-        private readonly AssistanceDbContext _dbContext;
+        private readonly IDbContextFactory<AssistanceDbContext> _dbContextFactory;
 
-        public AuthenticationService(AssistanceDbContext dbContext)
+        public AuthenticationService(IDbContextFactory<AssistanceDbContext> dbContextFactory)
         {
-            _dbContext = dbContext;
+            _dbContextFactory = dbContextFactory;
         }
 
         public bool IsUserAuthenticated()
@@ -26,16 +23,16 @@ namespace AsistenciaApp.Services
 
         public bool AuthenticateUser(string username, string password)
         {
-            var user = _dbContext.Admin.FirstOrDefault(u => u.User == username && u.Password == password);
+            using var context = _dbContextFactory.CreateDbContext();
+            var user = context.Admin.FirstOrDefault(u => u.User == username && u.Password == password);
 
-            if (user == default)
+            if (user == null)
             {
-                throw new UnauthorizedAccessException("Usuario o contrase√±a inv√°lidos.");
+                throw new UnauthorizedAccessException("Usuario o contraseÒa inv·lidos.");
             }
 
             _authenticatedUser = username;
-            return true;    
-
+            return true;
         }
 
         public void Logout()

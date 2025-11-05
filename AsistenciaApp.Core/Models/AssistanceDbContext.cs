@@ -22,11 +22,11 @@ public class AssistanceDbContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            // Carpeta donde se ejecuta la app (por ejemplo, bin\Debug\net8.0-windows)
+            // Carpeta donde se ejecuta la app (por ejemplo, bin\Debug\net9.0-windows)
             var basePath = AppContext.BaseDirectory;
 
-            // Ruta relativa dentro del proyecto (por ejemplo, carpeta DB)
-            var dbPath = Path.Combine(basePath, "DB", "DB_ASSISTANCE.db");
+            // Ruta relativa dentro del proyecto 
+            var dbPath = Path.Combine(basePath, "DB_ASSISTANCE.db");
 
             optionsBuilder.UseSqlite($"Data Source={dbPath}");
         }
