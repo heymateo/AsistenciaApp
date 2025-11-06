@@ -1,4 +1,3 @@
-csharp AsistenciaApp\Services\AuthenticationService.cs
 using System.Linq;
 using AsistenciaApp.Contracts.Services;
 using AsistenciaApp.Core.Models;

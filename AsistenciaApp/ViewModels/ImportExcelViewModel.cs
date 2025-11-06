@@ -50,6 +50,8 @@ public partial class ImportExcelViewModel : ObservableRecipient
         try
         {
             var filePath = await PickExcelFileAsync();
+            List<string> errores = new();
+
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
@@ -76,11 +78,25 @@ public partial class ImportExcelViewModel : ObservableRecipient
                     table.Columns[c].ColumnName = QuitarTildes(originalName.Trim());
                 }
 
-                // Función para acceder de forma segura a celdas
-                string GetCell(DataRow row, int index)
+
+                string[] columnasRequeridas = { "Identificacion", "Nombre" };
+                foreach (var col in columnasRequeridas)
                 {
-                    return index < row.ItemArray.Length ? row[index]?.ToString().Trim() ?? "" : "";
+                    if (!table.Columns.Contains(col))
+                    {
+                        errores.Add($"Falta la columna requerida: '{col}'");
+                    }
                 }
+
+
+                // Función para acceder de forma segura a celdas
+                string GetCell(DataRow row, string columnName)
+                {
+                    return row.Table.Columns.Contains(columnName)
+                        ? row[columnName]?.ToString().Trim() ?? ""
+                        : "";
+                }
+
 
                 for (var i = dataStartRow + 1; i < table.Rows.Count; i++)
                 {
@@ -99,15 +115,39 @@ public partial class ImportExcelViewModel : ObservableRecipient
                         continue;
 
                     // Leer y limpiar datos
-                    var identificacion = LimpiarIdentificacion(GetCell(row, 0));
-                    var nombre = GetCell(row, 1);
-                    var nivel = GetCell(row, 2);
-                    var seccion = GetCell(row, 3);
-                    var grupo = GetCell(row, 4);
-                    var especialidad = GetCell(row, 5);
+                    var identificacion = LimpiarIdentificacion(GetCell(row, "Identificacion"));
+                    var nombre = GetCell(row, "Nombre");
+                    var nivel = GetCell(row, "Nivel");
+                    var seccion = GetCell(row, "Seccion");
+                    var grupo = GetCell(row, "Grupo");
+                    var especialidad = GetCell(row, "Especialidad");
 
-                    if (string.IsNullOrWhiteSpace(identificacion) || string.IsNullOrWhiteSpace(nombre))
+
+
+
+
+                    if (string.IsNullOrWhiteSpace(identificacion))
+                    {
+                        errores.Add($"Fila {i + 1}: Identificación vacía.");
                         continue;
+                    }
+
+                    if (string.IsNullOrWhiteSpace(nombre))
+                    {
+                        errores.Add($"Fila {i + 1}: Nombre vacío.");
+                        continue;
+                    }
+
+                    // Optional: validate nivel or especialidad
+                    string[] nivelesValidos = { "setimo", "octavo", "noveno", "decimo", "undecimo", "duodecimo", "3 ciclo", "4 ciclo" };
+                    var nivelLimpio = QuitarTildes(nivel.Trim()).ToLowerInvariant();
+                    if (!nivelesValidos.Contains(nivelLimpio))
+                    {
+                        errores.Add($"Fila {i + 1}: Nivel no reconocido: '{nivel}'.");
+                    }
+
+
+
 
                     var estudiante = new Estudiante
                     {
@@ -119,14 +159,17 @@ public partial class ImportExcelViewModel : ObservableRecipient
                     };
 
                     // Limpiar tildes del nivel antes del switch
-                    var nivelLimpio = QuitarTildes(nivel.Trim()).ToLowerInvariant();
+                    var nivelLimpio1 = QuitarTildes(nivel.Trim()).ToLowerInvariant();
                     var especialidadLimpia = QuitarTildes(especialidad.Trim()).ToUpperInvariant();
 
                     // Lista de valores inválidos para especialidad
                     string[] valoresInvalidos2 = { "NO APLICA", "NINGUNA", "SIN ESPECIALIDAD", "N/A", "" };
 
-                    switch (nivelLimpio.Trim())
+                    switch (nivelLimpio1.Trim())
                     {
+                        case "setimo":
+                        case "octavo":
+                        case "noveno":
                         case "decimo":
                         case "undecimo":
                         case "duodecimo":
@@ -137,6 +180,16 @@ public partial class ImportExcelViewModel : ObservableRecipient
                         default:
                             estudiante.Especialidad = null;
                             break;
+                    }
+
+                    if (errores.Any())
+                    {
+                        var mensaje = "Se encontraron errores en el archivo:\n\n" + string.Join("\n", errores.Take(10));
+                        if (errores.Count > 10)
+                            mensaje += $"\n\n...y {errores.Count - 10} más.";
+
+                        await _dialogService.ShowDialogAsync("Errores en el archivo", mensaje);
+                        return; // Stop the import
                     }
 
                     estudiantes.Add(estudiante);
